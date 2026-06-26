@@ -1,0 +1,320 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Codex//SAP S4HANA Cloud Maintenance Watch//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:SAP S/4HANA Cloud Maintenance Watch
+X-WR-TIMEZONE:Australia/Sydney
+X-PUBLISHED-TTL:PT24H
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w26@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: W26 hotfix / patching
+DTSTART:20260627T150000Z
+DTEND:20260627T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Hotfix / patching watch window in current 2602 cycle.\n\nTimezo
+ ne shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S
+ /4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintenance S
+ chedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f
+ 97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W26
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w27@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: W27 HANA prep
+DTSTART:20260704T150000Z
+DTEND:20260704T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:HANA database / technical preparation watch window shown before
+  2608.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free
+ .\nSource: SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade
+  & Maintenance Schedule.\nSource URL: https://www.sap.com/docs/download/20
+ 21/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watc
+ h id: 2026-W27
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w29@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: 2608 Test upgrade
+DTSTART:20260718T120000Z
+DTEND:20260718T160000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:2608 major upgrade for test systems.\n\nTimezone shown to user:
+  Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Publ
+ ic Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\nSource 
+ URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bca6-c68
+ f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W29
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w31@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: 2608 Starter / other upgrade
+DTSTART:20260801T120000Z
+DTEND:20260802T120000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:2608 major upgrade for starter and other systems.\n\nTimezone s
+ hown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HA
+ NA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintenance Sched
+ ule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-
+ 0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W31
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w33-dev@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: 2608 Development upgrade
+DTSTART:20260815T040000Z
+DTEND:20260815T080000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:2608 major upgrade for development systems.\n\nTimezone shown t
+ o user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clo
+ ud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\n
+ Source URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-b
+ ca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W33-DEV
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w33-prod@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: 2608 Production upgrade
+DTSTART:20260815T120000Z
+DTEND:20260815T160000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:2608 major upgrade for production systems.\n\nTimezone shown to
+  user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clou
+ d Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\nS
+ ource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bc
+ a6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W33-PROD
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w34@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Backup upgrade weekend
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260824
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Backup upgrade weekend if SAP needs it for systems not upgraded
+  earlier.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: F
+ ree.\nSource: SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgr
+ ade & Maintenance Schedule.\nSource URL: https://www.sap.com/docs/download
+ /2021/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance w
+ atch id: 2026-W34
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w35@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Post-upgrade hotfix
+DTSTART:20260829T150000Z
+DTEND:20260829T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Post-upgrade hotfix / patching watch window.\n\nTimezone shown 
+ to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cl
+ oud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\
+ nSource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-
+ bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W35
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w37@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Standard maintenance / hotfix
+DTSTART:20260912T150000Z
+DTEND:20260912T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Standard maintenance / hotfix watch window after the 2608 patte
+ rn change.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: 
+ Free.\nSource: SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upg
+ rade & Maintenance Schedule.\nSource URL: https://www.sap.com/docs/downloa
+ d/2021/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance 
+ watch id: 2026-W37
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w39@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Online software change
+DTSTART:20260926T150000Z
+DTEND:20260926T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Online software change / continuous delivery watch window.\n\nT
+ imezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: 
+ SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintena
+ nce Schedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa
+ 59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-
+ W39
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w41@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Standard maintenance / hotfix
+DTSTART:20261010T150000Z
+DTEND:20261010T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Standard maintenance / hotfix watch window.\n\nTimezone shown t
+ o user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clo
+ ud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\n
+ Source URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-b
+ ca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W41
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w42@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Online software change
+DTSTART:20261017T150000Z
+DTEND:20261017T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Online software change / continuous delivery watch window.\n\nT
+ imezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: 
+ SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintena
+ nce Schedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa
+ 59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-
+ W42
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w45@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Standard maintenance / hotfix
+DTSTART:20261107T150000Z
+DTEND:20261107T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Standard maintenance / hotfix watch window.\n\nTimezone shown t
+ o user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clo
+ ud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\n
+ Source URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-b
+ ca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W45
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w46@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Online software change
+DTSTART:20261114T150000Z
+DTEND:20261114T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Online software change / continuous delivery watch window.\n\nT
+ imezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: 
+ SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintena
+ nce Schedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa
+ 59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-
+ W46
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w49@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Standard maintenance / hotfix
+DTSTART:20261205T150000Z
+DTEND:20261205T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Standard maintenance / hotfix watch window.\n\nTimezone shown t
+ o user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clo
+ ud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\n
+ Source URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-b
+ ca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W49
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w50@github-pages
+DTSTAMP:20260625T140000Z
+SUMMARY:SAP S/4HANA Cloud watch: Online software change
+DTSTART:20261212T150000Z
+DTEND:20261212T190000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP S/4HANA Cloud Public Edition online schedule
+DESCRIPTION:Online software change / continuous delivery watch window.\n\nT
+ imezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: 
+ SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintena
+ nce Schedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa
+ 59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-
+ W50
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

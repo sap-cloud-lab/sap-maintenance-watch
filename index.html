@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAP S/4HANA Cloud Maintenance Watch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#schedule" aria-label="SAP S/4HANA Cloud Maintenance Watch home">
+        <span class="sap-mark">SAP</span>
+        <span>
+          <strong>S/4HANA Cloud</strong>
+          <small>Maintenance Watch</small>
+        </span>
+      </a>
+      <nav aria-label="Page sections">
+        <a href="#schedule">Schedule</a>
+        <a href="#sources">Sources</a>
+        <a href="#calendar">Calendar</a>
+      </nav>
+      <a class="outlook-link" href="https://outlook.office365.com/calendar/" target="_blank" rel="noreferrer">
+        Open Outlook
+      </a>
+      <a
+        class="calendar-download"
+        href="SAP-S4HANA-Cloud-Maintenance-Watch.ics"
+        download="SAP-S4HANA-Cloud-Maintenance-Watch.ics"
+        aria-label="Download SAP maintenance watch ICS calendar file"
+      >
+        Download .ics
+      </a>
+    </header>
+
+    <main>
+      <section class="overview" aria-labelledby="page-title">
+        <div class="overview-copy">
+          <p class="system-label">Australia/Sydney · APJ watch windows</p>
+          <h1 id="page-title">SAP S/4HANA Cloud Maintenance Watch</h1>
+          <p>
+            A single view of upcoming 2608 upgrades, hotfix windows, standard maintenance, and online software changes.
+          </p>
+        </div>
+        <div class="overview-panel" aria-label="Current schedule status">
+          <div>
+            <span class="metric-label">Next window</span>
+            <strong id="nextWindow">Loading schedule</strong>
+          </div>
+          <div>
+            <span class="metric-label">Calendar sync</span>
+            <strong>Outlook watch items active</strong>
+          </div>
+          <div>
+            <span class="metric-label">Source checked</span>
+            <strong id="sourceChecked">2026-06-25</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="status-strip" aria-label="Schedule summary">
+        <article>
+          <span class="status-dot upgrade"></span>
+          <div>
+            <strong id="upgradeCount">0</strong>
+            <span>Upgrade windows</span>
+          </div>
+        </article>
+        <article>
+          <span class="status-dot maintenance"></span>
+          <div>
+            <strong id="maintenanceCount">0</strong>
+            <span>Maintenance / hotfix</span>
+          </div>
+        </article>
+        <article>
+          <span class="status-dot change"></span>
+          <div>
+            <strong id="changeCount">0</strong>
+            <span>Online software change</span>
+          </div>
+        </article>
+        <article>
+          <span class="status-dot prep"></span>
+          <div>
+            <strong id="prepCount">0</strong>
+            <span>Technical prep</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="workspace" id="schedule">
+        <section class="schedule-panel" aria-labelledby="schedule-title">
+          <div class="panel-heading">
+            <div>
+              <p class="system-label">Upcoming Watch Schedule</p>
+              <h2 id="schedule-title">Planned windows</h2>
+            </div>
+            <div class="toolbar" aria-label="Schedule filters">
+              <label class="search-box">
+                <span>Search</span>
+                <input id="searchInput" type="search" placeholder="Filter by week, system, type" />
+              </label>
+              <div class="segmented" role="tablist" aria-label="Filter schedule by type">
+                <button class="active" type="button" data-filter="all">All</button>
+                <button type="button" data-filter="upgrade">Upgrade</button>
+                <button type="button" data-filter="maintenance">Maintenance</button>
+                <button type="button" data-filter="change">Change</button>
+              </div>
+            </div>
+          </div>
+          <div class="timeline" id="scheduleList" aria-live="polite"></div>
+        </section>
+
+        <aside class="detail-panel" aria-labelledby="detail-title">
+          <div class="panel-heading compact">
+            <div>
+              <p class="system-label">Selected window</p>
+              <h2 id="detail-title">Details</h2>
+            </div>
+            <span class="sync-pill">Tracked in Outlook</span>
+          </div>
+          <div id="detailContent" class="detail-content"></div>
+        </aside>
+      </section>
+
+      <section class="source-grid" id="sources" aria-label="SAP sources and reference image">
+        <div class="source-copy">
+          <p class="system-label">SAP source set</p>
+          <h2>Reference links</h2>
+          <p>
+            The weekly reminder checks SAP online and keeps the Outlook watch items aligned with any changed planning dates.
+          </p>
+          <div class="source-actions">
+            <a
+              class="download-link"
+              href="SAP-S4HANA-Cloud-Maintenance-Watch.ics"
+              download="SAP-S4HANA-Cloud-Maintenance-Watch.ics"
+            >
+              Download calendar (.ics)
+            </a>
+            <a href="https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf" target="_blank" rel="noreferrer">
+              SAP schedule PDF
+            </a>
+            <a href="https://help.sap.com/crawler/PRODUCTION/SAP_EXTENSIBILITY_EXPLORER/SHIP/en-US" target="_blank" rel="noreferrer">
+              Extensibility Explorer
+            </a>
+            <a href="https://pages.community.sap.com/topics/s4hana-cloud/release-assessment" target="_blank" rel="noreferrer">
+              Release assessment
+            </a>
+          </div>
+        </div>
+        <figure class="source-image">
+          <img src="assets/sap-maintenance-calendar-page5.jpg" alt="SAP 2026 maintenance calendar source preview" />
+          <figcaption>SAP schedule source preview, current online document captured for the watch list.</figcaption>
+        </figure>
+      </section>
+
+      <section class="calendar-note" id="calendar" aria-label="Calendar tracking">
+        <div>
+          <p class="system-label">Calendar behavior</p>
+          <h2>How the reminders behave</h2>
+          <p>
+            Events are created as free time, with reminders before the watch windows. Backup weekends are shown as all-day watch items.
+          </p>
+        </div>
+        <div class="calendar-rules">
+          <span>Free calendar status</span>
+          <span>12-hour reminders</span>
+          <span>Import file ready</span>
+          <span>Weekly SAP refresh</span>
+        </div>
+        <a
+          class="calendar-download calendar-note-download"
+          href="SAP-S4HANA-Cloud-Maintenance-Watch.ics"
+          download="SAP-S4HANA-Cloud-Maintenance-Watch.ics"
+          aria-label="Download SAP S/4HANA Cloud maintenance watch calendar file"
+        >
+          Download .ics calendar
+        </a>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
