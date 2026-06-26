@@ -83,6 +83,8 @@ jobs:
       - name: Set up Pages
         if: steps.deploy_gate.outputs.should_deploy == 'true'
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload static site
         if: steps.deploy_gate.outputs.should_deploy == 'true'

@@ -4,12 +4,8 @@ Static public website and calendar feed for SAP S/4HANA Cloud Public Edition 3-s
 
 ## Public URLs
 
-After this repository is published with GitHub Pages, replace the placeholders below with your GitHub owner and repository name:
-
-- Website: `https://<github-owner>.github.io/<repository-name>/`
-- Calendar subscription: `https://<github-owner>.github.io/<repository-name>/SAP-S4HANA-Cloud-Maintenance-Watch.ics`
-
-If the repository is named `<github-owner>.github.io`, the website URL is `https://<github-owner>.github.io/` and the calendar URL is `https://<github-owner>.github.io/SAP-S4HANA-Cloud-Maintenance-Watch.ics`.
+- Website: `https://mahendrareddy91.github.io/sap-maintenance-watch/`
+- Calendar subscription: `https://mahendrareddy91.github.io/sap-maintenance-watch/SAP-S4HANA-Cloud-Maintenance-Watch.ics`
 
 ## Outlook Calendar Subscription
 
