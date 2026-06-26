@@ -53,7 +53,7 @@ DTSTART:20260718T120000Z
 DTEND:20260718T160000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:2608 major upgrade for test systems.\n\nTimezone shown to user:
+DESCRIPTION:2608 major upgrade for Test systems.\n\nTimezone shown to user:
   Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Publ
  ic Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\nSource 
  URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bca6-c68
@@ -72,7 +72,7 @@ DTSTART:20260801T120000Z
 DTEND:20260802T120000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:2608 major upgrade for starter and other systems.\n\nTimezone s
+DESCRIPTION:2608 major upgrade for Starter and other systems.\n\nTimezone s
  hown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HA
  NA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintenance Sched
  ule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-
@@ -91,7 +91,7 @@ DTSTART:20260815T040000Z
 DTEND:20260815T080000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:2608 major upgrade for development systems.\n\nTimezone shown t
+DESCRIPTION:2608 major upgrade for Development systems.\n\nTimezone shown t
  o user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clo
  ud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\n
  Source URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-b
@@ -110,7 +110,7 @@ DTSTART:20260815T120000Z
 DTEND:20260815T160000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:2608 major upgrade for production systems.\n\nTimezone shown to
+DESCRIPTION:2608 major upgrade for Production systems.\n\nTimezone shown to
   user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clou
  d Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\nS
  ource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bc

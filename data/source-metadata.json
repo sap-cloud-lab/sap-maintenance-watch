@@ -1,22 +1,7 @@
 {
   "sourceUrl": "https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf",
   "sourceSha256": "6a772c67d262d37ace8f1af019669deb175efa6a307d5391e2305f37efe5d345",
-  "scheduleSha256": "31a1a818a61b91a62d612939ecb19a1206505f16c881fae9fc66d3fb016615dd",
+  "scheduleSha256": "6ab684f658710838d3a4f669a3f8463f8d4e009e7ac8206a0edc962b3b4fbcbe",
   "sourceChecked": "2026-06-26",
-  "releaseDates": [
-    {
-      "release": "2602",
-      "help_portal": "Jan. 14",
-      "test": "Jan. 17/18",
-      "starter": "Jan. 31 / Feb. 01",
-      "development_production": "Feb. 14/15"
-    },
-    {
-      "release": "2608",
-      "help_portal": "Jul. 15",
-      "test": "Jul. 18/19",
-      "starter": "Aug. 01/02",
-      "development_production": "Aug. 15/16"
-    }
-  ]
+  "releaseDates": []
 }

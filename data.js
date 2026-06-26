@@ -37,7 +37,7 @@ window.sapWatchData = {
       "start": "2026-07-18T22:00:00+10:00",
       "end": "2026-07-19T02:00:00+10:00",
       "systems": "Test systems",
-      "description": "2608 major upgrade for test systems.",
+      "description": "2608 major upgrade for Test systems.",
       "displayTime": "Sat 2026-07-18 22:00-Sun 2026-07-19 02:00 AEST",
       "outlook": "Created as a free calendar item with a 12-hour reminder."
     },
@@ -49,7 +49,7 @@ window.sapWatchData = {
       "start": "2026-08-01T22:00:00+10:00",
       "end": "2026-08-02T22:00:00+10:00",
       "systems": "Starter and other systems",
-      "description": "2608 major upgrade for starter and other systems.",
+      "description": "2608 major upgrade for Starter and other systems.",
       "displayTime": "Sat 2026-08-01 22:00-Sun 2026-08-02 22:00 AEST",
       "outlook": "Created as a free calendar item with a 12-hour reminder."
     },
@@ -61,7 +61,7 @@ window.sapWatchData = {
       "start": "2026-08-15T14:00:00+10:00",
       "end": "2026-08-15T18:00:00+10:00",
       "systems": "Development systems",
-      "description": "2608 major upgrade for development systems.",
+      "description": "2608 major upgrade for Development systems.",
       "displayTime": "Sat 2026-08-15, 14:00-18:00 AEST",
       "outlook": "Created as a free calendar item with a 12-hour reminder."
     },
@@ -73,7 +73,7 @@ window.sapWatchData = {
       "start": "2026-08-15T22:00:00+10:00",
       "end": "2026-08-16T02:00:00+10:00",
       "systems": "Production systems",
-      "description": "2608 major upgrade for production systems.",
+      "description": "2608 major upgrade for Production systems.",
       "displayTime": "Sat 2026-08-15 22:00-Sun 2026-08-16 02:00 AEST",
       "outlook": "Created as a free calendar item with a 12-hour reminder."
     },
