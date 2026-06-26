@@ -4,8 +4,8 @@ Static public website and calendar feed for SAP S/4HANA Cloud Public Edition 3-s
 
 ## Public URLs
 
-- Website: `https://mahendrareddy91.github.io/sap-maintenance-watch/`
-- Calendar subscription: `https://mahendrareddy91.github.io/sap-maintenance-watch/SAP-S4HANA-Cloud-Maintenance-Watch.ics`
+- Website: `https://sap-cloud-lab.github.io/sap-maintenance-watch/`
+- Calendar subscription: `https://sap-cloud-lab.github.io/sap-maintenance-watch/SAP-S4HANA-Cloud-Maintenance-Watch.ics`
 
 ## Outlook Calendar Subscription
 
