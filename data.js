@@ -1,4 +1,4 @@
-﻿window.sapWatchData = {
+window.sapWatchData = {
   sourceChecked: "2026-07-01",
   timezone: "Australia/Sydney",
   sourceLabel: "SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule",
@@ -148,7 +148,7 @@
         label: "Operational announcement watch",
         summary: "HANA database upgrade preparation details are expected through SAP for Me / Cloud ALM availability announcements rather than a hotfix correction PDF.",
         expectedSource: "SAP for Me Cloud Service Availability notifications, SAP Cloud ALM status events, and the SAP 3-system landscape schedule PDF.",
-        nextAction: "Hourly check for updated announcement text, completion notices, or changed downtime wording."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for updated announcement text, completion notices, or changed downtime wording."
       }
     },
     {
@@ -199,7 +199,7 @@
         summary: "T-Tenant upgrade is expected to move to 2608 with HFC02. Preliminary 2608 What's New and Product Assistance content is available for review. The Early Release Series runs 13-17 July 2026 and includes Extensibility, Finance, SAP Activate, Cloud ALM, and Test Automation Tool topics. A tracked IAM customer-action signal recommends checking and activating successor IAM apps before 2608. SAP's RASD 2026 guidance adds change-history filtering and direct navigation from impact cards to Custom CDS Views, Manage Business Role Changes After Upgrade, and tenant-specific S/4HANA apps. SAP also published BTP ABAP Environment pre-upgrade testing guidance, Explore Migration Objects 2602.4/2608 changes, a Project Billing account-type check that excludes revenue and sales-deduction G/L postings from Project Billing, Treasury Business Partner workflow controls for sensitive counterparty/payment data changes, dynamic fiscal-period determination for EBRR period-end close jobs, decentralized EWM/QM integration for SAP Cloud ERP two-tier scenarios, clean-core wrapper guidance, outbound-delivery stock-warning custom logic, API-created delivery stock-shortage handling, EPPM custom value types, Origin Profit Centers, CBC 5-country rollout planning, and additional ERP feed updates for sales extensibility, EBRR scheduling, and Joule/two-tier planning. The full HFC02 correction attachment is still pending until SAP publishes the 2608 patch collection note.",
         expectedSource: "SAP 2608 upgrade guidance, SAP Help 2608 preview, preliminary 2608 What's New / Product Assistance, RASD 2026 guidance, Early Release Series, IAM successor app guidance, BTP ABAP Environment 2608 pre-upgrade guidance, Explore Migration Objects 2602.4/2608 update, Project Billing account-type check guidance, Treasury Business Partner workflow-control guidance, EBRR dynamic fiscal-period guidance, decentralized EWM/QM integration update, clean-core wrapper guidance, outbound-delivery custom-logic guidance, API delivery stock-shortage guidance, EPPM custom-value-type guidance, Origin Profit Center guidance, CBC 5-country rollout guidance, SAP Community ERP product update feed, future SAP S/4HANA Cloud Public Edition 2608 Patch Collection Information Note, SAP for Me / Cloud ALM upgrade announcements.",
         expectedFrom: "2026-07-15",
-        nextAction: "Hourly check for the 2608 SAP Note number, HFC02 attachment, RASD link, and any updated customer activities."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for the 2608 SAP Note number, HFC02 attachment, RASD link, and any updated customer activities."
       },
       customerActions: [
         {
@@ -412,7 +412,7 @@
         summary: "Starter, sandbox, evaluation, and other tenants are expected to upgrade with HFC03. T-Tenant is also expected to receive HFC03 at this point to preview features before D/P tenants move to HFC03+. Preliminary What's New and RASD should be used to identify scope-specific review items before the weekend, including change-history deltas and impact-card navigation. The IAM successor app activation check remains an active customer action.",
         expectedSource: "SAP Help 2608 preview, preliminary 2608 What's New / Product Assistance, RASD 2026 guidance, IAM successor app guidance, future SAP S/4HANA Cloud Public Edition 2608 Patch Collection Information Note, SAP for Me announcements, and Cloud ALM status events.",
         expectedFrom: "2026-07-15",
-        nextAction: "Hourly check for HFC03 details, RASD impacts, new feature preview wording, and any date or downtime wording changes."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for HFC03 details, RASD impacts, new feature preview wording, and any date or downtime wording changes."
       }
     },
     {
@@ -432,7 +432,7 @@
         summary: "Development systems are expected to upgrade with HFC03+. SAP's 2608 pattern introduces HFCxx+ releases containing critical fixes one week after the base HFC. Preliminary What's New, RASD 2026 guidance, and the IAM successor app activation guidance are active preparation sources for scope-specific changes.",
         expectedSource: "SAP Help 2608 preview, preliminary 2608 What's New / Product Assistance, RASD 2026 guidance, IAM successor app guidance, future 2608 patch collection note, HFC short-description attachments, and SAP for Me / Cloud ALM announcements.",
         expectedFrom: "2026-07-15",
-        nextAction: "Hourly check for HFC03+ wording, application correction lists, critical-fix markers, and recommended customer activities."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for HFC03+ wording, application correction lists, critical-fix markers, and recommended customer activities."
       }
     },
     {
@@ -452,7 +452,7 @@
         summary: "Production systems are expected to upgrade with HFC03+. This is the highest-priority watch item for HFC03+ critical fixes, customer activities, completion updates, scope-specific RASD preparation items, and IAM successor app activation readiness.",
         expectedSource: "SAP Help 2608 preview, preliminary 2608 What's New / Product Assistance, RASD 2026 guidance, IAM successor app guidance, future 2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM announcements, and upgrade emails.",
         expectedFrom: "2026-07-15",
-        nextAction: "Hourly check for HFC03+ details, production-impact wording, recommended activities, and any completion or delay updates."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for HFC03+ details, production-impact wording, recommended activities, and any completion or delay updates."
       }
     },
     {
@@ -471,7 +471,7 @@
         label: "Exception-only watch",
         summary: "The backup weekend is only used for systems not upgraded during the original upgrade weekends. There may be no correction PDF unless SAP announces a specific affected system.",
         expectedSource: "SAP for Me / Cloud ALM system-specific announcements and upgrade completion or exception emails.",
-        nextAction: "Hourly check for any Fortescue-specific backup-weekend announcement, cancellation, or changed system scope."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for any Fortescue-specific backup-weekend announcement, cancellation, or changed system scope."
       }
     },
     {
@@ -491,7 +491,7 @@
         summary: "This post-upgrade patching window should be matched to the published 2608 HFC level once SAP publishes the 2608 patch collection note and attachments.",
         expectedSource: "Future 2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM HFC announcements.",
         expectedFrom: "2026-07-15",
-        nextAction: "Hourly check for the exact HFC code, correction list, and whether the window remains required after upgrade completion."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for the exact HFC code, correction list, and whether the window remains required after upgrade completion."
       }
     },
     {
@@ -510,7 +510,7 @@
         label: "Standard maintenance detail pending",
         summary: "This is the first standard maintenance / hotfix watch window after the 2608 pattern change. SAP's 2608 pattern indicates D/P tenants receive HFCxx+ critical-fix releases while T/other tenants may receive the base HFC earlier.",
         expectedSource: "2608 patch collection note, SAP for Me / Cloud ALM maintenance announcements, and HFC attachments when published.",
-        nextAction: "Hourly check for exact HFC/HFC+ code, correction/update wording, customer activities, and window changes."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for exact HFC/HFC+ code, correction/update wording, customer activities, and window changes."
       }
     },
     {
@@ -529,7 +529,7 @@
         label: "Continuous delivery watch",
         summary: "Online software change details are expected through What's New, Preliminary What's New, RASD, and SAP for Me / Cloud ALM announcement text. SAP's 2608 pattern adds online software change weekends alongside standard maintenance and optional urgent maintenance.",
         expectedSource: "What's New Viewer, Preliminary What's New, Release Assessment / Scope Dependency, SAP for Me / Cloud ALM announcements.",
-        nextAction: "Hourly check for released or upcoming feature/update detail and any customer action flags."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for released or upcoming feature/update detail and any customer action flags."
       }
     },
     {
@@ -548,7 +548,7 @@
         label: "Standard maintenance detail pending",
         summary: "Monthly standard maintenance details will be tied to the current 2608 HFC level once SAP publishes the relevant note update and announcement.",
         expectedSource: "2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM announcements.",
-        nextAction: "Hourly check for exact HFC code, correction list, and any changed downtime wording."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for exact HFC code, correction list, and any changed downtime wording."
       }
     },
     {
@@ -567,7 +567,7 @@
         label: "Continuous delivery watch",
         summary: "Online software change details will be checked against What's New / RASD plus SAP for Me / Cloud ALM announcement text.",
         expectedSource: "What's New Viewer, Preliminary What's New, Release Assessment / Scope Dependency, SAP for Me / Cloud ALM announcements.",
-        nextAction: "Hourly check for feature/update detail, affected scope, and customer action flags."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for feature/update detail, affected scope, and customer action flags."
       }
     },
     {
@@ -586,7 +586,7 @@
         label: "Standard maintenance detail pending",
         summary: "Monthly standard maintenance details will be tied to the current 2608 HFC level once SAP publishes the relevant note update and announcement.",
         expectedSource: "2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM announcements.",
-        nextAction: "Hourly check for exact HFC code, correction list, and any changed downtime wording."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for exact HFC code, correction list, and any changed downtime wording."
       }
     },
     {
@@ -605,7 +605,7 @@
         label: "Continuous delivery watch",
         summary: "Online software change details will be checked against What's New / RASD plus SAP for Me / Cloud ALM announcement text.",
         expectedSource: "What's New Viewer, Preliminary What's New, Release Assessment / Scope Dependency, SAP for Me / Cloud ALM announcements.",
-        nextAction: "Hourly check for feature/update detail, affected scope, and customer action flags."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for feature/update detail, affected scope, and customer action flags."
       }
     },
     {
@@ -624,7 +624,7 @@
         label: "Standard maintenance detail pending",
         summary: "Monthly standard maintenance details will be tied to the current 2608 HFC level once SAP publishes the relevant note update and announcement.",
         expectedSource: "2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM announcements.",
-        nextAction: "Hourly check for exact HFC code, correction list, and any changed downtime wording."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for exact HFC code, correction list, and any changed downtime wording."
       }
     },
     {
@@ -643,7 +643,7 @@
         label: "Continuous delivery watch",
         summary: "Online software change details will be checked against What's New / RASD plus SAP for Me / Cloud ALM announcement text.",
         expectedSource: "What's New Viewer, Preliminary What's New, Release Assessment / Scope Dependency, SAP for Me / Cloud ALM announcements.",
-        nextAction: "Hourly check for feature/update detail, affected scope, and customer action flags."
+        nextAction: "Daily 7:00 AM Australia/Sydney check for feature/update detail, affected scope, and customer action flags."
       }
     }
   ]

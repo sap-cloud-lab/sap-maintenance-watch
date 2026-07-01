@@ -90,6 +90,7 @@ nav {
 }
 
 nav a,
+.manual-refresh-link,
 .outlook-link,
 .calendar-download,
 .source-actions a {
@@ -103,12 +104,14 @@ nav a,
 }
 
 nav a:hover,
+.manual-refresh-link:hover,
 .outlook-link:hover,
 .calendar-download:hover,
 .source-actions a:hover {
   background: #eaf4ff;
 }
 
+.manual-refresh-link,
 .outlook-link {
   border: 1px solid var(--line);
   background: var(--surface);

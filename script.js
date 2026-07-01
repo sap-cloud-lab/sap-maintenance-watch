@@ -210,7 +210,7 @@
             <dd>${escapeHTML(detailWatch.expectedSource)}</dd>
           </div>
           <div>
-            <dt>Hourly action</dt>
+            <dt>Daily action</dt>
             <dd>${escapeHTML(detailWatch.nextAction)}</dd>
           </div>
         </dl>

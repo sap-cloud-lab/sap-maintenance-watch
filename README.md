@@ -55,6 +55,10 @@ GitHub Pages publishes automatically on every push to `main` using `.github/work
 
 `.github/workflows/refresh-sap-watch.yml` runs once per day at 7:00 AM Australia/Sydney. It checks public SAP sources and records fingerprints in `source-state.json`. It commits and redeploys only when a tracked source changes or when a manual run asks it to record a no-change check.
 
+Manual run page:
+
+<https://github.com/sap-cloud-lab/sap-maintenance-watch/actions/workflows/refresh-sap-watch.yml>
+
 The workflow reads these GitHub Actions secrets when they exist:
 
 - `SAP_SUSER_ID`
