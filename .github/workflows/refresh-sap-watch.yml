@@ -1,0 +1,99 @@
+name: Refresh SAP Watch Sources
+
+on:
+  workflow_dispatch:
+    inputs:
+      record_no_change_check:
+        description: "Record a check even when no source changed"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+  schedule:
+    # GitHub cron is UTC. Running at both possible UTC offsets lets the
+    # workflow honor 7:00 AM Australia/Sydney across daylight saving changes.
+    - cron: "0 20 * * *"
+    - cron: "0 21 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sap-watch-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+      should_run: ${{ steps.time_gate.outputs.should_run }}
+    steps:
+      - name: Check Sydney run time
+        id: time_gate
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          hour=$(TZ=Australia/Sydney date +%H)
+          if [ "$hour" = "07" ]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check out repository
+        if: steps.time_gate.outputs.should_run == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        if: steps.time_gate.outputs.should_run == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Check SAP watch sources
+        if: steps.time_gate.outputs.should_run == 'true'
+        run: node scripts/check-sap-watch.mjs
+        env:
+          SAP_SUSER_ID: ${{ secrets.SAP_SUSER_ID }}
+          SAP_SUSER_PASSWORD: ${{ secrets.SAP_SUSER_PASSWORD }}
+          RECORD_NO_CHANGE_CHECKS: ${{ github.event_name == 'workflow_dispatch' && inputs.record_no_change_check == 'true' }}
+
+      - name: Commit changed watch state
+        id: commit
+        if: steps.time_gate.outputs.should_run == 'true'
+        run: |
+          if git diff --quiet -- source-state.json data.js; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source-state.json data.js
+          git commit -m "Refresh SAP watch source state"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload static site
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/deploy-pages@v4

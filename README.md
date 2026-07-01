@@ -23,7 +23,7 @@ Do not commit SAP S-user IDs, passwords, cookies, session tokens, browser profil
 
 ## Secure SAP Access
 
-If an authenticated SAP-for-Me updater is added later, credentials must be stored only in GitHub repository secrets:
+Authenticated SAP-for-Me access must be stored only in GitHub repository secrets:
 
 1. Open the repository on GitHub.
 2. Go to **Settings**.
@@ -34,6 +34,10 @@ If an authenticated SAP-for-Me updater is added later, credentials must be store
    - `SAP_SUSER_PASSWORD`
 
 Important: do not paste credentials into source files, workflow YAML, issues, commits, pull requests, or chat. If a password was ever pasted into chat, change it before using it in GitHub Secrets.
+
+Direct secrets page:
+
+<https://github.com/sap-cloud-lab/sap-maintenance-watch/settings/secrets/actions>
 
 ## MFA Reality Check
 
@@ -46,3 +50,14 @@ Normal SAP S-user login can require MFA, trusted-browser approval, or SSO renewa
 ## Publishing
 
 GitHub Pages publishes automatically on every push to `main` using `.github/workflows/pages.yml`.
+
+## Daily Source Watch
+
+`.github/workflows/refresh-sap-watch.yml` runs once per day at 7:00 AM Australia/Sydney. It checks public SAP sources and records fingerprints in `source-state.json`. It commits and redeploys only when a tracked source changes or when a manual run asks it to record a no-change check.
+
+The workflow reads these GitHub Actions secrets when they exist:
+
+- `SAP_SUSER_ID`
+- `SAP_SUSER_PASSWORD`
+
+The workflow does not print, commit, or expose those values. It also does not try to force browser password login during scheduled runs because SAP for Me can require MFA or trusted-browser approval.
