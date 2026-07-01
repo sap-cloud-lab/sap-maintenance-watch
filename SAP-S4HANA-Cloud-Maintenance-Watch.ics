@@ -1,24 +1,19 @@
-BEGIN:VCALENDAR
+﻿BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Codex//SAP S4HANA Cloud Maintenance Watch//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:SAP S/4HANA Cloud Maintenance Watch
 X-WR-TIMEZONE:Australia/Sydney
-X-PUBLISHED-TTL:PT24H
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w26@github-pages
-DTSTAMP:20260625T140000Z
+UID:sap-s4hana-watch-2026-w26@codex.local
+DTSTAMP:20260629T080959Z
 SUMMARY:SAP S/4HANA Cloud watch: W26 hotfix / patching
 DTSTART:20260627T150000Z
 DTEND:20260627T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Hotfix / patching watch window in current 2602 cycle.\n\nTimezo
- ne shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S
- /4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintenance S
- chedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f
- 97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W26
+DESCRIPTION:SAP S/4HANA Cloud Public Edition 2602 HFC13 was released on 25.06.2026. SAP Note 3646210 includes 91 application corrections in attachment S4HANACloud2602HFC13_ListOfHotfixShortDescription.pdf.\n\nAreas include Ariba integration, migration cockpit, document compliance, Central Business Configuration, actual costing, service orders, localisation and DRC, group reporting, treasury, EWM, delivery APIs, product master, purchasing analytics, purchase orders, maintenance plans, production, PSM, QM, billing, freight and logistics integration.\n\nSAP announced final What's New and Product Assistance for SAP S/4HANA Cloud Public Edition 2602.4. SAP Help also lists 54 official 2602.4 (HFC12) What's New entries, all dated 26.06.2026 in search results. Tracked topics include Developer Extensibility for scheduling goods issue for deliveries, Explore Migration Objects enhancements, Joule features, project/work-package details, electronic invoicing, withholding-tax analysis, BOM print preview, quality inspection, and logistics/compliance updates. SAP recommends RASD for a personalized view based on activated and used scope; the announcement says 2602.4 information would be available in RASD within the next few days.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule plus SAP Note 3646210, SAP Community final 2602.4 announcement, and SAP Help 2602.4 What's New/Product Assistance search results.\nCodex SAP maintenance watch id: 2026-W26
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -26,19 +21,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w27@github-pages
-DTSTAMP:20260625T140000Z
+UID:sap-s4hana-watch-2026-w27@codex.local
+DTSTAMP:20260629T080959Z
 SUMMARY:SAP S/4HANA Cloud watch: W27 HANA prep
 DTSTART:20260704T150000Z
 DTEND:20260704T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:HANA database / technical preparation watch window shown before
-  2608.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free
- .\nSource: SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade
-  & Maintenance Schedule.\nSource URL: https://www.sap.com/docs/download/20
- 21/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watc
- h id: 2026-W27
+DESCRIPTION:HANA database / technical preparation watch window shown before 2608.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W27
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -46,18 +36,29 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w29@github-pages
-DTSTAMP:20260625T140000Z
+UID:sap-s4hana-watch-2026-w28-release-planning@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: 2608 APJ release planning
+DTSTART:20260708T030000Z
+DTEND:20260708T040000Z
+TRANSP:TRANSPARENT
+LOCATION:SAP Preferred Success / SAP Learning Hub
+DESCRIPTION:SAP Preferred Success APJ release planning session for SAP Cloud ERP 2608. SAP lists the APJ English session for July 8, 13:00-14:00 AEST. SAP says the session covers 2608 release dates, the upgrade process, the new system maintenance schedule starting from September, RASD impact analysis, and release call-to-action items.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP Preferred Success: Join Our SAP Cloud ERP 2608 Release Planning Session.\nCodex SAP maintenance watch id: 2026-W28-RELEASE-PLANNING
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:SAP 2608 release planning session reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sap-s4hana-watch-2026-w29@codex.local
+DTSTAMP:20260629T080959Z
 SUMMARY:SAP S/4HANA Cloud watch: 2608 Test upgrade
 DTSTART:20260718T120000Z
 DTEND:20260718T160000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:2608 major upgrade for Test systems.\n\nTimezone shown to user:
-  Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Publ
- ic Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\nSource 
- URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bca6-c68
- f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W29
+DESCRIPTION:2608 major upgrade for Test systems. SAP's 2608 upgrade guidance indicates T-Tenant upgrades to 2608 with HFC02 on 18-19 July 2026. Preliminary 2608 What's New and Product Assistance content is available for upgrade preparation through the What's New Viewer and RASD. SAP's 2608 Early Release Series runs 13-17 July 2026 and includes Extensibility, Finance, SAP Activate, Cloud ALM, and Test Automation Tool topics; the static source page does not expose a reliable session timezone, so exact session entries were not created. Customer action now tracked: SAP IAM guidance says successor IAM apps are inactive by default from 2602; before 2608, check predecessor app usage, activate successor IAM apps in business roles, validate with key users, and transport changes to Test and Production. Priority IAM successor IDs include F3516A_TRAN, F3425A_TRAN, F1443B_TRAN, F3883A_TRAN, F3915A_TRAN, F7280A_TRAN, F0956B_TRAN, and F9104_TRAN. Product update tracked: 2608 adds multi-processor workflow approval controls for two- and three-person approvals plus validation callbacks. RASD 2026 update tracked: use What's New change history, Last Modified On filtering, and RASD impact-card navigation for changed extensibility objects, where-used lists, impacted catalogs, IAM apps, and renamed app tiles. Newly tracked product updates: SAP BTP ABAP Environment 2608 pre-upgrade testing can be nominated for 17 July 08:00-16:00 CET, which is 17 July 17:00 to 18 July 01:00 AEST if SAP's CET label is interpreted literally; Explore Migration Objects adds 2602.4/2608 availability, scope-item status, and dependency-graph features for migration planning; SAP Asset Management describes AI-assisted maintenance notifications and planning; SAP Sales Billing adds Advanced Down Payment Processing with milestone billing; Project Billing excludes project-related postings to revenue and sales-deduction G/L accounts from billing processes under the 2608 account-type check; SAP Treasury Business Partner workflow controls add four-eyes governance and approval traceability for sensitive counterparty and payment-relevant data changes; EBRR dynamic fiscal-period determination adds Current Fiscal Period and Previous Fiscal Period options for recurring revenue-recognition close jobs across sales orders, projects, service documents, provider contracts, and revenue contracts. Decentralized EWM/QM integration for SAP Cloud ERP two-tier scenarios now tracks warehouse-side quality inspection with QIE and stock synchronization back to SAP Cloud ERP. Clean-core wrapper guidance now tracks wrapper interfaces around classic APIs and internal objects for ABAP Cloud-friendly extensibility. Outbound-delivery stock-warning custom logic now tracks BAdI LE_SHP_DELIVERY_FINAL_CHECK, stock checks before delivery save, and separate API message behavior. API-created delivery stock-shortage handling now tracks BAdI LE_SHP_SAVE_DOCUMENT_PREPARE, custom field YY1_Message, and SAP's note that API-created delivery warnings can be ignored unless handled as errors or persisted messages. EPPM financial-planning custom value types now track CAPEX/OPEX-style cost splits through integration customizing and BAdI RPM_FICO_INT. Origin Profit Centers now track project-margin reporting by responsible and contributing profit centers through a Universal Journal attribute. CBC 5-country rollout planning now tracks the SAP Central Business Configuration delta rule for country additions and main-line / parallel-line merge or rebase planning. Additional ERP feed product signals now tracked: sales-order developer extensibility via BAdI SD_SLS_END_OF_FINALIZE for issue-summary custom fields, now modified 29 June 2026 with details for custom field YY1_ISSUE_SUMMARY_SDH, enhancement spot ES_SD_SLS_DEV_EXTEND, method IF_SD_SLS_END_OF_FINALIZE~MODIFY_FIELDS, simulation-mode skip logic, and the generated control flag required for writes; EBRR company-code and ledger range scheduling; external revenue recognition key derivation for project-based sales in CFD 2602.3; Joule/two-tier planning signals for cross-tier constraints and cross-ATP checks; and SAP Business AI assistant/agent/skill concept signals for SAP Cloud ERP. SAP updated the Business AI article again on 1 July 2026 AEST; no maintenance-window or customer-action date change was detected. Full HFC02 attachment details are still pending until SAP publishes the 2608 patch collection note.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule plus SAP 2608 upgrade guidance, preliminary 2608 What's New guidance, RASD 2026 update, Early Release Series page, IAM app activation guidance, 2608 workflow approvals product update, BTP ABAP Environment 2608 pre-upgrade guidance, Explore Migration Objects 2602.4/2608 update, Asset Management autonomous agents update, Advanced Down Payment milestone billing update, Project Billing account-type check guidance, Treasury Business Partner workflow-control guidance, EBRR dynamic fiscal-period guidance, decentralized EWM/QM integration update, clean-core wrapper guidance, outbound-delivery custom-logic guidance, API delivery stock-shortage guidance, EPPM custom-value-type guidance, Origin Profit Center guidance, CBC 5-country rollout guidance, SAP Community ERP product update RSS feed, and SAP Business AI Assistant/Agent product update, modified again 1 July 2026 AEST without a detected schedule or customer-action date change.\nCodex SAP maintenance watch id: 2026-W29
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -65,18 +66,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w31@github-pages
-DTSTAMP:20260625T140000Z
+UID:sap-s4hana-watch-2026-w31@codex.local
+DTSTAMP:20260629T080959Z
 SUMMARY:SAP S/4HANA Cloud watch: 2608 Starter / other upgrade
 DTSTART:20260801T120000Z
 DTEND:20260802T120000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:2608 major upgrade for Starter and other systems.\n\nTimezone s
- hown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HA
- NA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintenance Sched
- ule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-
- 0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W31
+DESCRIPTION:2608 major upgrade for Starter and other systems. SAP's 2608 upgrade guidance indicates other tenants upgrade with HFC03 on 1-2 August 2026, and T-Tenant receives HFC03 for new feature preview. Preliminary 2608 What's New and Product Assistance content is available for upgrade preparation through the What's New Viewer and RASD. Customer action remains active: complete the IAM successor app activation review before this upgrade weekend if affected predecessor apps are used. RASD follow-up: use change-history deltas, Last Modified On filtering, and impact-card navigation to review scope-specific changes. Full HFC03 attachment details are still pending until SAP publishes the 2608 patch collection note.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule plus SAP 2608 upgrade guidance, preliminary 2608 What's New guidance, RASD 2026 update, and IAM app activation guidance.\nCodex SAP maintenance watch id: 2026-W31
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -84,18 +81,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w33-dev@github-pages
-DTSTAMP:20260625T140000Z
+UID:sap-s4hana-watch-2026-w33-dev@codex.local
+DTSTAMP:20260629T080959Z
 SUMMARY:SAP S/4HANA Cloud watch: 2608 Development upgrade
 DTSTART:20260815T040000Z
 DTEND:20260815T080000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:2608 major upgrade for Development systems.\n\nTimezone shown t
- o user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clo
- ud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\n
- Source URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-b
- ca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W33-DEV
+DESCRIPTION:2608 major upgrade for Development systems. SAP's 2608 upgrade guidance indicates D/P tenants upgrade with HFC03+ on 15-16 August 2026, with T-Tenant receiving HFC03+ in the same weekend. Preliminary 2608 What's New and Product Assistance content is available for upgrade preparation through the What's New Viewer and RASD. Customer action remains active: validate IAM successor app activation and transport role changes before Development and Production move to 2608. RASD impact-card follow-ups should also be validated before this weekend. Full HFC03+ attachment details are still pending until SAP publishes the 2608 patch collection note.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule plus SAP 2608 upgrade guidance, preliminary 2608 What's New guidance, RASD 2026 update, and IAM app activation guidance.\nCodex SAP maintenance watch id: 2026-W33-DEV
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -103,18 +96,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w33-prod@github-pages
-DTSTAMP:20260625T140000Z
+UID:sap-s4hana-watch-2026-w33-prod@codex.local
+DTSTAMP:20260629T080959Z
 SUMMARY:SAP S/4HANA Cloud watch: 2608 Production upgrade
 DTSTART:20260815T120000Z
 DTEND:20260815T160000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:2608 major upgrade for Production systems.\n\nTimezone shown to
-  user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clou
- d Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\nS
- ource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bc
- a6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W33-PROD
+DESCRIPTION:2608 major upgrade for Production systems. SAP's 2608 upgrade guidance indicates D/P tenants upgrade with HFC03+ on 15-16 August 2026, with T-Tenant receiving HFC03+ in the same weekend. Preliminary 2608 What's New and Product Assistance content is available for upgrade preparation through the What's New Viewer and RASD. Production readiness now includes the IAM successor app activation check where predecessor apps are used and RASD impact-card follow-up for scope-specific changes. Full HFC03+ attachment details are still pending until SAP publishes the 2608 patch collection note.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule plus SAP 2608 upgrade guidance, preliminary 2608 What's New guidance, RASD 2026 update, and IAM app activation guidance.\nCodex SAP maintenance watch id: 2026-W33-PROD
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -122,38 +111,29 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w34@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Backup upgrade weekend
+UID:sap-s4hana-watch-2026-w34@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: backup upgrade weekend
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260824
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Backup upgrade weekend if SAP needs it for systems not upgraded
-  earlier.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: F
- ree.\nSource: SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgr
- ade & Maintenance Schedule.\nSource URL: https://www.sap.com/docs/download
- /2021/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance w
- atch id: 2026-W34
+DESCRIPTION:Backup upgrade weekend if SAP needs it for systems not upgraded earlier.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W34
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:SAP S/4HANA Cloud watch window reminder
+DESCRIPTION:SAP S/4HANA Cloud backup upgrade weekend reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w35@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Post-upgrade hotfix
+UID:sap-s4hana-watch-2026-w35@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: post-upgrade hotfix
 DTSTART:20260829T150000Z
 DTEND:20260829T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Post-upgrade hotfix / patching watch window.\n\nTimezone shown 
- to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cl
- oud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\
- nSource URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-
- bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W35
+DESCRIPTION:Post-upgrade hotfix / patching watch window.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W35
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -161,19 +141,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w37@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Standard maintenance / hotfix
+UID:sap-s4hana-watch-2026-w37@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: standard maintenance / hotfix
 DTSTART:20260912T150000Z
 DTEND:20260912T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Standard maintenance / hotfix watch window after the 2608 patte
- rn change.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: 
- Free.\nSource: SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upg
- rade & Maintenance Schedule.\nSource URL: https://www.sap.com/docs/downloa
- d/2021/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance 
- watch id: 2026-W37
+DESCRIPTION:Standard maintenance / hotfix watch window after the 2608 pattern change.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W37
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -181,19 +156,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w39@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Online software change
+UID:sap-s4hana-watch-2026-w39@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: online software change
 DTSTART:20260926T150000Z
 DTEND:20260926T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Online software change / continuous delivery watch window.\n\nT
- imezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: 
- SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintena
- nce Schedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa
- 59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-
- W39
+DESCRIPTION:Online software change / continuous delivery watch window.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W39
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -201,18 +171,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w41@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Standard maintenance / hotfix
+UID:sap-s4hana-watch-2026-w41@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: standard maintenance / hotfix
 DTSTART:20261010T150000Z
 DTEND:20261010T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Standard maintenance / hotfix watch window.\n\nTimezone shown t
- o user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clo
- ud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\n
- Source URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-b
- ca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W41
+DESCRIPTION:Standard maintenance / hotfix watch window.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W41
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -220,19 +186,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w42@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Online software change
+UID:sap-s4hana-watch-2026-w42@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: online software change
 DTSTART:20261017T150000Z
 DTEND:20261017T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Online software change / continuous delivery watch window.\n\nT
- imezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: 
- SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintena
- nce Schedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa
- 59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-
- W42
+DESCRIPTION:Online software change / continuous delivery watch window.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W42
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -240,18 +201,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w45@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Standard maintenance / hotfix
+UID:sap-s4hana-watch-2026-w45@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: standard maintenance / hotfix
 DTSTART:20261107T150000Z
 DTEND:20261107T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Standard maintenance / hotfix watch window.\n\nTimezone shown t
- o user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clo
- ud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\n
- Source URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-b
- ca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W45
+DESCRIPTION:Standard maintenance / hotfix watch window.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W45
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -259,19 +216,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w46@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Online software change
+UID:sap-s4hana-watch-2026-w46@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: online software change
 DTSTART:20261114T150000Z
 DTEND:20261114T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Online software change / continuous delivery watch window.\n\nT
- imezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: 
- SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintena
- nce Schedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa
- 59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-
- W46
+DESCRIPTION:Online software change / continuous delivery watch window.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W46
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -279,18 +231,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w49@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Standard maintenance / hotfix
+UID:sap-s4hana-watch-2026-w49@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: standard maintenance / hotfix
 DTSTART:20261205T150000Z
 DTEND:20261205T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Standard maintenance / hotfix watch window.\n\nTimezone shown t
- o user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Clo
- ud Public Edition\, 3-System Landscape - Upgrade & Maintenance Schedule.\n
- Source URL: https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-b
- ca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-W49
+DESCRIPTION:Standard maintenance / hotfix watch window.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W49
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -298,19 +246,14 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:sap-s4hana-watch-2026-w50@github-pages
-DTSTAMP:20260625T140000Z
-SUMMARY:SAP S/4HANA Cloud watch: Online software change
+UID:sap-s4hana-watch-2026-w50@codex.local
+DTSTAMP:20260629T080959Z
+SUMMARY:SAP S/4HANA Cloud watch: online software change
 DTSTART:20261212T150000Z
 DTEND:20261212T190000Z
 TRANSP:TRANSPARENT
 LOCATION:SAP S/4HANA Cloud Public Edition online schedule
-DESCRIPTION:Online software change / continuous delivery watch window.\n\nT
- imezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: 
- SAP S/4HANA Cloud Public Edition\, 3-System Landscape - Upgrade & Maintena
- nce Schedule.\nSource URL: https://www.sap.com/docs/download/2021/09/58ffa
- 59e-f97d-0010-bca6-c68f7e60039b.pdf\nCodex SAP maintenance watch id: 2026-
- W50
+DESCRIPTION:Online software change / continuous delivery watch window.\n\nTimezone shown to user: Australia/Sydney.\nCalendar status: Free.\nSource: SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule.\nCodex SAP maintenance watch id: 2026-W50
 BEGIN:VALARM
 TRIGGER:-PT12H
 ACTION:DISPLAY
@@ -318,3 +261,5 @@ DESCRIPTION:SAP S/4HANA Cloud watch window reminder
 END:VALARM
 END:VEVENT
 END:VCALENDAR
+
+

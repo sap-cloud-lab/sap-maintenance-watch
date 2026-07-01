@@ -1,39 +1,48 @@
 # SAP S/4HANA Cloud Maintenance Watch
 
-Static public website and calendar feed for SAP S/4HANA Cloud Public Edition 3-system landscape maintenance watch windows.
+Public website and calendar feed for SAP S/4HANA Cloud Public Edition maintenance, upgrade, hotfix, RASD, and release-watch information.
 
 ## Public URLs
 
-- Website: `https://sap-cloud-lab.github.io/sap-maintenance-watch/`
-- Calendar subscription: `https://sap-cloud-lab.github.io/sap-maintenance-watch/SAP-S4HANA-Cloud-Maintenance-Watch.ics`
+- Website: https://sap-cloud-lab.github.io/sap-maintenance-watch/
+- Calendar feed: https://sap-cloud-lab.github.io/sap-maintenance-watch/SAP-S4HANA-Cloud-Maintenance-Watch.ics
 
-## Outlook Calendar Subscription
+## What Is Published
 
-Use a subscription rather than importing the `.ics` file. A subscription keeps Outlook connected to the hosted feed when the schedule changes.
+This repository publishes only public/static website files:
 
-1. Open Outlook on the web.
-2. Go to Calendar.
-3. Select **Add calendar**.
-4. Choose **Subscribe from web**.
-5. Paste the hosted calendar subscription URL.
-6. Name it `SAP S/4HANA Cloud Maintenance Watch`.
-7. Save.
+- `index.html`
+- `styles.css`
+- `script.js`
+- `data.js`
+- `SAP-S4HANA-Cloud-Maintenance-Watch.ics`
+- `source-state.json`
+- `assets/`
 
-The feed is published as free time with reminder alarms included in the calendar file.
+Do not commit SAP S-user IDs, passwords, cookies, session tokens, browser profiles, `.env` files, or downloaded private SAP-for-Me attachments that are not allowed to be redistributed.
 
-## Automated Refresh
+## Secure SAP Access
 
-The GitHub Actions workflow in `.github/workflows/pages.yml` runs every day at 7:00 AM Australia/Sydney. It checks SAP's public SAP S/4HANA Cloud Public Edition 3-system landscape schedule PDF, regenerates `data.js` and `SAP-S4HANA-Cloud-Maintenance-Watch.ics` only when the derived schedule data changes, commits the update, and redeploys GitHub Pages.
+If an authenticated SAP-for-Me updater is added later, credentials must be stored only in GitHub repository secrets:
 
-Source checked by the updater:
+1. Open the repository on GitHub.
+2. Go to **Settings**.
+3. Open **Secrets and variables**.
+4. Choose **Actions**.
+5. Add repository secrets such as:
+   - `SAP_SUSER_ID`
+   - `SAP_SUSER_PASSWORD`
 
-<https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf>
+Important: do not paste credentials into source files, workflow YAML, issues, commits, pull requests, or chat. If a password was ever pasted into chat, change it before using it in GitHub Secrets.
 
-## Local Refresh
+## MFA Reality Check
 
-```sh
-python -m pip install -r requirements.txt
-python scripts/update_schedule.py
-```
+Normal SAP S-user login can require MFA, trusted-browser approval, or SSO renewal. A GitHub Action cannot reliably complete those interactive prompts by itself. The reliable model is:
 
-The website itself is static and does not require a build step.
+- refresh public SAP sources automatically;
+- use subscribed SAP-for-Me or SAP Cloud ALM notifications where possible;
+- use authenticated SAP sources only when a non-interactive technical credential or an already-approved integration is available.
+
+## Publishing
+
+GitHub Pages publishes automatically on every push to `main` using `.github/workflows/pages.yml`.

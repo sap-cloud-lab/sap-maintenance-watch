@@ -313,6 +313,11 @@ h3 {
 .detail-panel {
   position: sticky;
   top: 94px;
+  align-self: start;
+  max-height: calc(100vh - 118px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
 }
 
 .panel-heading {
@@ -523,6 +528,230 @@ dd {
   color: var(--muted);
 }
 
+.hotfix-badge,
+.hotfix-code {
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: var(--sap-deep);
+  font-size: 0.75rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.hotfix-badge {
+  padding: 7px 10px;
+}
+
+.hotfix-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(10, 110, 209, 0.24);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+}
+
+.hotfix-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.hotfix-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  padding: 8px 11px;
+}
+
+.hotfix-heading div {
+  display: grid;
+  gap: 3px;
+}
+
+.hotfix-heading strong {
+  font-size: 0.95rem;
+}
+
+.hotfix-heading span:last-child,
+.hotfix-source {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.hotfix-source {
+  display: grid;
+  gap: 4px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.hotfix-list {
+  display: grid;
+  max-height: 360px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.hotfix-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.34fr) minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hotfix-row:last-child {
+  border-bottom: 0;
+}
+
+.hotfix-row span {
+  color: var(--sap-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  word-break: break-word;
+}
+
+.hotfix-row p {
+  color: var(--ink);
+  font-size: 0.84rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.watch-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--sap-cyan);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.watch-card.pending {
+  border-left-color: var(--change);
+}
+
+.watch-card.watching {
+  border-left-color: var(--sap-blue);
+}
+
+.watch-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.watch-heading span,
+.watch-heading strong {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.watch-heading span {
+  color: var(--sap-deep);
+}
+
+.watch-heading strong {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--muted);
+}
+
+.watch-card p {
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.signal-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--sap-blue);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.signal-card.customer-action-card {
+  border-left-color: #e76500;
+  background: #fffaf4;
+}
+
+.signal-card.product-update-card {
+  border-left-color: #188918;
+  background: #f6fbf6;
+}
+
+.signal-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--sap-deep);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.signal-heading strong {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #fff;
+  color: #9a3f00;
+  font-size: 0.72rem;
+}
+
+.signal-card h4 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.signal-card p,
+.signal-card li {
+  color: var(--ink);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.signal-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.signal-source {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.watch-list {
+  gap: 0;
+}
+
+.watch-list div {
+  padding: 10px 0;
+}
+
+.watch-list dd {
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .detail-footer {
   display: grid;
   gap: 8px;
@@ -643,6 +872,9 @@ dd {
 
   .detail-panel {
     position: static;
+    max-height: none;
+    overflow: visible;
+    overscroll-behavior: auto;
   }
 
   .panel-heading,
@@ -706,6 +938,11 @@ dd {
   .event-meta {
     justify-content: flex-start;
   }
+
+  .hotfix-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -727,7 +964,7 @@ dd {
   }
 }
 
-</style>
+    </style>
   </head>
   <body>
     <header class="topbar">
@@ -748,7 +985,7 @@ dd {
       </a>
       <a
         class="calendar-download"
-        href="data:text/calendar;charset=utf-8;base64,QkVHSU46VkNBTEVOREFSClZFUlNJT046Mi4wClBST0RJRDotLy9Db2RleC8vU0FQIFM0SEFOQSBDbG91ZCBNYWludGVuYW5jZSBXYXRjaC8vRU4KQ0FMU0NBTEU6R1JFR09SSUFOCk1FVEhPRDpQVUJMSVNIClgtV1ItQ0FMTkFNRTpTQVAgUy80SEFOQSBDbG91ZCBNYWludGVuYW5jZSBXYXRjaApYLVdSLVRJTUVaT05FOkF1c3RyYWxpYS9TeWRuZXkKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzI2QGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiBXMjYgaG90Zml4IC8gcGF0Y2hpbmcKRFRTVEFSVDoyMDI2MDYyN1QxNTAwMDBaCkRURU5EOjIwMjYwNjI3VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpIb3RmaXggLyBwYXRjaGluZyB3YXRjaCB3aW5kb3cgaW4gY3VycmVudCAyNjAyIGN5Y2xlLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVcyNgpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13MjdAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IFcyNyBIQU5BIHByZXAKRFRTVEFSVDoyMDI2MDcwNFQxNTAwMDBaCkRURU5EOjIwMjYwNzA0VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpIQU5BIGRhdGFiYXNlIC8gdGVjaG5pY2FsIHByZXBhcmF0aW9uIHdhdGNoIHdpbmRvdyBzaG93biBiZWZvcmUgMjYwOC5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XMjcKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzI5QGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiAyNjA4IFRlc3QgdXBncmFkZQpEVFNUQVJUOjIwMjYwNzE4VDEyMDAwMFoKRFRFTkQ6MjAyNjA3MThUMTYwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOjI2MDggbWFqb3IgdXBncmFkZSBmb3IgVGVzdCBzeXN0ZW1zLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVcyOQpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13MzFAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IDI2MDggU3RhcnRlciAvIG90aGVyIHVwZ3JhZGUKRFRTVEFSVDoyMDI2MDgwMVQxMjAwMDBaCkRURU5EOjIwMjYwODAyVDEyMDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjoyNjA4IG1ham9yIHVwZ3JhZGUgZm9yIFN0YXJ0ZXIgYW5kIG90aGVyIHN5c3RlbXMuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzMxCkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczMy1kZXZAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IDI2MDggRGV2ZWxvcG1lbnQgdXBncmFkZQpEVFNUQVJUOjIwMjYwODE1VDA0MDAwMFoKRFRFTkQ6MjAyNjA4MTVUMDgwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOjI2MDggbWFqb3IgdXBncmFkZSBmb3IgRGV2ZWxvcG1lbnQgc3lzdGVtcy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XMzMtREVWCkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczMy1wcm9kQGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiAyNjA4IFByb2R1Y3Rpb24gdXBncmFkZQpEVFNUQVJUOjIwMjYwODE1VDEyMDAwMFoKRFRFTkQ6MjAyNjA4MTVUMTYwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOjI2MDggbWFqb3IgdXBncmFkZSBmb3IgUHJvZHVjdGlvbiBzeXN0ZW1zLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVczMy1QUk9ECkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczNEBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogYmFja3VwIHVwZ3JhZGUgd2Vla2VuZApEVFNUQVJUO1ZBTFVFPURBVEU6MjAyNjA4MjIKRFRFTkQ7VkFMVUU9REFURToyMDI2MDgyNApUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOkJhY2t1cCB1cGdyYWRlIHdlZWtlbmQgaWYgU0FQIG5lZWRzIGl0IGZvciBzeXN0ZW1zIG5vdCB1cGdyYWRlZCBlYXJsaWVyLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVczNApCRUdJTjpWQUxBUk0KVFJJR0dFUjotUDFECkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIGJhY2t1cCB1cGdyYWRlIHdlZWtlbmQgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczNUBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogcG9zdC11cGdyYWRlIGhvdGZpeApEVFNUQVJUOjIwMjYwODI5VDE1MDAwMFoKRFRFTkQ6MjAyNjA4MjlUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOlBvc3QtdXBncmFkZSBob3RmaXggLyBwYXRjaGluZyB3YXRjaCB3aW5kb3cuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzM1CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczN0Bjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogc3RhbmRhcmQgbWFpbnRlbmFuY2UgLyBob3RmaXgKRFRTVEFSVDoyMDI2MDkxMlQxNTAwMDBaCkRURU5EOjIwMjYwOTEyVDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpTdGFuZGFyZCBtYWludGVuYW5jZSAvIGhvdGZpeCB3YXRjaCB3aW5kb3cgYWZ0ZXIgdGhlIDI2MDggcGF0dGVybiBjaGFuZ2UuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzM3CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczOUBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogb25saW5lIHNvZnR3YXJlIGNoYW5nZQpEVFNUQVJUOjIwMjYwOTI2VDE1MDAwMFoKRFRFTkQ6MjAyNjA5MjZUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOk9ubGluZSBzb2Z0d2FyZSBjaGFuZ2UgLyBjb250aW51b3VzIGRlbGl2ZXJ5IHdhdGNoIHdpbmRvdy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XMzkKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzQxQGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiBzdGFuZGFyZCBtYWludGVuYW5jZSAvIGhvdGZpeApEVFNUQVJUOjIwMjYxMDEwVDE1MDAwMFoKRFRFTkQ6MjAyNjEwMTBUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOlN0YW5kYXJkIG1haW50ZW5hbmNlIC8gaG90Zml4IHdhdGNoIHdpbmRvdy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XNDEKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzQyQGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiBvbmxpbmUgc29mdHdhcmUgY2hhbmdlCkRUU1RBUlQ6MjAyNjEwMTdUMTUwMDAwWgpEVEVORDoyMDI2MTAxN1QxOTAwMDBaClRSQU5TUDpUUkFOU1BBUkVOVApMT0NBVElPTjpTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiBvbmxpbmUgc2NoZWR1bGUKREVTQ1JJUFRJT046T25saW5lIHNvZnR3YXJlIGNoYW5nZSAvIGNvbnRpbnVvdXMgZGVsaXZlcnkgd2F0Y2ggd2luZG93LlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVc0MgpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13NDVAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IHN0YW5kYXJkIG1haW50ZW5hbmNlIC8gaG90Zml4CkRUU1RBUlQ6MjAyNjExMDdUMTUwMDAwWgpEVEVORDoyMDI2MTEwN1QxOTAwMDBaClRSQU5TUDpUUkFOU1BBUkVOVApMT0NBVElPTjpTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiBvbmxpbmUgc2NoZWR1bGUKREVTQ1JJUFRJT046U3RhbmRhcmQgbWFpbnRlbmFuY2UgLyBob3RmaXggd2F0Y2ggd2luZG93LlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVc0NQpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13NDZAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IG9ubGluZSBzb2Z0d2FyZSBjaGFuZ2UKRFRTVEFSVDoyMDI2MTExNFQxNTAwMDBaCkRURU5EOjIwMjYxMTE0VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpPbmxpbmUgc29mdHdhcmUgY2hhbmdlIC8gY29udGludW91cyBkZWxpdmVyeSB3YXRjaCB3aW5kb3cuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzQ2CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXc0OUBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogc3RhbmRhcmQgbWFpbnRlbmFuY2UgLyBob3RmaXgKRFRTVEFSVDoyMDI2MTIwNVQxNTAwMDBaCkRURU5EOjIwMjYxMjA1VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpTdGFuZGFyZCBtYWludGVuYW5jZSAvIGhvdGZpeCB3YXRjaCB3aW5kb3cuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzQ5CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXc1MEBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogb25saW5lIHNvZnR3YXJlIGNoYW5nZQpEVFNUQVJUOjIwMjYxMjEyVDE1MDAwMFoKRFRFTkQ6MjAyNjEyMTJUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOk9ubGluZSBzb2Z0d2FyZSBjaGFuZ2UgLyBjb250aW51b3VzIGRlbGl2ZXJ5IHdhdGNoIHdpbmRvdy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XNTAKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKRU5EOlZDQUxFTkRBUgo="
+        href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0AVERSION%3A2.0%0APRODID%3A-%2F%2FCodex%2F%2FSAP%20S4HANA%20Cloud%20Maintenance%20Watch%2F%2FEN%0ACALSCALE%3AGREGORIAN%0AMETHOD%3APUBLISH%0AX-WR-CALNAME%3ASAP%20S%2F4HANA%20Cloud%20Maintenance%20Watch%0AX-WR-TIMEZONE%3AAustralia%2FSydney%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w26%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20W26%20hotfix%20%2F%20patching%0ADTSTART%3A20260627T150000Z%0ADTEND%3A20260627T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%202602%20HFC13%20was%20released%20on%2025.06.2026.%20SAP%20Note%203646210%20includes%2091%20application%20corrections%20in%20attachment%20S4HANACloud2602HFC13_ListOfHotfixShortDescription.pdf.%5Cn%5CnAreas%20include%20Ariba%20integration%2C%20migration%20cockpit%2C%20document%20compliance%2C%20Central%20Business%20Configuration%2C%20actual%20costing%2C%20service%20orders%2C%20localisation%20and%20DRC%2C%20group%20reporting%2C%20treasury%2C%20EWM%2C%20delivery%20APIs%2C%20product%20master%2C%20purchasing%20analytics%2C%20purchase%20orders%2C%20maintenance%20plans%2C%20production%2C%20PSM%2C%20QM%2C%20billing%2C%20freight%20and%20logistics%20integration.%5Cn%5CnSAP%20announced%20final%20What's%20New%20and%20Product%20Assistance%20for%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%202602.4.%20SAP%20Help%20also%20lists%2054%20official%202602.4%20(HFC12)%20What's%20New%20entries%2C%20all%20dated%2026.06.2026%20in%20search%20results.%20Tracked%20topics%20include%20Developer%20Extensibility%20for%20scheduling%20goods%20issue%20for%20deliveries%2C%20Explore%20Migration%20Objects%20enhancements%2C%20Joule%20features%2C%20project%2Fwork-package%20details%2C%20electronic%20invoicing%2C%20withholding-tax%20analysis%2C%20BOM%20print%20preview%2C%20quality%20inspection%2C%20and%20logistics%2Fcompliance%20updates.%20SAP%20recommends%20RASD%20for%20a%20personalized%20view%20based%20on%20activated%20and%20used%20scope%3B%20the%20announcement%20says%202602.4%20information%20would%20be%20available%20in%20RASD%20within%20the%20next%20few%20days.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%20Note%203646210%2C%20SAP%20Community%20final%202602.4%20announcement%2C%20and%20SAP%20Help%202602.4%20What's%20New%2FProduct%20Assistance%20search%20results.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W26%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w27%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20W27%20HANA%20prep%0ADTSTART%3A20260704T150000Z%0ADTEND%3A20260704T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AHANA%20database%20%2F%20technical%20preparation%20watch%20window%20shown%20before%202608.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W27%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w28-release-planning%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20APJ%20release%20planning%0ADTSTART%3A20260708T030000Z%0ADTEND%3A20260708T040000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20Preferred%20Success%20%2F%20SAP%20Learning%20Hub%0ADESCRIPTION%3ASAP%20Preferred%20Success%20APJ%20release%20planning%20session%20for%20SAP%20Cloud%20ERP%202608.%20SAP%20lists%20the%20APJ%20English%20session%20for%20July%208%2C%2013%3A00-14%3A00%20AEST.%20SAP%20says%20the%20session%20covers%202608%20release%20dates%2C%20the%20upgrade%20process%2C%20the%20new%20system%20maintenance%20schedule%20starting%20from%20September%2C%20RASD%20impact%20analysis%2C%20and%20release%20call-to-action%20items.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20Preferred%20Success%3A%20Join%20Our%20SAP%20Cloud%20ERP%202608%20Release%20Planning%20Session.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W28-RELEASE-PLANNING%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%202608%20release%20planning%20session%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w29%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Test%20upgrade%0ADTSTART%3A20260718T120000Z%0ADTEND%3A20260718T160000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Test%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20T-Tenant%20upgrades%20to%202608%20with%20HFC02%20on%2018-19%20July%202026.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20SAP's%202608%20Early%20Release%20Series%20runs%2013-17%20July%202026%20and%20includes%20Extensibility%2C%20Finance%2C%20SAP%20Activate%2C%20Cloud%20ALM%2C%20and%20Test%20Automation%20Tool%20topics%3B%20the%20static%20source%20page%20does%20not%20expose%20a%20reliable%20session%20timezone%2C%20so%20exact%20session%20entries%20were%20not%20created.%20Customer%20action%20now%20tracked%3A%20SAP%20IAM%20guidance%20says%20successor%20IAM%20apps%20are%20inactive%20by%20default%20from%202602%3B%20before%202608%2C%20check%20predecessor%20app%20usage%2C%20activate%20successor%20IAM%20apps%20in%20business%20roles%2C%20validate%20with%20key%20users%2C%20and%20transport%20changes%20to%20Test%20and%20Production.%20Priority%20IAM%20successor%20IDs%20include%20F3516A_TRAN%2C%20F3425A_TRAN%2C%20F1443B_TRAN%2C%20F3883A_TRAN%2C%20F3915A_TRAN%2C%20F7280A_TRAN%2C%20F0956B_TRAN%2C%20and%20F9104_TRAN.%20Product%20update%20tracked%3A%202608%20adds%20multi-processor%20workflow%20approval%20controls%20for%20two-%20and%20three-person%20approvals%20plus%20validation%20callbacks.%20RASD%202026%20update%20tracked%3A%20use%20What's%20New%20change%20history%2C%20Last%20Modified%20On%20filtering%2C%20and%20RASD%20impact-card%20navigation%20for%20changed%20extensibility%20objects%2C%20where-used%20lists%2C%20impacted%20catalogs%2C%20IAM%20apps%2C%20and%20renamed%20app%20tiles.%20Newly%20tracked%20product%20updates%3A%20SAP%20BTP%20ABAP%20Environment%202608%20pre-upgrade%20testing%20can%20be%20nominated%20for%2017%20July%2008%3A00-16%3A00%20CET%2C%20which%20is%2017%20July%2017%3A00%20to%2018%20July%2001%3A00%20AEST%20if%20SAP's%20CET%20label%20is%20interpreted%20literally%3B%20Explore%20Migration%20Objects%20adds%202602.4%2F2608%20availability%2C%20scope-item%20status%2C%20and%20dependency-graph%20features%20for%20migration%20planning%3B%20SAP%20Asset%20Management%20describes%20AI-assisted%20maintenance%20notifications%20and%20planning%3B%20SAP%20Sales%20Billing%20adds%20Advanced%20Down%20Payment%20Processing%20with%20milestone%20billing%3B%20Project%20Billing%20excludes%20project-related%20postings%20to%20revenue%20and%20sales-deduction%20G%2FL%20accounts%20from%20billing%20processes%20under%20the%202608%20account-type%20check%3B%20SAP%20Treasury%20Business%20Partner%20workflow%20controls%20add%20four-eyes%20governance%20and%20approval%20traceability%20for%20sensitive%20counterparty%20and%20payment-relevant%20data%20changes%3B%20EBRR%20dynamic%20fiscal-period%20determination%20adds%20Current%20Fiscal%20Period%20and%20Previous%20Fiscal%20Period%20options%20for%20recurring%20revenue-recognition%20close%20jobs%20across%20sales%20orders%2C%20projects%2C%20service%20documents%2C%20provider%20contracts%2C%20and%20revenue%20contracts.%20Decentralized%20EWM%2FQM%20integration%20for%20SAP%20Cloud%20ERP%20two-tier%20scenarios%20now%20tracks%20warehouse-side%20quality%20inspection%20with%20QIE%20and%20stock%20synchronization%20back%20to%20SAP%20Cloud%20ERP.%20Clean-core%20wrapper%20guidance%20now%20tracks%20wrapper%20interfaces%20around%20classic%20APIs%20and%20internal%20objects%20for%20ABAP%20Cloud-friendly%20extensibility.%20Outbound-delivery%20stock-warning%20custom%20logic%20now%20tracks%20BAdI%20LE_SHP_DELIVERY_FINAL_CHECK%2C%20stock%20checks%20before%20delivery%20save%2C%20and%20separate%20API%20message%20behavior.%20API-created%20delivery%20stock-shortage%20handling%20now%20tracks%20BAdI%20LE_SHP_SAVE_DOCUMENT_PREPARE%2C%20custom%20field%20YY1_Message%2C%20and%20SAP's%20note%20that%20API-created%20delivery%20warnings%20can%20be%20ignored%20unless%20handled%20as%20errors%20or%20persisted%20messages.%20EPPM%20financial-planning%20custom%20value%20types%20now%20track%20CAPEX%2FOPEX-style%20cost%20splits%20through%20integration%20customizing%20and%20BAdI%20RPM_FICO_INT.%20Origin%20Profit%20Centers%20now%20track%20project-margin%20reporting%20by%20responsible%20and%20contributing%20profit%20centers%20through%20a%20Universal%20Journal%20attribute.%20CBC%205-country%20rollout%20planning%20now%20tracks%20the%20SAP%20Central%20Business%20Configuration%20delta%20rule%20for%20country%20additions%20and%20main-line%20%2F%20parallel-line%20merge%20or%20rebase%20planning.%20Additional%20ERP%20feed%20product%20signals%20now%20tracked%3A%20sales-order%20developer%20extensibility%20via%20BAdI%20SD_SLS_END_OF_FINALIZE%20for%20issue-summary%20custom%20fields%2C%20now%20modified%2029%20June%202026%20with%20details%20for%20custom%20field%20YY1_ISSUE_SUMMARY_SDH%2C%20enhancement%20spot%20ES_SD_SLS_DEV_EXTEND%2C%20method%20IF_SD_SLS_END_OF_FINALIZE~MODIFY_FIELDS%2C%20simulation-mode%20skip%20logic%2C%20and%20the%20generated%20control%20flag%20required%20for%20writes%3B%20EBRR%20company-code%20and%20ledger%20range%20scheduling%3B%20external%20revenue%20recognition%20key%20derivation%20for%20project-based%20sales%20in%20CFD%202602.3%3B%20and%20Joule%2Ftwo-tier%20planning%20signals%20for%20cross-tier%20constraints%20and%20cross-ATP%20checks.%20Full%20HFC02%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20Early%20Release%20Series%20page%2C%20IAM%20app%20activation%20guidance%2C%202608%20workflow%20approvals%20product%20update%2C%20BTP%20ABAP%20Environment%202608%20pre-upgrade%20guidance%2C%20Explore%20Migration%20Objects%202602.4%2F2608%20update%2C%20Asset%20Management%20autonomous%20agents%20update%2C%20Advanced%20Down%20Payment%20milestone%20billing%20update%2C%20Project%20Billing%20account-type%20check%20guidance%2C%20Treasury%20Business%20Partner%20workflow-control%20guidance%2C%20EBRR%20dynamic%20fiscal-period%20guidance%2C%20decentralized%20EWM%2FQM%20integration%20update%2C%20clean-core%20wrapper%20guidance%2C%20outbound-delivery%20custom-logic%20guidance%2C%20API%20delivery%20stock-shortage%20guidance%2C%20EPPM%20custom-value-type%20guidance%2C%20Origin%20Profit%20Center%20guidance%2C%20CBC%205-country%20rollout%20guidance%2C%20and%20SAP%20Community%20ERP%20product%20update%20RSS%20feed.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W29%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w31%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Starter%20%2F%20other%20upgrade%0ADTSTART%3A20260801T120000Z%0ADTEND%3A20260802T120000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Starter%20and%20other%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20other%20tenants%20upgrade%20with%20HFC03%20on%201-2%20August%202026%2C%20and%20T-Tenant%20receives%20HFC03%20for%20new%20feature%20preview.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20Customer%20action%20remains%20active%3A%20complete%20the%20IAM%20successor%20app%20activation%20review%20before%20this%20upgrade%20weekend%20if%20affected%20predecessor%20apps%20are%20used.%20RASD%20follow-up%3A%20use%20change-history%20deltas%2C%20Last%20Modified%20On%20filtering%2C%20and%20impact-card%20navigation%20to%20review%20scope-specific%20changes.%20Full%20HFC03%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20and%20IAM%20app%20activation%20guidance.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W31%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w33-dev%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Development%20upgrade%0ADTSTART%3A20260815T040000Z%0ADTEND%3A20260815T080000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Development%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20D%2FP%20tenants%20upgrade%20with%20HFC03%2B%20on%2015-16%20August%202026%2C%20with%20T-Tenant%20receiving%20HFC03%2B%20in%20the%20same%20weekend.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20Customer%20action%20remains%20active%3A%20validate%20IAM%20successor%20app%20activation%20and%20transport%20role%20changes%20before%20Development%20and%20Production%20move%20to%202608.%20RASD%20impact-card%20follow-ups%20should%20also%20be%20validated%20before%20this%20weekend.%20Full%20HFC03%2B%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20and%20IAM%20app%20activation%20guidance.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W33-DEV%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w33-prod%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Production%20upgrade%0ADTSTART%3A20260815T120000Z%0ADTEND%3A20260815T160000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Production%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20D%2FP%20tenants%20upgrade%20with%20HFC03%2B%20on%2015-16%20August%202026%2C%20with%20T-Tenant%20receiving%20HFC03%2B%20in%20the%20same%20weekend.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20Production%20readiness%20now%20includes%20the%20IAM%20successor%20app%20activation%20check%20where%20predecessor%20apps%20are%20used%20and%20RASD%20impact-card%20follow-up%20for%20scope-specific%20changes.%20Full%20HFC03%2B%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20and%20IAM%20app%20activation%20guidance.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W33-PROD%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w34%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20backup%20upgrade%20weekend%0ADTSTART%3BVALUE%3DDATE%3A20260822%0ADTEND%3BVALUE%3DDATE%3A20260824%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3ABackup%20upgrade%20weekend%20if%20SAP%20needs%20it%20for%20systems%20not%20upgraded%20earlier.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W34%0ABEGIN%3AVALARM%0ATRIGGER%3A-P1D%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20backup%20upgrade%20weekend%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w35%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20post-upgrade%20hotfix%0ADTSTART%3A20260829T150000Z%0ADTEND%3A20260829T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3APost-upgrade%20hotfix%20%2F%20patching%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W35%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w37%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20260912T150000Z%0ADTEND%3A20260912T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window%20after%20the%202608%20pattern%20change.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W37%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w39%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20260926T150000Z%0ADTEND%3A20260926T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W39%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w41%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20261010T150000Z%0ADTEND%3A20261010T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W41%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w42%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20261017T150000Z%0ADTEND%3A20261017T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W42%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w45%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20261107T150000Z%0ADTEND%3A20261107T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W45%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w46%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20261114T150000Z%0ADTEND%3A20261114T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W46%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w49%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20261205T150000Z%0ADTEND%3A20261205T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W49%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w50%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20261212T150000Z%0ADTEND%3A20261212T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W50%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0AEND%3AVCALENDAR%0A"
         download="SAP-S4HANA-Cloud-Maintenance-Watch.ics"
         aria-label="Download SAP maintenance watch ICS calendar file"
       >
@@ -759,7 +996,7 @@ dd {
     <main>
       <section class="overview" aria-labelledby="page-title">
         <div class="overview-copy">
-          <p class="system-label">Australia/Sydney &middot; APJ watch windows</p>
+          <p class="system-label">Australia/Sydney ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· APJ watch windows</p>
           <h1 id="page-title">SAP S/4HANA Cloud Maintenance Watch</h1>
           <p>
             A single view of upcoming 2608 upgrades, hotfix windows, standard maintenance, and online software changes.
@@ -776,7 +1013,7 @@ dd {
           </div>
           <div>
             <span class="metric-label">Source checked</span>
-            <strong id="sourceChecked">2026-06-25</strong>
+            <strong id="sourceChecked">2026-06-30</strong>
           </div>
         </div>
       </section>
@@ -857,13 +1094,73 @@ dd {
           <div class="source-actions">
             <a
               class="download-link"
-              href="data:text/calendar;charset=utf-8;base64,QkVHSU46VkNBTEVOREFSClZFUlNJT046Mi4wClBST0RJRDotLy9Db2RleC8vU0FQIFM0SEFOQSBDbG91ZCBNYWludGVuYW5jZSBXYXRjaC8vRU4KQ0FMU0NBTEU6R1JFR09SSUFOCk1FVEhPRDpQVUJMSVNIClgtV1ItQ0FMTkFNRTpTQVAgUy80SEFOQSBDbG91ZCBNYWludGVuYW5jZSBXYXRjaApYLVdSLVRJTUVaT05FOkF1c3RyYWxpYS9TeWRuZXkKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzI2QGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiBXMjYgaG90Zml4IC8gcGF0Y2hpbmcKRFRTVEFSVDoyMDI2MDYyN1QxNTAwMDBaCkRURU5EOjIwMjYwNjI3VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpIb3RmaXggLyBwYXRjaGluZyB3YXRjaCB3aW5kb3cgaW4gY3VycmVudCAyNjAyIGN5Y2xlLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVcyNgpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13MjdAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IFcyNyBIQU5BIHByZXAKRFRTVEFSVDoyMDI2MDcwNFQxNTAwMDBaCkRURU5EOjIwMjYwNzA0VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpIQU5BIGRhdGFiYXNlIC8gdGVjaG5pY2FsIHByZXBhcmF0aW9uIHdhdGNoIHdpbmRvdyBzaG93biBiZWZvcmUgMjYwOC5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XMjcKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzI5QGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiAyNjA4IFRlc3QgdXBncmFkZQpEVFNUQVJUOjIwMjYwNzE4VDEyMDAwMFoKRFRFTkQ6MjAyNjA3MThUMTYwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOjI2MDggbWFqb3IgdXBncmFkZSBmb3IgVGVzdCBzeXN0ZW1zLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVcyOQpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13MzFAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IDI2MDggU3RhcnRlciAvIG90aGVyIHVwZ3JhZGUKRFRTVEFSVDoyMDI2MDgwMVQxMjAwMDBaCkRURU5EOjIwMjYwODAyVDEyMDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjoyNjA4IG1ham9yIHVwZ3JhZGUgZm9yIFN0YXJ0ZXIgYW5kIG90aGVyIHN5c3RlbXMuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzMxCkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczMy1kZXZAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IDI2MDggRGV2ZWxvcG1lbnQgdXBncmFkZQpEVFNUQVJUOjIwMjYwODE1VDA0MDAwMFoKRFRFTkQ6MjAyNjA4MTVUMDgwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOjI2MDggbWFqb3IgdXBncmFkZSBmb3IgRGV2ZWxvcG1lbnQgc3lzdGVtcy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XMzMtREVWCkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczMy1wcm9kQGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiAyNjA4IFByb2R1Y3Rpb24gdXBncmFkZQpEVFNUQVJUOjIwMjYwODE1VDEyMDAwMFoKRFRFTkQ6MjAyNjA4MTVUMTYwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOjI2MDggbWFqb3IgdXBncmFkZSBmb3IgUHJvZHVjdGlvbiBzeXN0ZW1zLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVczMy1QUk9ECkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczNEBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogYmFja3VwIHVwZ3JhZGUgd2Vla2VuZApEVFNUQVJUO1ZBTFVFPURBVEU6MjAyNjA4MjIKRFRFTkQ7VkFMVUU9REFURToyMDI2MDgyNApUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOkJhY2t1cCB1cGdyYWRlIHdlZWtlbmQgaWYgU0FQIG5lZWRzIGl0IGZvciBzeXN0ZW1zIG5vdCB1cGdyYWRlZCBlYXJsaWVyLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVczNApCRUdJTjpWQUxBUk0KVFJJR0dFUjotUDFECkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIGJhY2t1cCB1cGdyYWRlIHdlZWtlbmQgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczNUBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogcG9zdC11cGdyYWRlIGhvdGZpeApEVFNUQVJUOjIwMjYwODI5VDE1MDAwMFoKRFRFTkQ6MjAyNjA4MjlUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOlBvc3QtdXBncmFkZSBob3RmaXggLyBwYXRjaGluZyB3YXRjaCB3aW5kb3cuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzM1CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczN0Bjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogc3RhbmRhcmQgbWFpbnRlbmFuY2UgLyBob3RmaXgKRFRTVEFSVDoyMDI2MDkxMlQxNTAwMDBaCkRURU5EOjIwMjYwOTEyVDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpTdGFuZGFyZCBtYWludGVuYW5jZSAvIGhvdGZpeCB3YXRjaCB3aW5kb3cgYWZ0ZXIgdGhlIDI2MDggcGF0dGVybiBjaGFuZ2UuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzM3CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczOUBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogb25saW5lIHNvZnR3YXJlIGNoYW5nZQpEVFNUQVJUOjIwMjYwOTI2VDE1MDAwMFoKRFRFTkQ6MjAyNjA5MjZUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOk9ubGluZSBzb2Z0d2FyZSBjaGFuZ2UgLyBjb250aW51b3VzIGRlbGl2ZXJ5IHdhdGNoIHdpbmRvdy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XMzkKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzQxQGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiBzdGFuZGFyZCBtYWludGVuYW5jZSAvIGhvdGZpeApEVFNUQVJUOjIwMjYxMDEwVDE1MDAwMFoKRFRFTkQ6MjAyNjEwMTBUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOlN0YW5kYXJkIG1haW50ZW5hbmNlIC8gaG90Zml4IHdhdGNoIHdpbmRvdy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XNDEKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzQyQGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiBvbmxpbmUgc29mdHdhcmUgY2hhbmdlCkRUU1RBUlQ6MjAyNjEwMTdUMTUwMDAwWgpEVEVORDoyMDI2MTAxN1QxOTAwMDBaClRSQU5TUDpUUkFOU1BBUkVOVApMT0NBVElPTjpTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiBvbmxpbmUgc2NoZWR1bGUKREVTQ1JJUFRJT046T25saW5lIHNvZnR3YXJlIGNoYW5nZSAvIGNvbnRpbnVvdXMgZGVsaXZlcnkgd2F0Y2ggd2luZG93LlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVc0MgpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13NDVAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IHN0YW5kYXJkIG1haW50ZW5hbmNlIC8gaG90Zml4CkRUU1RBUlQ6MjAyNjExMDdUMTUwMDAwWgpEVEVORDoyMDI2MTEwN1QxOTAwMDBaClRSQU5TUDpUUkFOU1BBUkVOVApMT0NBVElPTjpTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiBvbmxpbmUgc2NoZWR1bGUKREVTQ1JJUFRJT046U3RhbmRhcmQgbWFpbnRlbmFuY2UgLyBob3RmaXggd2F0Y2ggd2luZG93LlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVc0NQpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13NDZAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IG9ubGluZSBzb2Z0d2FyZSBjaGFuZ2UKRFRTVEFSVDoyMDI2MTExNFQxNTAwMDBaCkRURU5EOjIwMjYxMTE0VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpPbmxpbmUgc29mdHdhcmUgY2hhbmdlIC8gY29udGludW91cyBkZWxpdmVyeSB3YXRjaCB3aW5kb3cuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzQ2CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXc0OUBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogc3RhbmRhcmQgbWFpbnRlbmFuY2UgLyBob3RmaXgKRFRTVEFSVDoyMDI2MTIwNVQxNTAwMDBaCkRURU5EOjIwMjYxMjA1VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpTdGFuZGFyZCBtYWludGVuYW5jZSAvIGhvdGZpeCB3YXRjaCB3aW5kb3cuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzQ5CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXc1MEBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogb25saW5lIHNvZnR3YXJlIGNoYW5nZQpEVFNUQVJUOjIwMjYxMjEyVDE1MDAwMFoKRFRFTkQ6MjAyNjEyMTJUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOk9ubGluZSBzb2Z0d2FyZSBjaGFuZ2UgLyBjb250aW51b3VzIGRlbGl2ZXJ5IHdhdGNoIHdpbmRvdy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XNTAKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKRU5EOlZDQUxFTkRBUgo="
+              href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0AVERSION%3A2.0%0APRODID%3A-%2F%2FCodex%2F%2FSAP%20S4HANA%20Cloud%20Maintenance%20Watch%2F%2FEN%0ACALSCALE%3AGREGORIAN%0AMETHOD%3APUBLISH%0AX-WR-CALNAME%3ASAP%20S%2F4HANA%20Cloud%20Maintenance%20Watch%0AX-WR-TIMEZONE%3AAustralia%2FSydney%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w26%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20W26%20hotfix%20%2F%20patching%0ADTSTART%3A20260627T150000Z%0ADTEND%3A20260627T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%202602%20HFC13%20was%20released%20on%2025.06.2026.%20SAP%20Note%203646210%20includes%2091%20application%20corrections%20in%20attachment%20S4HANACloud2602HFC13_ListOfHotfixShortDescription.pdf.%5Cn%5CnAreas%20include%20Ariba%20integration%2C%20migration%20cockpit%2C%20document%20compliance%2C%20Central%20Business%20Configuration%2C%20actual%20costing%2C%20service%20orders%2C%20localisation%20and%20DRC%2C%20group%20reporting%2C%20treasury%2C%20EWM%2C%20delivery%20APIs%2C%20product%20master%2C%20purchasing%20analytics%2C%20purchase%20orders%2C%20maintenance%20plans%2C%20production%2C%20PSM%2C%20QM%2C%20billing%2C%20freight%20and%20logistics%20integration.%5Cn%5CnSAP%20announced%20final%20What's%20New%20and%20Product%20Assistance%20for%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%202602.4.%20SAP%20Help%20also%20lists%2054%20official%202602.4%20(HFC12)%20What's%20New%20entries%2C%20all%20dated%2026.06.2026%20in%20search%20results.%20Tracked%20topics%20include%20Developer%20Extensibility%20for%20scheduling%20goods%20issue%20for%20deliveries%2C%20Explore%20Migration%20Objects%20enhancements%2C%20Joule%20features%2C%20project%2Fwork-package%20details%2C%20electronic%20invoicing%2C%20withholding-tax%20analysis%2C%20BOM%20print%20preview%2C%20quality%20inspection%2C%20and%20logistics%2Fcompliance%20updates.%20SAP%20recommends%20RASD%20for%20a%20personalized%20view%20based%20on%20activated%20and%20used%20scope%3B%20the%20announcement%20says%202602.4%20information%20would%20be%20available%20in%20RASD%20within%20the%20next%20few%20days.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%20Note%203646210%2C%20SAP%20Community%20final%202602.4%20announcement%2C%20and%20SAP%20Help%202602.4%20What's%20New%2FProduct%20Assistance%20search%20results.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W26%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w27%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20W27%20HANA%20prep%0ADTSTART%3A20260704T150000Z%0ADTEND%3A20260704T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AHANA%20database%20%2F%20technical%20preparation%20watch%20window%20shown%20before%202608.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W27%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w28-release-planning%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20APJ%20release%20planning%0ADTSTART%3A20260708T030000Z%0ADTEND%3A20260708T040000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20Preferred%20Success%20%2F%20SAP%20Learning%20Hub%0ADESCRIPTION%3ASAP%20Preferred%20Success%20APJ%20release%20planning%20session%20for%20SAP%20Cloud%20ERP%202608.%20SAP%20lists%20the%20APJ%20English%20session%20for%20July%208%2C%2013%3A00-14%3A00%20AEST.%20SAP%20says%20the%20session%20covers%202608%20release%20dates%2C%20the%20upgrade%20process%2C%20the%20new%20system%20maintenance%20schedule%20starting%20from%20September%2C%20RASD%20impact%20analysis%2C%20and%20release%20call-to-action%20items.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20Preferred%20Success%3A%20Join%20Our%20SAP%20Cloud%20ERP%202608%20Release%20Planning%20Session.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W28-RELEASE-PLANNING%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%202608%20release%20planning%20session%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w29%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Test%20upgrade%0ADTSTART%3A20260718T120000Z%0ADTEND%3A20260718T160000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Test%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20T-Tenant%20upgrades%20to%202608%20with%20HFC02%20on%2018-19%20July%202026.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20SAP's%202608%20Early%20Release%20Series%20runs%2013-17%20July%202026%20and%20includes%20Extensibility%2C%20Finance%2C%20SAP%20Activate%2C%20Cloud%20ALM%2C%20and%20Test%20Automation%20Tool%20topics%3B%20the%20static%20source%20page%20does%20not%20expose%20a%20reliable%20session%20timezone%2C%20so%20exact%20session%20entries%20were%20not%20created.%20Customer%20action%20now%20tracked%3A%20SAP%20IAM%20guidance%20says%20successor%20IAM%20apps%20are%20inactive%20by%20default%20from%202602%3B%20before%202608%2C%20check%20predecessor%20app%20usage%2C%20activate%20successor%20IAM%20apps%20in%20business%20roles%2C%20validate%20with%20key%20users%2C%20and%20transport%20changes%20to%20Test%20and%20Production.%20Priority%20IAM%20successor%20IDs%20include%20F3516A_TRAN%2C%20F3425A_TRAN%2C%20F1443B_TRAN%2C%20F3883A_TRAN%2C%20F3915A_TRAN%2C%20F7280A_TRAN%2C%20F0956B_TRAN%2C%20and%20F9104_TRAN.%20Product%20update%20tracked%3A%202608%20adds%20multi-processor%20workflow%20approval%20controls%20for%20two-%20and%20three-person%20approvals%20plus%20validation%20callbacks.%20RASD%202026%20update%20tracked%3A%20use%20What's%20New%20change%20history%2C%20Last%20Modified%20On%20filtering%2C%20and%20RASD%20impact-card%20navigation%20for%20changed%20extensibility%20objects%2C%20where-used%20lists%2C%20impacted%20catalogs%2C%20IAM%20apps%2C%20and%20renamed%20app%20tiles.%20Newly%20tracked%20product%20updates%3A%20SAP%20BTP%20ABAP%20Environment%202608%20pre-upgrade%20testing%20can%20be%20nominated%20for%2017%20July%2008%3A00-16%3A00%20CET%2C%20which%20is%2017%20July%2017%3A00%20to%2018%20July%2001%3A00%20AEST%20if%20SAP's%20CET%20label%20is%20interpreted%20literally%3B%20Explore%20Migration%20Objects%20adds%202602.4%2F2608%20availability%2C%20scope-item%20status%2C%20and%20dependency-graph%20features%20for%20migration%20planning%3B%20SAP%20Asset%20Management%20describes%20AI-assisted%20maintenance%20notifications%20and%20planning%3B%20SAP%20Sales%20Billing%20adds%20Advanced%20Down%20Payment%20Processing%20with%20milestone%20billing%3B%20Project%20Billing%20excludes%20project-related%20postings%20to%20revenue%20and%20sales-deduction%20G%2FL%20accounts%20from%20billing%20processes%20under%20the%202608%20account-type%20check%3B%20SAP%20Treasury%20Business%20Partner%20workflow%20controls%20add%20four-eyes%20governance%20and%20approval%20traceability%20for%20sensitive%20counterparty%20and%20payment-relevant%20data%20changes%3B%20EBRR%20dynamic%20fiscal-period%20determination%20adds%20Current%20Fiscal%20Period%20and%20Previous%20Fiscal%20Period%20options%20for%20recurring%20revenue-recognition%20close%20jobs%20across%20sales%20orders%2C%20projects%2C%20service%20documents%2C%20provider%20contracts%2C%20and%20revenue%20contracts.%20Decentralized%20EWM%2FQM%20integration%20for%20SAP%20Cloud%20ERP%20two-tier%20scenarios%20now%20tracks%20warehouse-side%20quality%20inspection%20with%20QIE%20and%20stock%20synchronization%20back%20to%20SAP%20Cloud%20ERP.%20Clean-core%20wrapper%20guidance%20now%20tracks%20wrapper%20interfaces%20around%20classic%20APIs%20and%20internal%20objects%20for%20ABAP%20Cloud-friendly%20extensibility.%20Outbound-delivery%20stock-warning%20custom%20logic%20now%20tracks%20BAdI%20LE_SHP_DELIVERY_FINAL_CHECK%2C%20stock%20checks%20before%20delivery%20save%2C%20and%20separate%20API%20message%20behavior.%20API-created%20delivery%20stock-shortage%20handling%20now%20tracks%20BAdI%20LE_SHP_SAVE_DOCUMENT_PREPARE%2C%20custom%20field%20YY1_Message%2C%20and%20SAP's%20note%20that%20API-created%20delivery%20warnings%20can%20be%20ignored%20unless%20handled%20as%20errors%20or%20persisted%20messages.%20EPPM%20financial-planning%20custom%20value%20types%20now%20track%20CAPEX%2FOPEX-style%20cost%20splits%20through%20integration%20customizing%20and%20BAdI%20RPM_FICO_INT.%20Origin%20Profit%20Centers%20now%20track%20project-margin%20reporting%20by%20responsible%20and%20contributing%20profit%20centers%20through%20a%20Universal%20Journal%20attribute.%20CBC%205-country%20rollout%20planning%20now%20tracks%20the%20SAP%20Central%20Business%20Configuration%20delta%20rule%20for%20country%20additions%20and%20main-line%20%2F%20parallel-line%20merge%20or%20rebase%20planning.%20Additional%20ERP%20feed%20product%20signals%20now%20tracked%3A%20sales-order%20developer%20extensibility%20via%20BAdI%20SD_SLS_END_OF_FINALIZE%20for%20issue-summary%20custom%20fields%2C%20now%20modified%2029%20June%202026%20with%20details%20for%20custom%20field%20YY1_ISSUE_SUMMARY_SDH%2C%20enhancement%20spot%20ES_SD_SLS_DEV_EXTEND%2C%20method%20IF_SD_SLS_END_OF_FINALIZE~MODIFY_FIELDS%2C%20simulation-mode%20skip%20logic%2C%20and%20the%20generated%20control%20flag%20required%20for%20writes%3B%20EBRR%20company-code%20and%20ledger%20range%20scheduling%3B%20external%20revenue%20recognition%20key%20derivation%20for%20project-based%20sales%20in%20CFD%202602.3%3B%20and%20Joule%2Ftwo-tier%20planning%20signals%20for%20cross-tier%20constraints%20and%20cross-ATP%20checks.%20Full%20HFC02%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20Early%20Release%20Series%20page%2C%20IAM%20app%20activation%20guidance%2C%202608%20workflow%20approvals%20product%20update%2C%20BTP%20ABAP%20Environment%202608%20pre-upgrade%20guidance%2C%20Explore%20Migration%20Objects%202602.4%2F2608%20update%2C%20Asset%20Management%20autonomous%20agents%20update%2C%20Advanced%20Down%20Payment%20milestone%20billing%20update%2C%20Project%20Billing%20account-type%20check%20guidance%2C%20Treasury%20Business%20Partner%20workflow-control%20guidance%2C%20EBRR%20dynamic%20fiscal-period%20guidance%2C%20decentralized%20EWM%2FQM%20integration%20update%2C%20clean-core%20wrapper%20guidance%2C%20outbound-delivery%20custom-logic%20guidance%2C%20API%20delivery%20stock-shortage%20guidance%2C%20EPPM%20custom-value-type%20guidance%2C%20Origin%20Profit%20Center%20guidance%2C%20CBC%205-country%20rollout%20guidance%2C%20and%20SAP%20Community%20ERP%20product%20update%20RSS%20feed.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W29%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w31%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Starter%20%2F%20other%20upgrade%0ADTSTART%3A20260801T120000Z%0ADTEND%3A20260802T120000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Starter%20and%20other%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20other%20tenants%20upgrade%20with%20HFC03%20on%201-2%20August%202026%2C%20and%20T-Tenant%20receives%20HFC03%20for%20new%20feature%20preview.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20Customer%20action%20remains%20active%3A%20complete%20the%20IAM%20successor%20app%20activation%20review%20before%20this%20upgrade%20weekend%20if%20affected%20predecessor%20apps%20are%20used.%20RASD%20follow-up%3A%20use%20change-history%20deltas%2C%20Last%20Modified%20On%20filtering%2C%20and%20impact-card%20navigation%20to%20review%20scope-specific%20changes.%20Full%20HFC03%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20and%20IAM%20app%20activation%20guidance.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W31%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w33-dev%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Development%20upgrade%0ADTSTART%3A20260815T040000Z%0ADTEND%3A20260815T080000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Development%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20D%2FP%20tenants%20upgrade%20with%20HFC03%2B%20on%2015-16%20August%202026%2C%20with%20T-Tenant%20receiving%20HFC03%2B%20in%20the%20same%20weekend.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20Customer%20action%20remains%20active%3A%20validate%20IAM%20successor%20app%20activation%20and%20transport%20role%20changes%20before%20Development%20and%20Production%20move%20to%202608.%20RASD%20impact-card%20follow-ups%20should%20also%20be%20validated%20before%20this%20weekend.%20Full%20HFC03%2B%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20and%20IAM%20app%20activation%20guidance.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W33-DEV%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w33-prod%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Production%20upgrade%0ADTSTART%3A20260815T120000Z%0ADTEND%3A20260815T160000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Production%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20D%2FP%20tenants%20upgrade%20with%20HFC03%2B%20on%2015-16%20August%202026%2C%20with%20T-Tenant%20receiving%20HFC03%2B%20in%20the%20same%20weekend.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20Production%20readiness%20now%20includes%20the%20IAM%20successor%20app%20activation%20check%20where%20predecessor%20apps%20are%20used%20and%20RASD%20impact-card%20follow-up%20for%20scope-specific%20changes.%20Full%20HFC03%2B%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20and%20IAM%20app%20activation%20guidance.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W33-PROD%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w34%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20backup%20upgrade%20weekend%0ADTSTART%3BVALUE%3DDATE%3A20260822%0ADTEND%3BVALUE%3DDATE%3A20260824%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3ABackup%20upgrade%20weekend%20if%20SAP%20needs%20it%20for%20systems%20not%20upgraded%20earlier.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W34%0ABEGIN%3AVALARM%0ATRIGGER%3A-P1D%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20backup%20upgrade%20weekend%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w35%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20post-upgrade%20hotfix%0ADTSTART%3A20260829T150000Z%0ADTEND%3A20260829T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3APost-upgrade%20hotfix%20%2F%20patching%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W35%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w37%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20260912T150000Z%0ADTEND%3A20260912T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window%20after%20the%202608%20pattern%20change.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W37%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w39%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20260926T150000Z%0ADTEND%3A20260926T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W39%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w41%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20261010T150000Z%0ADTEND%3A20261010T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W41%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w42%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20261017T150000Z%0ADTEND%3A20261017T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W42%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w45%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20261107T150000Z%0ADTEND%3A20261107T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W45%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w46%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20261114T150000Z%0ADTEND%3A20261114T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W46%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w49%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20261205T150000Z%0ADTEND%3A20261205T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W49%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w50%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20261212T150000Z%0ADTEND%3A20261212T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W50%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0AEND%3AVCALENDAR%0A"
               download="SAP-S4HANA-Cloud-Maintenance-Watch.ics"
             >
               Download calendar (.ics)
             </a>
             <a href="https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf" target="_blank" rel="noreferrer">
               SAP schedule PDF
+            </a>
+            <a href="https://me.sap.com/notes/3646210" target="_blank" rel="noreferrer">
+              SAP Note 3646210
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/get-ready-for-the-2608-upgrade-of-the-sap-cloud-erp-public-edition/ba-p/14421165" target="_blank" rel="noreferrer">
+              2608 upgrade guidance
+            </a>
+            <a href="https://help.sap.com/docs/SAP_S4HANA_CLOUD/ee9ee0ca4c3942068ea584d2f929b5b1/3ee2f812232c421dba6e02c3dc00d02f.html?locale=en-US&state=PRODUCTION&version=2602.12" target="_blank" rel="noreferrer">
+              2602.4 What's New
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/sap-s-4hana-cloud-public-edition-2602-4-final-what-s-new-amp-product/ba-p/14413240" target="_blank" rel="noreferrer">
+              2602.4 final announcement
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/preliminary-what-s-new-information-for-sap-s-4hana-cloud-public-edition/ba-p/14419769" target="_blank" rel="noreferrer">
+              Preliminary 2608 What's New
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/release-assessment-and-scope-dependency-for-sap-s-4hana-cloud-public/ba-p/14410548" target="_blank" rel="noreferrer">
+              RASD 2026 updates
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/register-now-for-the-2608-early-release-series/ba-p/14399772" target="_blank" rel="noreferrer">
+              2608 Early Release Series
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/why-it-s-important-to-activate-new-apps-and-how-to-do-it-short-version/ba-p/14399282" target="_blank" rel="noreferrer">
+              IAM app activation
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%BF%80%E6%B4%BB%E6%96%B0%E5%BA%94%E7%94%A8-iam-app-%E4%BB%A5%E5%8F%8A%E5%A6%82%E4%BD%95%E6%93%8D%E4%BD%9C-2608%E5%8D%87%E7%BA%A7%E5%89%8D%E5%BF%85%E7%9C%8B/ba-p/14415816" target="_blank" rel="noreferrer">
+              2608 IAM checklist
+            </a>
+            <a href="https://community.sap.com/t5/technology-blog-posts-by-sap/4-eyes-by-configuration-multi-processor-workflow-approvals-in-sap-s-4hana/ba-p/14426804" target="_blank" rel="noreferrer">
+              2608 workflow approvals
+            </a>
+            <a href="https://community.sap.com/t5/technology-blog-posts-by-sap/sap-btp-abap-environment-pre-upgrade-option-for-release-2608/ba-p/14417919" target="_blank" rel="noreferrer">
+              BTP ABAP 2608 pre-upgrade
+            </a>
+            <a href="https://community.sap.com/t5/technology-blog-posts-by-sap/what-s-new-in-the-explore-migration-objects-app-releases-2602-4-and-2608/ba-p/14410708" target="_blank" rel="noreferrer">
+              Explore Migration Objects 2608
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/sap-preferred-success-join-our-sap-cloud-erp-2608-release-planning-session/ba-p/14396634" target="_blank" rel="noreferrer">
+              2608 APJ release planning
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/asset-management-in-sap-s-4hana-cloud-public-edition-from-reactive/ba-p/14428230" target="_blank" rel="noreferrer">
+              Asset Management agents
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/advanced-down-payment-processing-meets-milestone-billing-in-sap-s-4hana/ba-p/14422367" target="_blank" rel="noreferrer">
+              Down payment milestone billing
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/project-billing-clarified-billing-relevance-for-revenue-and-sales-deduction/ba-p/14395847" target="_blank" rel="noreferrer">
+              Project Billing account check
+            </a>
+            <a href="https://community.sap.com/t5/financial-management-blog-posts-by-sap/workflow-based-treasury-business-partner-controls-across-the-treasury/ba-p/14415628" target="_blank" rel="noreferrer">
+              Treasury BP controls
+            </a>
+            <a href="https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/dynamic-fiscal-period-determination-in-ebrr-period-end-close-run/ba-p/14424187" target="_blank" rel="noreferrer">
+              EBRR fiscal period
+            </a>
+            <a href="https://community.sap.com/khhcw49343/rss/board?board.id=erp-blog-sap" target="_blank" rel="noreferrer">
+              ERP product feed
+            </a>
+            <a href="https://help.sap.com/docs/SAP_S4HANA_CLOUD" target="_blank" rel="noreferrer">
+              SAP Help 2608 preview
             </a>
             <a href="https://help.sap.com/crawler/PRODUCTION/SAP_EXTENSIBILITY_EXPLORER/SHIP/en-US" target="_blank" rel="noreferrer">
               Extensibility Explorer
@@ -895,7 +1192,7 @@ dd {
         </div>
         <a
           class="calendar-download calendar-note-download"
-          href="data:text/calendar;charset=utf-8;base64,QkVHSU46VkNBTEVOREFSClZFUlNJT046Mi4wClBST0RJRDotLy9Db2RleC8vU0FQIFM0SEFOQSBDbG91ZCBNYWludGVuYW5jZSBXYXRjaC8vRU4KQ0FMU0NBTEU6R1JFR09SSUFOCk1FVEhPRDpQVUJMSVNIClgtV1ItQ0FMTkFNRTpTQVAgUy80SEFOQSBDbG91ZCBNYWludGVuYW5jZSBXYXRjaApYLVdSLVRJTUVaT05FOkF1c3RyYWxpYS9TeWRuZXkKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzI2QGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiBXMjYgaG90Zml4IC8gcGF0Y2hpbmcKRFRTVEFSVDoyMDI2MDYyN1QxNTAwMDBaCkRURU5EOjIwMjYwNjI3VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpIb3RmaXggLyBwYXRjaGluZyB3YXRjaCB3aW5kb3cgaW4gY3VycmVudCAyNjAyIGN5Y2xlLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVcyNgpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13MjdAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IFcyNyBIQU5BIHByZXAKRFRTVEFSVDoyMDI2MDcwNFQxNTAwMDBaCkRURU5EOjIwMjYwNzA0VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpIQU5BIGRhdGFiYXNlIC8gdGVjaG5pY2FsIHByZXBhcmF0aW9uIHdhdGNoIHdpbmRvdyBzaG93biBiZWZvcmUgMjYwOC5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XMjcKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzI5QGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiAyNjA4IFRlc3QgdXBncmFkZQpEVFNUQVJUOjIwMjYwNzE4VDEyMDAwMFoKRFRFTkQ6MjAyNjA3MThUMTYwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOjI2MDggbWFqb3IgdXBncmFkZSBmb3IgVGVzdCBzeXN0ZW1zLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVcyOQpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13MzFAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IDI2MDggU3RhcnRlciAvIG90aGVyIHVwZ3JhZGUKRFRTVEFSVDoyMDI2MDgwMVQxMjAwMDBaCkRURU5EOjIwMjYwODAyVDEyMDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjoyNjA4IG1ham9yIHVwZ3JhZGUgZm9yIFN0YXJ0ZXIgYW5kIG90aGVyIHN5c3RlbXMuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzMxCkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczMy1kZXZAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IDI2MDggRGV2ZWxvcG1lbnQgdXBncmFkZQpEVFNUQVJUOjIwMjYwODE1VDA0MDAwMFoKRFRFTkQ6MjAyNjA4MTVUMDgwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOjI2MDggbWFqb3IgdXBncmFkZSBmb3IgRGV2ZWxvcG1lbnQgc3lzdGVtcy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XMzMtREVWCkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczMy1wcm9kQGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiAyNjA4IFByb2R1Y3Rpb24gdXBncmFkZQpEVFNUQVJUOjIwMjYwODE1VDEyMDAwMFoKRFRFTkQ6MjAyNjA4MTVUMTYwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOjI2MDggbWFqb3IgdXBncmFkZSBmb3IgUHJvZHVjdGlvbiBzeXN0ZW1zLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVczMy1QUk9ECkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczNEBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogYmFja3VwIHVwZ3JhZGUgd2Vla2VuZApEVFNUQVJUO1ZBTFVFPURBVEU6MjAyNjA4MjIKRFRFTkQ7VkFMVUU9REFURToyMDI2MDgyNApUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOkJhY2t1cCB1cGdyYWRlIHdlZWtlbmQgaWYgU0FQIG5lZWRzIGl0IGZvciBzeXN0ZW1zIG5vdCB1cGdyYWRlZCBlYXJsaWVyLlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVczNApCRUdJTjpWQUxBUk0KVFJJR0dFUjotUDFECkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIGJhY2t1cCB1cGdyYWRlIHdlZWtlbmQgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczNUBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogcG9zdC11cGdyYWRlIGhvdGZpeApEVFNUQVJUOjIwMjYwODI5VDE1MDAwMFoKRFRFTkQ6MjAyNjA4MjlUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOlBvc3QtdXBncmFkZSBob3RmaXggLyBwYXRjaGluZyB3YXRjaCB3aW5kb3cuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzM1CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczN0Bjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogc3RhbmRhcmQgbWFpbnRlbmFuY2UgLyBob3RmaXgKRFRTVEFSVDoyMDI2MDkxMlQxNTAwMDBaCkRURU5EOjIwMjYwOTEyVDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpTdGFuZGFyZCBtYWludGVuYW5jZSAvIGhvdGZpeCB3YXRjaCB3aW5kb3cgYWZ0ZXIgdGhlIDI2MDggcGF0dGVybiBjaGFuZ2UuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzM3CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXczOUBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogb25saW5lIHNvZnR3YXJlIGNoYW5nZQpEVFNUQVJUOjIwMjYwOTI2VDE1MDAwMFoKRFRFTkQ6MjAyNjA5MjZUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOk9ubGluZSBzb2Z0d2FyZSBjaGFuZ2UgLyBjb250aW51b3VzIGRlbGl2ZXJ5IHdhdGNoIHdpbmRvdy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XMzkKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzQxQGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiBzdGFuZGFyZCBtYWludGVuYW5jZSAvIGhvdGZpeApEVFNUQVJUOjIwMjYxMDEwVDE1MDAwMFoKRFRFTkQ6MjAyNjEwMTBUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOlN0YW5kYXJkIG1haW50ZW5hbmNlIC8gaG90Zml4IHdhdGNoIHdpbmRvdy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XNDEKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKQkVHSU46VkVWRU5UClVJRDpzYXAtczRoYW5hLXdhdGNoLTIwMjYtdzQyQGNvZGV4LmxvY2FsCkRUU1RBTVA6MjAyNjA2MjVUMDkwMDAwWgpTVU1NQVJZOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoOiBvbmxpbmUgc29mdHdhcmUgY2hhbmdlCkRUU1RBUlQ6MjAyNjEwMTdUMTUwMDAwWgpEVEVORDoyMDI2MTAxN1QxOTAwMDBaClRSQU5TUDpUUkFOU1BBUkVOVApMT0NBVElPTjpTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiBvbmxpbmUgc2NoZWR1bGUKREVTQ1JJUFRJT046T25saW5lIHNvZnR3YXJlIGNoYW5nZSAvIGNvbnRpbnVvdXMgZGVsaXZlcnkgd2F0Y2ggd2luZG93LlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVc0MgpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13NDVAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IHN0YW5kYXJkIG1haW50ZW5hbmNlIC8gaG90Zml4CkRUU1RBUlQ6MjAyNjExMDdUMTUwMDAwWgpEVEVORDoyMDI2MTEwN1QxOTAwMDBaClRSQU5TUDpUUkFOU1BBUkVOVApMT0NBVElPTjpTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiBvbmxpbmUgc2NoZWR1bGUKREVTQ1JJUFRJT046U3RhbmRhcmQgbWFpbnRlbmFuY2UgLyBob3RmaXggd2F0Y2ggd2luZG93LlxuXG5UaW1lem9uZSBzaG93biB0byB1c2VyOiBBdXN0cmFsaWEvU3lkbmV5LlxuQ2FsZW5kYXIgc3RhdHVzOiBGcmVlLlxuU291cmNlOiBTQVAgUy80SEFOQSBDbG91ZCBQdWJsaWMgRWRpdGlvbiwgMy1TeXN0ZW0gTGFuZHNjYXBlIC0gVXBncmFkZSAmIE1haW50ZW5hbmNlIFNjaGVkdWxlLlxuQ29kZXggU0FQIG1haW50ZW5hbmNlIHdhdGNoIGlkOiAyMDI2LVc0NQpCRUdJTjpWQUxBUk0KVFJJR0dFUjotUFQxMkgKQUNUSU9OOkRJU1BMQVkKREVTQ1JJUFRJT046U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2ggd2luZG93IHJlbWluZGVyCkVORDpWQUxBUk0KRU5EOlZFVkVOVApCRUdJTjpWRVZFTlQKVUlEOnNhcC1zNGhhbmEtd2F0Y2gtMjAyNi13NDZAY29kZXgubG9jYWwKRFRTVEFNUDoyMDI2MDYyNVQwOTAwMDBaClNVTU1BUlk6U0FQIFMvNEhBTkEgQ2xvdWQgd2F0Y2g6IG9ubGluZSBzb2Z0d2FyZSBjaGFuZ2UKRFRTVEFSVDoyMDI2MTExNFQxNTAwMDBaCkRURU5EOjIwMjYxMTE0VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpPbmxpbmUgc29mdHdhcmUgY2hhbmdlIC8gY29udGludW91cyBkZWxpdmVyeSB3YXRjaCB3aW5kb3cuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzQ2CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXc0OUBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogc3RhbmRhcmQgbWFpbnRlbmFuY2UgLyBob3RmaXgKRFRTVEFSVDoyMDI2MTIwNVQxNTAwMDBaCkRURU5EOjIwMjYxMjA1VDE5MDAwMFoKVFJBTlNQOlRSQU5TUEFSRU5UCkxPQ0FUSU9OOlNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uIG9ubGluZSBzY2hlZHVsZQpERVNDUklQVElPTjpTdGFuZGFyZCBtYWludGVuYW5jZSAvIGhvdGZpeCB3YXRjaCB3aW5kb3cuXG5cblRpbWV6b25lIHNob3duIHRvIHVzZXI6IEF1c3RyYWxpYS9TeWRuZXkuXG5DYWxlbmRhciBzdGF0dXM6IEZyZWUuXG5Tb3VyY2U6IFNBUCBTLzRIQU5BIENsb3VkIFB1YmxpYyBFZGl0aW9uLCAzLVN5c3RlbSBMYW5kc2NhcGUgLSBVcGdyYWRlICYgTWFpbnRlbmFuY2UgU2NoZWR1bGUuXG5Db2RleCBTQVAgbWFpbnRlbmFuY2Ugd2F0Y2ggaWQ6IDIwMjYtVzQ5CkJFR0lOOlZBTEFSTQpUUklHR0VSOi1QVDEySApBQ1RJT046RElTUExBWQpERVNDUklQVElPTjpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaCB3aW5kb3cgcmVtaW5kZXIKRU5EOlZBTEFSTQpFTkQ6VkVWRU5UCkJFR0lOOlZFVkVOVApVSUQ6c2FwLXM0aGFuYS13YXRjaC0yMDI2LXc1MEBjb2RleC5sb2NhbApEVFNUQU1QOjIwMjYwNjI1VDA5MDAwMFoKU1VNTUFSWTpTQVAgUy80SEFOQSBDbG91ZCB3YXRjaDogb25saW5lIHNvZnR3YXJlIGNoYW5nZQpEVFNUQVJUOjIwMjYxMjEyVDE1MDAwMFoKRFRFTkQ6MjAyNjEyMTJUMTkwMDAwWgpUUkFOU1A6VFJBTlNQQVJFTlQKTE9DQVRJT046U0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24gb25saW5lIHNjaGVkdWxlCkRFU0NSSVBUSU9OOk9ubGluZSBzb2Z0d2FyZSBjaGFuZ2UgLyBjb250aW51b3VzIGRlbGl2ZXJ5IHdhdGNoIHdpbmRvdy5cblxuVGltZXpvbmUgc2hvd24gdG8gdXNlcjogQXVzdHJhbGlhL1N5ZG5leS5cbkNhbGVuZGFyIHN0YXR1czogRnJlZS5cblNvdXJjZTogU0FQIFMvNEhBTkEgQ2xvdWQgUHVibGljIEVkaXRpb24sIDMtU3lzdGVtIExhbmRzY2FwZSAtIFVwZ3JhZGUgJiBNYWludGVuYW5jZSBTY2hlZHVsZS5cbkNvZGV4IFNBUCBtYWludGVuYW5jZSB3YXRjaCBpZDogMjAyNi1XNTAKQkVHSU46VkFMQVJNClRSSUdHRVI6LVBUMTJICkFDVElPTjpESVNQTEFZCkRFU0NSSVBUSU9OOlNBUCBTLzRIQU5BIENsb3VkIHdhdGNoIHdpbmRvdyByZW1pbmRlcgpFTkQ6VkFMQVJNCkVORDpWRVZFTlQKRU5EOlZDQUxFTkRBUgo="
+          href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0AVERSION%3A2.0%0APRODID%3A-%2F%2FCodex%2F%2FSAP%20S4HANA%20Cloud%20Maintenance%20Watch%2F%2FEN%0ACALSCALE%3AGREGORIAN%0AMETHOD%3APUBLISH%0AX-WR-CALNAME%3ASAP%20S%2F4HANA%20Cloud%20Maintenance%20Watch%0AX-WR-TIMEZONE%3AAustralia%2FSydney%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w26%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20W26%20hotfix%20%2F%20patching%0ADTSTART%3A20260627T150000Z%0ADTEND%3A20260627T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%202602%20HFC13%20was%20released%20on%2025.06.2026.%20SAP%20Note%203646210%20includes%2091%20application%20corrections%20in%20attachment%20S4HANACloud2602HFC13_ListOfHotfixShortDescription.pdf.%5Cn%5CnAreas%20include%20Ariba%20integration%2C%20migration%20cockpit%2C%20document%20compliance%2C%20Central%20Business%20Configuration%2C%20actual%20costing%2C%20service%20orders%2C%20localisation%20and%20DRC%2C%20group%20reporting%2C%20treasury%2C%20EWM%2C%20delivery%20APIs%2C%20product%20master%2C%20purchasing%20analytics%2C%20purchase%20orders%2C%20maintenance%20plans%2C%20production%2C%20PSM%2C%20QM%2C%20billing%2C%20freight%20and%20logistics%20integration.%5Cn%5CnSAP%20announced%20final%20What's%20New%20and%20Product%20Assistance%20for%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%202602.4.%20SAP%20Help%20also%20lists%2054%20official%202602.4%20(HFC12)%20What's%20New%20entries%2C%20all%20dated%2026.06.2026%20in%20search%20results.%20Tracked%20topics%20include%20Developer%20Extensibility%20for%20scheduling%20goods%20issue%20for%20deliveries%2C%20Explore%20Migration%20Objects%20enhancements%2C%20Joule%20features%2C%20project%2Fwork-package%20details%2C%20electronic%20invoicing%2C%20withholding-tax%20analysis%2C%20BOM%20print%20preview%2C%20quality%20inspection%2C%20and%20logistics%2Fcompliance%20updates.%20SAP%20recommends%20RASD%20for%20a%20personalized%20view%20based%20on%20activated%20and%20used%20scope%3B%20the%20announcement%20says%202602.4%20information%20would%20be%20available%20in%20RASD%20within%20the%20next%20few%20days.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%20Note%203646210%2C%20SAP%20Community%20final%202602.4%20announcement%2C%20and%20SAP%20Help%202602.4%20What's%20New%2FProduct%20Assistance%20search%20results.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W26%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w27%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20W27%20HANA%20prep%0ADTSTART%3A20260704T150000Z%0ADTEND%3A20260704T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AHANA%20database%20%2F%20technical%20preparation%20watch%20window%20shown%20before%202608.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W27%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w28-release-planning%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20APJ%20release%20planning%0ADTSTART%3A20260708T030000Z%0ADTEND%3A20260708T040000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20Preferred%20Success%20%2F%20SAP%20Learning%20Hub%0ADESCRIPTION%3ASAP%20Preferred%20Success%20APJ%20release%20planning%20session%20for%20SAP%20Cloud%20ERP%202608.%20SAP%20lists%20the%20APJ%20English%20session%20for%20July%208%2C%2013%3A00-14%3A00%20AEST.%20SAP%20says%20the%20session%20covers%202608%20release%20dates%2C%20the%20upgrade%20process%2C%20the%20new%20system%20maintenance%20schedule%20starting%20from%20September%2C%20RASD%20impact%20analysis%2C%20and%20release%20call-to-action%20items.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20Preferred%20Success%3A%20Join%20Our%20SAP%20Cloud%20ERP%202608%20Release%20Planning%20Session.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W28-RELEASE-PLANNING%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%202608%20release%20planning%20session%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w29%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Test%20upgrade%0ADTSTART%3A20260718T120000Z%0ADTEND%3A20260718T160000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Test%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20T-Tenant%20upgrades%20to%202608%20with%20HFC02%20on%2018-19%20July%202026.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20SAP's%202608%20Early%20Release%20Series%20runs%2013-17%20July%202026%20and%20includes%20Extensibility%2C%20Finance%2C%20SAP%20Activate%2C%20Cloud%20ALM%2C%20and%20Test%20Automation%20Tool%20topics%3B%20the%20static%20source%20page%20does%20not%20expose%20a%20reliable%20session%20timezone%2C%20so%20exact%20session%20entries%20were%20not%20created.%20Customer%20action%20now%20tracked%3A%20SAP%20IAM%20guidance%20says%20successor%20IAM%20apps%20are%20inactive%20by%20default%20from%202602%3B%20before%202608%2C%20check%20predecessor%20app%20usage%2C%20activate%20successor%20IAM%20apps%20in%20business%20roles%2C%20validate%20with%20key%20users%2C%20and%20transport%20changes%20to%20Test%20and%20Production.%20Priority%20IAM%20successor%20IDs%20include%20F3516A_TRAN%2C%20F3425A_TRAN%2C%20F1443B_TRAN%2C%20F3883A_TRAN%2C%20F3915A_TRAN%2C%20F7280A_TRAN%2C%20F0956B_TRAN%2C%20and%20F9104_TRAN.%20Product%20update%20tracked%3A%202608%20adds%20multi-processor%20workflow%20approval%20controls%20for%20two-%20and%20three-person%20approvals%20plus%20validation%20callbacks.%20RASD%202026%20update%20tracked%3A%20use%20What's%20New%20change%20history%2C%20Last%20Modified%20On%20filtering%2C%20and%20RASD%20impact-card%20navigation%20for%20changed%20extensibility%20objects%2C%20where-used%20lists%2C%20impacted%20catalogs%2C%20IAM%20apps%2C%20and%20renamed%20app%20tiles.%20Newly%20tracked%20product%20updates%3A%20SAP%20BTP%20ABAP%20Environment%202608%20pre-upgrade%20testing%20can%20be%20nominated%20for%2017%20July%2008%3A00-16%3A00%20CET%2C%20which%20is%2017%20July%2017%3A00%20to%2018%20July%2001%3A00%20AEST%20if%20SAP's%20CET%20label%20is%20interpreted%20literally%3B%20Explore%20Migration%20Objects%20adds%202602.4%2F2608%20availability%2C%20scope-item%20status%2C%20and%20dependency-graph%20features%20for%20migration%20planning%3B%20SAP%20Asset%20Management%20describes%20AI-assisted%20maintenance%20notifications%20and%20planning%3B%20SAP%20Sales%20Billing%20adds%20Advanced%20Down%20Payment%20Processing%20with%20milestone%20billing%3B%20Project%20Billing%20excludes%20project-related%20postings%20to%20revenue%20and%20sales-deduction%20G%2FL%20accounts%20from%20billing%20processes%20under%20the%202608%20account-type%20check%3B%20SAP%20Treasury%20Business%20Partner%20workflow%20controls%20add%20four-eyes%20governance%20and%20approval%20traceability%20for%20sensitive%20counterparty%20and%20payment-relevant%20data%20changes%3B%20EBRR%20dynamic%20fiscal-period%20determination%20adds%20Current%20Fiscal%20Period%20and%20Previous%20Fiscal%20Period%20options%20for%20recurring%20revenue-recognition%20close%20jobs%20across%20sales%20orders%2C%20projects%2C%20service%20documents%2C%20provider%20contracts%2C%20and%20revenue%20contracts.%20Decentralized%20EWM%2FQM%20integration%20for%20SAP%20Cloud%20ERP%20two-tier%20scenarios%20now%20tracks%20warehouse-side%20quality%20inspection%20with%20QIE%20and%20stock%20synchronization%20back%20to%20SAP%20Cloud%20ERP.%20Clean-core%20wrapper%20guidance%20now%20tracks%20wrapper%20interfaces%20around%20classic%20APIs%20and%20internal%20objects%20for%20ABAP%20Cloud-friendly%20extensibility.%20Outbound-delivery%20stock-warning%20custom%20logic%20now%20tracks%20BAdI%20LE_SHP_DELIVERY_FINAL_CHECK%2C%20stock%20checks%20before%20delivery%20save%2C%20and%20separate%20API%20message%20behavior.%20API-created%20delivery%20stock-shortage%20handling%20now%20tracks%20BAdI%20LE_SHP_SAVE_DOCUMENT_PREPARE%2C%20custom%20field%20YY1_Message%2C%20and%20SAP's%20note%20that%20API-created%20delivery%20warnings%20can%20be%20ignored%20unless%20handled%20as%20errors%20or%20persisted%20messages.%20EPPM%20financial-planning%20custom%20value%20types%20now%20track%20CAPEX%2FOPEX-style%20cost%20splits%20through%20integration%20customizing%20and%20BAdI%20RPM_FICO_INT.%20Origin%20Profit%20Centers%20now%20track%20project-margin%20reporting%20by%20responsible%20and%20contributing%20profit%20centers%20through%20a%20Universal%20Journal%20attribute.%20CBC%205-country%20rollout%20planning%20now%20tracks%20the%20SAP%20Central%20Business%20Configuration%20delta%20rule%20for%20country%20additions%20and%20main-line%20%2F%20parallel-line%20merge%20or%20rebase%20planning.%20Additional%20ERP%20feed%20product%20signals%20now%20tracked%3A%20sales-order%20developer%20extensibility%20via%20BAdI%20SD_SLS_END_OF_FINALIZE%20for%20issue-summary%20custom%20fields%2C%20now%20modified%2029%20June%202026%20with%20details%20for%20custom%20field%20YY1_ISSUE_SUMMARY_SDH%2C%20enhancement%20spot%20ES_SD_SLS_DEV_EXTEND%2C%20method%20IF_SD_SLS_END_OF_FINALIZE~MODIFY_FIELDS%2C%20simulation-mode%20skip%20logic%2C%20and%20the%20generated%20control%20flag%20required%20for%20writes%3B%20EBRR%20company-code%20and%20ledger%20range%20scheduling%3B%20external%20revenue%20recognition%20key%20derivation%20for%20project-based%20sales%20in%20CFD%202602.3%3B%20and%20Joule%2Ftwo-tier%20planning%20signals%20for%20cross-tier%20constraints%20and%20cross-ATP%20checks.%20Full%20HFC02%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20Early%20Release%20Series%20page%2C%20IAM%20app%20activation%20guidance%2C%202608%20workflow%20approvals%20product%20update%2C%20BTP%20ABAP%20Environment%202608%20pre-upgrade%20guidance%2C%20Explore%20Migration%20Objects%202602.4%2F2608%20update%2C%20Asset%20Management%20autonomous%20agents%20update%2C%20Advanced%20Down%20Payment%20milestone%20billing%20update%2C%20Project%20Billing%20account-type%20check%20guidance%2C%20Treasury%20Business%20Partner%20workflow-control%20guidance%2C%20EBRR%20dynamic%20fiscal-period%20guidance%2C%20decentralized%20EWM%2FQM%20integration%20update%2C%20clean-core%20wrapper%20guidance%2C%20outbound-delivery%20custom-logic%20guidance%2C%20API%20delivery%20stock-shortage%20guidance%2C%20EPPM%20custom-value-type%20guidance%2C%20Origin%20Profit%20Center%20guidance%2C%20CBC%205-country%20rollout%20guidance%2C%20and%20SAP%20Community%20ERP%20product%20update%20RSS%20feed.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W29%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w31%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Starter%20%2F%20other%20upgrade%0ADTSTART%3A20260801T120000Z%0ADTEND%3A20260802T120000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Starter%20and%20other%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20other%20tenants%20upgrade%20with%20HFC03%20on%201-2%20August%202026%2C%20and%20T-Tenant%20receives%20HFC03%20for%20new%20feature%20preview.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20Customer%20action%20remains%20active%3A%20complete%20the%20IAM%20successor%20app%20activation%20review%20before%20this%20upgrade%20weekend%20if%20affected%20predecessor%20apps%20are%20used.%20RASD%20follow-up%3A%20use%20change-history%20deltas%2C%20Last%20Modified%20On%20filtering%2C%20and%20impact-card%20navigation%20to%20review%20scope-specific%20changes.%20Full%20HFC03%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20and%20IAM%20app%20activation%20guidance.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W31%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w33-dev%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Development%20upgrade%0ADTSTART%3A20260815T040000Z%0ADTEND%3A20260815T080000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Development%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20D%2FP%20tenants%20upgrade%20with%20HFC03%2B%20on%2015-16%20August%202026%2C%20with%20T-Tenant%20receiving%20HFC03%2B%20in%20the%20same%20weekend.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20Customer%20action%20remains%20active%3A%20validate%20IAM%20successor%20app%20activation%20and%20transport%20role%20changes%20before%20Development%20and%20Production%20move%20to%202608.%20RASD%20impact-card%20follow-ups%20should%20also%20be%20validated%20before%20this%20weekend.%20Full%20HFC03%2B%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20and%20IAM%20app%20activation%20guidance.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W33-DEV%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w33-prod%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%202608%20Production%20upgrade%0ADTSTART%3A20260815T120000Z%0ADTEND%3A20260815T160000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3A2608%20major%20upgrade%20for%20Production%20systems.%20SAP's%202608%20upgrade%20guidance%20indicates%20D%2FP%20tenants%20upgrade%20with%20HFC03%2B%20on%2015-16%20August%202026%2C%20with%20T-Tenant%20receiving%20HFC03%2B%20in%20the%20same%20weekend.%20Preliminary%202608%20What's%20New%20and%20Product%20Assistance%20content%20is%20available%20for%20upgrade%20preparation%20through%20the%20What's%20New%20Viewer%20and%20RASD.%20Production%20readiness%20now%20includes%20the%20IAM%20successor%20app%20activation%20check%20where%20predecessor%20apps%20are%20used%20and%20RASD%20impact-card%20follow-up%20for%20scope-specific%20changes.%20Full%20HFC03%2B%20attachment%20details%20are%20still%20pending%20until%20SAP%20publishes%20the%202608%20patch%20collection%20note.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule%20plus%20SAP%202608%20upgrade%20guidance%2C%20preliminary%202608%20What's%20New%20guidance%2C%20RASD%202026%20update%2C%20and%20IAM%20app%20activation%20guidance.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W33-PROD%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w34%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20backup%20upgrade%20weekend%0ADTSTART%3BVALUE%3DDATE%3A20260822%0ADTEND%3BVALUE%3DDATE%3A20260824%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3ABackup%20upgrade%20weekend%20if%20SAP%20needs%20it%20for%20systems%20not%20upgraded%20earlier.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W34%0ABEGIN%3AVALARM%0ATRIGGER%3A-P1D%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20backup%20upgrade%20weekend%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w35%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20post-upgrade%20hotfix%0ADTSTART%3A20260829T150000Z%0ADTEND%3A20260829T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3APost-upgrade%20hotfix%20%2F%20patching%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W35%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w37%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20260912T150000Z%0ADTEND%3A20260912T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window%20after%20the%202608%20pattern%20change.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W37%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w39%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20260926T150000Z%0ADTEND%3A20260926T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W39%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w41%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20261010T150000Z%0ADTEND%3A20261010T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W41%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w42%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20261017T150000Z%0ADTEND%3A20261017T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W42%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w45%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20261107T150000Z%0ADTEND%3A20261107T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W45%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w46%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20261114T150000Z%0ADTEND%3A20261114T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W46%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w49%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20standard%20maintenance%20%2F%20hotfix%0ADTSTART%3A20261205T150000Z%0ADTEND%3A20261205T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AStandard%20maintenance%20%2F%20hotfix%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W49%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0ABEGIN%3AVEVENT%0AUID%3Asap-s4hana-watch-2026-w50%40codex.local%0ADTSTAMP%3A20260629T080959Z%0ASUMMARY%3ASAP%20S%2F4HANA%20Cloud%20watch%3A%20online%20software%20change%0ADTSTART%3A20261212T150000Z%0ADTEND%3A20261212T190000Z%0ATRANSP%3ATRANSPARENT%0ALOCATION%3ASAP%20S%2F4HANA%20Cloud%20Public%20Edition%20online%20schedule%0ADESCRIPTION%3AOnline%20software%20change%20%2F%20continuous%20delivery%20watch%20window.%5Cn%5CnTimezone%20shown%20to%20user%3A%20Australia%2FSydney.%5CnCalendar%20status%3A%20Free.%5CnSource%3A%20SAP%20S%2F4HANA%20Cloud%20Public%20Edition%2C%203-System%20Landscape%20-%20Upgrade%20%26%20Maintenance%20Schedule.%5CnCodex%20SAP%20maintenance%20watch%20id%3A%202026-W50%0ABEGIN%3AVALARM%0ATRIGGER%3A-PT12H%0AACTION%3ADISPLAY%0ADESCRIPTION%3ASAP%20S%2F4HANA%20Cloud%20watch%20window%20reminder%0AEND%3AVALARM%0AEND%3AVEVENT%0AEND%3AVCALENDAR%0A"
           download="SAP-S4HANA-Cloud-Maintenance-Watch.ics"
           aria-label="Download SAP S/4HANA Cloud maintenance watch calendar file"
         >
@@ -906,7 +1203,7 @@ dd {
 
     <script>
 window.sapWatchData = {
-  sourceChecked: "2026-06-25",
+  sourceChecked: "2026-07-01",
   timezone: "Australia/Sydney",
   sourceLabel: "SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule",
   calendarImportFile: "SAP-S4HANA-Cloud-Maintenance-Watch.ics",
@@ -920,8 +1217,124 @@ window.sapWatchData = {
       start: "2026-06-28T01:00:00+10:00",
       end: "2026-06-28T05:00:00+10:00",
       systems: "Current 2602 cycle",
-      description: "Hotfix / patching watch window in current 2602 cycle.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      description: "Hotfix / patching watch window for SAP S/4HANA Cloud Public Edition 2602. SAP Note 3646210 shows HFC13 released on 25.06.2026, with 91 application corrections in the attached short-description PDF. SAP also announced final What's New and Product Assistance for 2602.4, and SAP Help lists 54 official 2602.4 (HFC12) What's New entries dated 26.06.2026, including Developer Extensibility, migration objects, Joule, billing, finance, compliance, projects, quality, and logistics updates.",
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      hotfixCollection: {
+        code: "HFC13",
+        release: "2602",
+        releasedOn: "25.06.2026",
+        sapNote: "3646210",
+        sapNoteTitle: "SAP S/4HANA Cloud Public Edition 2602 and SAP Marketing Cloud 2602 - Patch Collection Information Note",
+        noteUrl: "https://me.sap.com/notes/3646210",
+        attachment: "S4HANACloud2602HFC13_ListOfHotfixShortDescription.pdf",
+        correctionCount: 91,
+        corrections: [
+          { component: "BNS-ARI-CI-S4-MM", summary: "Ariba Integration with S/4HANA SOAP API - MM Invoice Status Not Updating from S/4HANA Public Cloud to Ariba" },
+          { component: "CA-CPD-SS", summary: "S/4HANA Professional Services Cloud - CPM ATC Corrections" },
+          { component: "CA-CPD-SS", summary: "S/4HANA Professional Services Cloud - CPM Transfer Project Plan to Finance issue" },
+          { component: "CA-DT-MIG-S4C", summary: "S/4HANA Migration Cockpit - Direct Transfer: ERP Cloud Content Correction Request for 2602 CE - 03/06/2026" },
+          { component: "CA-GTF-CSC-EDO-DCC", summary: "Document Compliance Cockpit Hotfix - Navigate to source document APP" },
+          { component: "CA-GTF-CSC-EDO-FR", summary: "Document Compliance France France Domestic Customer Payment" },
+          { component: "CA-GTF-CSC-EDO-IN-DC", summary: "Document Compliance India DCS LC: Shipto GSTIN is Mandatory" },
+          { component: "CA-GTF-CSC-EDO-PL", summary: "Document Compliance Poland Code Corrections - Poland Ksef: Email Fetching Logic Fix" },
+          { component: "CA-GTF-CSC-EDO-PL", summary: "Document Compliance Poland Code Corrections - Single Value Mapping method call for PAYM" },
+          { component: "CA-GTF-CSC-EDO-PL", summary: "Document Compliance Poland Fix invoice line tags: StanPrzed KursWalutyZ" },
+          { component: "CA-GTF-CSC-EDO-PL", summary: "Document Compliance Poland Code Corrections - Adding URL field in EDOPLINV containing QR code image" },
+          { component: "CA-LT-OBT-TDR", summary: "SAP S/4HANA, test data refresh: Technology Renumbering: Ignore obsolete interval 24 of RV_BELEG" },
+          { component: "CA-MDG-CMP-MM", summary: "Material Update SU 22 and SAP_WFR_SAPSCORE - Product Delete issue" },
+          { component: "CA-TS-S4", summary: "Cross Application Timesheet in S/4HANA Time recording via concurrent employment recognized as inter company" },
+          { component: "CA-TS-S4", summary: "Cross Application Timesheet in S/4HANA Test Data Refresh: Check Failed - SDMI in Source" },
+          { component: "CA-VCM-2CL", summary: "Value Chain Monitoring Framework (Public Cloud) Determine Adv. ICO ToC dates based on SPE_LE_SCENARIO" },
+          { component: "CBC-S4-CCP", summary: "Integration of S/4 HANA Cloud with CBC - Cust. Conversion Fix: redundant WHN in empty PLT solutions org unit" },
+          { component: "CBC-S4-CCP", summary: "Integration of S/4 HANA Cloud with CBC - Cust. Conversion Update of /SMB/TBL_CNV for PPL and CCP deployment in HF13" },
+          { component: "CBC-S4-CCP", summary: "Integration of S/4 HANA Cloud with CBC - Cust. Conversion BAC Mapping sync 2702 HFC12" },
+          { component: "CBC-S4-DIC", summary: "Integration of S/4 HANA Cloud with CBC - Data Dictionary Delete entry TDWA in table /SMB/EXM_TABLES to prevent customer issues" },
+          { component: "CO-PC-ACT-2CL", summary: "Actual Costing (Public Cloud) Display Actual Costing Result cannot extract data" },
+          { component: "CO-PC-OBJ-EBR-2CL", summary: "Event-Based Revenue Recognition (Public Cloud) App Display Project WIP Details (F4766) does not check Restriction Type PPM_PRJ for confidential projects" },
+          { component: "CRM-S4-IHR-2CL", summary: "S4CRM: In-House Repair (Public Cloud) Rejected Quotation not creating an outbound delivery" },
+          { component: "CRM-S4-SRV-SVO-2CL", summary: "S4CRM: Service Order (Public Cloud) Hotfix: Unable to delete item 10 in purchase order 4500078996 due to account assignment lock" },
+          { component: "CRM-S4-SRV-SVO-2CL", summary: "S4CRM: Service Order (Public Cloud) WBS for service contract is not triggered" },
+          { component: "FI-LOC-BOE", summary: "Bill of Exchange New feature ID updating for metering in CE2602" },
+          { component: "FI-LOC-CNT-AR", summary: "S4H Best Practices for Argentina $RC_Else - Update content for table V_1ACHRDET since it was delivered with wrong entry" },
+          { component: "FI-LOC-CNT-BR", summary: "S4H Best Practices for Brazil BR Legal Change GSREQAMER-19215" },
+          { component: "FI-LOC-CNT-BR", summary: "S4H Best Practices for Brazil BR LC GSREQAMER-19215" },
+          { component: "FI-LOC-CNT-PE", summary: "S4H Best Practices for Peru Hotfix for the variant file VVC_T683_VA_V_T683S_BMJ.TXT - field I_DRUKZ - cause XML rejection" },
+          { component: "FI-LOC-CNT-VN", summary: "Vietnam BO mapping file became inconsistent after adding country identifier to filename, fix for 2602" },
+          { component: "FI-LOC-EPI-CN", summary: "China Fix custom field value not passed correctly in EPIC_EBR_SAVING BAdI" },
+          { component: "FI-LOC-FI-AR-ACR", summary: "Advanced Compliance Reporting CM 543837/2026: Issue with txt file from the AR_PURCHASE_VAT_DCL report Argentina" },
+          { component: "FI-LOC-FI-BR-REI", summary: "DRC EFD-Reinf Report [CE] EFD-Reinf - NT03/2026" },
+          { component: "FI-LOC-FI-CN", summary: "China [GLOFIN] The amount in the cash flow is incorrect" },
+          { component: "FI-LOC-FI-IN-WHT", summary: "Withholding Tax Non-compliant SSCUI" },
+          { component: "FI-LOC-FI-TR", summary: "Turkey Electronic Ledger - year opening entries from previous years included in report" },
+          { component: "FI-LOC-GAI-CN", summary: "China HF: CADE CBC Scope Item" },
+          { component: "FI-LOC-LO-HR", summary: "Croatia GLO LOG: HFC 1 for HR and RO, HFC 13 for RO" },
+          { component: "FI-LOC-LO-IN", summary: "India Tax Config Agent UI Service Changes" },
+          { component: "FI-LOC-LO-IN", summary: "India AFD local currency exchange rate correction" },
+          { component: "FI-LOC-NFE-BR-OUT", summary: "Outbound [Case] 643166/2026 - Outbound NFS-e: vRetCSLL wrong amount in multi-item NFS-e National" },
+          { component: "FI-LOC-NFE-BR-OUT", summary: "Outbound [DRC NF-e] Tax Reform - SP NFS-e Layout - PIS COFINS handling" },
+          { component: "FI-LOC-SD-IN", summary: "India (aka XX-CSC-IN-SD) Duplicate challan for same material document Corrections II" },
+          { component: "FI-LOC-SRF-RUN", summary: "Advanced Compliance Reporting (Run Time) SAP DRC Error when trying to start an activity for creating a return for TDD environment" },
+          { component: "FI-LOC-SRF-RUN", summary: "Advanced Compliance Reporting (Run Time) Feature Toggle for activity status" },
+          { component: "FI-LOC-VAT-GEN", summary: "ACR Generic Activities Hotfix for issue in Short Summary File Generation in Report Submission of DRR" },
+          { component: "FIN-CS-COR-DT-2CL", summary: "Data Transfer (Public Cloud) DTXI - E2E Test - ET+DA Update" },
+          { component: "FIN-CS-COR-DT-FU-2CL", summary: "File Upload (Public Cloud) [DTXI] Invalid status S when error occurs in data adapter" },
+          { component: "FIN-CS-COR-DT-FU-2CL", summary: "File Upload (Public Cloud) [DTXI] legacy wrapper fix" },
+          { component: "FIN-CS-COR-IS-2CL", summary: "Information System (Public Cloud) [Task Log] Summary failing unit test, HF 2" },
+          { component: "FIN-CS-RUL-2CL", summary: "Group Reporting Rule Engine (Public Cloud) Automatic posting rule posting on wrong doc type" },
+          { component: "FIN-FSCM-PF-PAY-2CL", summary: "Advanced Payment Management (Public Cloud) CPR duplicate checking" },
+          { component: "FIN-FSCM-TRM-2CL", summary: "Treasury and Risk Management (Public Cloud) XPRA report for SWFDVEVTYNOOPT" },
+          { component: "FIN-FSCM-TRM-AC-2CL", summary: "Position Management and Accounting (Public Cloud) Hotfix: Correction Report for Customer Case 622221/2026: Error Reverse Posting Document in Sec" },
+          { component: "FIN-UA-2CL", summary: "Universal Allocations (Public Cloud) Unit tests XPRA" },
+          { component: "LE-IDW-2CL", summary: "Decentralized WMS Integration (Public Cloud) 3PL Inbound Deliveries with Stocktype do not use correct storage location" },
+          { component: "LE-IDW-2CL", summary: "Decentralized WMS Integration (Public Cloud) qRFC queues with locking errors do not restart" },
+          { component: "LE-SHP-API-2CL", summary: "Interfaces for Delivery Documents (API) (Public Cloud) delivery date ignored in inbound delivery creation per OData" },
+          { component: "LO-AB", summary: "Agency Business / Settlement Management Authorization handling in case of company code restriction for auth. obj. W_WBRK_PER" },
+          { component: "LO-MD-BOM-2CL", summary: "Bills of Material (Public Cloud) BDEF changes in A_BillOfMaterial_1 for MCP" },
+          { component: "LO-MD-BP-2CL", summary: "Business Partners for Public Cloud DCP corrections - invalid Data Controller issue fix" },
+          { component: "LO-MD-MM-2CL", summary: "Product Master for Public Cloud Fix for customer incident: New mandatory field PRT usage in plant section product master data" },
+          { component: "LO-MD-MM-2CL", summary: "Product Master for Public Cloud SSCUI AutoSkip - Retail System Logic Enhancement" },
+          { component: "LO-RFM-IFC-IN-SRV", summary: "Service based POS Interface - Inbound Problem with Billing document Output Determination, Document Type FP (Invoice POS Interface)" },
+          { component: "LO-RFM-PP-2CL", summary: "Production Planning for Fashion (Public Cloud) Fashion MRP Missing Planning file entry error - HF correction" },
+          { component: "LO-RFM-STO-FIO", summary: "In-Store Merchandise and Inventory Management - Fiori Apps Create In-Store Sales Order App - Scanning alternative GTIN does not work" },
+          { component: "LO-RFM-STO-FIO", summary: "In-Store Merchandise and Inventory Management - Fiori Apps [RFM] - Transfer Product on hand quantity issue (CS20260012497010)" },
+          { component: "MM-FIO-PUR-ANA-2CL", summary: "Fiori UI for Purchasing Analytics (Public Cloud) Data Product Fixes: Purchasing Info Record" },
+          { component: "MM-FIO-PUR-ANA-2CL", summary: "Fiori UI for Purchasing Analytics (Public Cloud) App Material Price Variance does not load due to performance issue" },
+          { component: "MM-IV-LIV-2CL", summary: "Logistics Invoice Verification (Public Cloud) CS20260012225580: Extend SuplInvWRKFLW note index to 3 char" },
+          { component: "MM-PUR-PO-2CL", summary: "Purchase Orders (Public Cloud) System dumps when PO is created from service order" },
+          { component: "MM-PUR-PO-2CL", summary: "Purchase Orders (Public Cloud) Subcontracting BOM Explosion - validity date" },
+          { component: "MM-PUR-PO-2CL", summary: "Purchase Orders (Public Cloud) Add missing field BEDNR to MM_PUR_S4_PO_MODIFY_ITEM" },
+          { component: "PM-EQM-SF-MPC-2CL", summary: "Measuring points and counters (Public Cloud) Measuring Point API Error - Measuring point XXXX is locked by user \"\"" },
+          { component: "PM-PRM-MP-2CL", summary: "Maintenance Plans (Public Cloud) Enhancement of API to filter based on functional location and equipment" },
+          { component: "PM-PRM-TL-2CL", summary: "Task Lists (Public Cloud) CS20260012388046 - Object does not exist error in Change Documents App" },
+          { component: "PP-FIO-SFC-2CL", summary: "Fiori UI for Production Orders (Public Cloud) Enabling Feature Toggle in SSCUI for AI297" },
+          { component: "PP-PMR-2CL", summary: "Predictive MRP (Public Cloud) PMRP: Missing components and wrong qty" },
+          { component: "PP-SFC-ES-2CL", summary: "Enterprise Services in Shop Floor Control (Public Cloud) [Correction] OData PATCH" },
+          { component: "PPM-SCL-STR", summary: "Project Structure (Public Cloud) 1NT: Enterprise project - Project with Revenue's settlement rule is missing" },
+          { component: "PSM-FM-BU-AC", summary: "Availability Control PSM enhancement of AVC shared lock handling" },
+          { component: "PSM-FM-UP-CM", summary: "Commitments Hotfix for Correction Report - 133651/2026 - Country Fire Authority" },
+          { component: "QM-CA-CG-2CL", summary: "Quality Certificate Creation (Public Cloud) Case674550/2026" },
+          { component: "SCM-EWM-API-2CL", summary: "Remote APIs (Public Cloud) Fixedbin Assignment API: Enable EWMStorQtyUnitSAPCode" },
+          { component: "SCM-EWM-PI-2CL", summary: "Physical Inventory (Public Cloud) [WM][C]2702 Toolbar issue on ObjectPage" },
+          { component: "SD-BIL-2CL", summary: "Billing (Public Cloud) [Billing Posting Agent] Expose Pricing Type on UI_BillingDocument_AI" },
+          { component: "SD-BIL-PBD-2CL", summary: "Preliminary Billing Documents (Public Cloud) 2608.1 - Bug fix for PBD modify BAdI logic" },
+          { component: "SV-CLD-PC", summary: "S4HANA Product Content - PSCC org 2602: Unassignment of BBs 390 and 39F from 5SW" },
+          { component: "TM-FRM-2CL", summary: "Freight Order Management (Public Cloud) [CS20260012494355] Change ASR read api to use transactional handling" },
+          { component: "TM-INT-LI-2CL", summary: "Logistics Integration - General HSS_SAP_COM_0573_Paramters_addtion" }
+        ]
+      },
+      productUpdates: [
+        {
+          label: "2602.4 final What's New / Product Assistance",
+          source: "SAP Community final 2602.4 announcement plus SAP Help Portal search results for SAP S/4HANA Cloud Public Edition 2602.4 (HFC12), dated 26 June 2026.",
+          summary: "SAP announced that final What's New information and final Product Assistance for SAP S/4HANA Cloud Public Edition 2602.4 are available. SAP Help exposes 54 official 2602.4 (HFC12) What's New entries, which provide a broader product-change view alongside the HFC13 hotfix correction PDF.",
+          items: [
+            "Tracked topics include Developer Extensibility for scheduling goods issue for deliveries, Explore Migration Objects enhancements, Joule features, project/work-package details, electronic invoicing, withholding-tax analysis, BOM print preview, quality inspection, and logistics/compliance updates.",
+            "SAP recommends using RASD for a personalized view based on activated and used scope; the announcement says the 2602.4 information would be available in RASD within the next few days.",
+            "Use this as the product-assistance layer for the current 2602 maintenance cycle; SAP Note 3646210 remains the HFC13 correction list.",
+            "The search-result row set is being hashed so future changes are detected even if SAP keeps the same visible date."
+          ]
+        }
+      ]
     },
     {
       id: "2026-W27",
@@ -933,7 +1346,45 @@ window.sapWatchData = {
       end: "2026-07-05T05:00:00+10:00",
       systems: "HANA database / technical preparation",
       description: "HANA database / technical preparation watch window shown before 2608.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "watching",
+        label: "Operational announcement watch",
+        summary: "HANA database upgrade preparation details are expected through SAP for Me / Cloud ALM availability announcements rather than a hotfix correction PDF.",
+        expectedSource: "SAP for Me Cloud Service Availability notifications, SAP Cloud ALM status events, and the SAP 3-system landscape schedule PDF.",
+        nextAction: "Hourly check for updated announcement text, completion notices, or changed downtime wording."
+      }
+    },
+    {
+      id: "2026-W28-RELEASE-PLANNING",
+      week: "2026-W28",
+      title: "2608 APJ release planning",
+      category: "prep",
+      displayTime: "Wed 2026-07-08, 13:00-14:00 AEST",
+      start: "2026-07-08T13:00:00+10:00",
+      end: "2026-07-08T14:00:00+10:00",
+      systems: "SAP Cloud ERP / SAP S/4HANA Cloud Public Edition",
+      description: "SAP Preferred Success APJ release planning session for SAP Cloud ERP 2608. SAP says the session covers 2608 release dates, the upgrade process, the new system maintenance schedule starting from September, RASD impact analysis, and release call-to-action items.",
+      outlook: "Added to the downloadable .ics calendar with a 12-hour reminder.",
+      detailWatch: {
+        status: "scheduled",
+        label: "Preferred Success APJ session",
+        summary: "SAP Preferred Success has published a 2608 APJ release planning session for July 8, 13:00-14:00 AEST. The page is relevant because it explicitly covers release dates, upgrade process, the new maintenance schedule from September, RASD, and actionable next steps.",
+        expectedSource: "SAP Preferred Success release planning page, SAP Learning Hub registration, and any follow-up session materials or Outlook invitations.",
+        nextAction: "Check for changed session time, registration updates, follow-up materials, or new call-to-action items."
+      },
+      productUpdates: [
+        {
+          label: "2608 release planning session",
+          source: "SAP Community Preferred Success post, published 1 June 2026.",
+          summary: "APJ English session is listed for July 8, 13:00-14:00 AEST for SAP Cloud ERP with SAP Preferred Success subscription customers.",
+          items: [
+            "Use this session to validate the 2608 upgrade timeline against the maintenance-watch calendar.",
+            "Capture any September maintenance-schedule changes and RASD action items that SAP presents.",
+            "Registration is via SAP Learning Hub from the SAP Community post."
+          ]
+        }
+      ]
     },
     {
       id: "2026-W29",
@@ -944,8 +1395,209 @@ window.sapWatchData = {
       start: "2026-07-18T22:00:00+10:00",
       end: "2026-07-19T02:00:00+10:00",
       systems: "Test systems",
-      description: "2608 major upgrade for Test systems.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      description: "2608 major upgrade for Test systems. SAP's 2608 upgrade guidance indicates T-Tenant upgrades to 2608 with HFC02 on 18-19 July 2026. SAP has also published preliminary 2608 What's New and Product Assistance guidance for upgrade preparation through the What's New Viewer and RASD, plus Early Release Series sessions on 13-17 July 2026. Customer action now tracked: SAP's IAM guidance says successor IAM apps should be checked, activated, tested, and transported before the 2608 upgrade where predecessor apps are used. RASD 2026 guidance adds change-history filtering and direct navigation to affected S/4HANA apps. Newly tracked product updates add BTP ABAP Environment pre-upgrade testing, Explore Migration Objects 2602.4/2608 changes, Project Billing account-type checks for revenue and sales-deduction G/L accounts, Treasury Business Partner workflow controls, dynamic fiscal-period determination for EBRR period-end close jobs, decentralized EWM/QM integration for SAP Cloud ERP two-tier scenarios, clean-core wrapper guidance, outbound-delivery stock-warning custom logic, API-created delivery stock-shortage handling, EPPM custom value types, Origin Profit Centers, CBC 5-country rollout planning, and additional ERP feed signals for sales extensibility, EBRR scheduling, and Joule/two-tier planning.",
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "pending",
+        label: "2608 T-Tenant upgrade detail",
+        summary: "T-Tenant upgrade is expected to move to 2608 with HFC02. Preliminary 2608 What's New and Product Assistance content is available for review. The Early Release Series runs 13-17 July 2026 and includes Extensibility, Finance, SAP Activate, Cloud ALM, and Test Automation Tool topics. A tracked IAM customer-action signal recommends checking and activating successor IAM apps before 2608. SAP's RASD 2026 guidance adds change-history filtering and direct navigation from impact cards to Custom CDS Views, Manage Business Role Changes After Upgrade, and tenant-specific S/4HANA apps. SAP also published BTP ABAP Environment pre-upgrade testing guidance, Explore Migration Objects 2602.4/2608 changes, a Project Billing account-type check that excludes revenue and sales-deduction G/L postings from Project Billing, Treasury Business Partner workflow controls for sensitive counterparty/payment data changes, dynamic fiscal-period determination for EBRR period-end close jobs, decentralized EWM/QM integration for SAP Cloud ERP two-tier scenarios, clean-core wrapper guidance, outbound-delivery stock-warning custom logic, API-created delivery stock-shortage handling, EPPM custom value types, Origin Profit Centers, CBC 5-country rollout planning, and additional ERP feed updates for sales extensibility, EBRR scheduling, and Joule/two-tier planning. The full HFC02 correction attachment is still pending until SAP publishes the 2608 patch collection note.",
+        expectedSource: "SAP 2608 upgrade guidance, SAP Help 2608 preview, preliminary 2608 What's New / Product Assistance, RASD 2026 guidance, Early Release Series, IAM successor app guidance, BTP ABAP Environment 2608 pre-upgrade guidance, Explore Migration Objects 2602.4/2608 update, Project Billing account-type check guidance, Treasury Business Partner workflow-control guidance, EBRR dynamic fiscal-period guidance, decentralized EWM/QM integration update, clean-core wrapper guidance, outbound-delivery custom-logic guidance, API delivery stock-shortage guidance, EPPM custom-value-type guidance, Origin Profit Center guidance, CBC 5-country rollout guidance, SAP Community ERP product update feed, future SAP S/4HANA Cloud Public Edition 2608 Patch Collection Information Note, SAP for Me / Cloud ALM upgrade announcements.",
+        expectedFrom: "2026-07-15",
+        nextAction: "Hourly check for the 2608 SAP Note number, HFC02 attachment, RASD link, and any updated customer activities."
+      },
+      customerActions: [
+        {
+          label: "2608 IAM successor app activation",
+          status: "Action required",
+          source: "SAP Community IAM app activation guidance; SAP Note 2975653 referenced by SAP as the central IAM change overview.",
+          summary: "From SAP S/4HANA Cloud Public Edition 2602, newly delivered IAM apps are inactive by default. Before 2608, check whether Fortescue roles use predecessor apps, activate the relevant successor IAM apps, validate with key users, then transport role changes to Test and Production.",
+          items: [
+            "Use IAM Information System, Display IAM Apps, or Manage Business Role Changes After Upgrade to identify predecessor/successor relationships and affected business roles.",
+            "Activate successor IAM apps in Maintain Business Roles or by Mass Change, then maintain any new restriction types and catalog/page impacts.",
+            "After validation, deactivate deprecated predecessor apps where appropriate and update role documentation, launchpad pages, filters, and end-user communications.",
+            "Priority successor IAM app IDs called out by SAP include F3516A_TRAN, F3425A_TRAN, F1443B_TRAN, F3883A_TRAN, F3915A_TRAN, F7280A_TRAN, F0956B_TRAN, and F9104_TRAN."
+          ]
+        }
+      ],
+      productUpdates: [
+        {
+          label: "2608 workflow approval controls",
+          source: "SAP Community product update for SAP S/4HANA Cloud Public Edition 2608.",
+          summary: "SAP published a 2608 product update for flexible workflow: multi-processor task completion enables two- or three-person approvals, supports independent four-eyes/six-eyes controls, and adds validation callbacks to block invalid workflow activation.",
+          items: [
+            "Review affected approval workflows using Manage Workflow after the 2608 upgrade.",
+            "Test multi-processor approval scenarios with concrete users, teams, substitution, and forwarding cases.",
+            "Use workflow simulation and excluded-agent design where initiator/approver separation is required."
+          ]
+        },
+        {
+          label: "RASD 2026 impact tracking",
+          source: "SAP Community RASD 2026 product update, modified 23 June 2026.",
+          summary: "SAP's Release Assessment and Scope Dependency update explains 2026 enhancements intended to reduce Day 1 upgrade impact: What’s New change history, Last Modified On filtering, customer-name display, and cross-navigation from impact cards into affected S/4HANA Cloud apps.",
+          items: [
+            "Use the What’s New Viewer change history and Last Modified On filter to focus on entries updated after the last review date.",
+            "Review RASD impact cards for deleted or changed extensibility objects, where-used lists, impacted business catalogs, IAM apps, and renamed app tiles.",
+            "Use direct navigation from RASD to Custom CDS Views and Manage Business Role Changes After Upgrade where available."
+          ]
+        },
+        {
+          label: "BTP ABAP Environment 2608 pre-upgrade option",
+          source: "SAP Community product update, published 12 June 2026 and modified 19 June 2026.",
+          summary: "SAP says SAP BTP ABAP Environment customers or partners can nominate existing systems for an optional 2608 pre-upgrade to test custom-built apps before the standard 2608 upgrade. The stated pre-upgrade window is 17 July, 08:00-16:00 CET, which is 17 July 17:00 to 18 July 01:00 AEST if SAP's CET label is interpreted literally.",
+          items: [
+            "SAP recommends nominating a non-development system, such as a test system; production nomination is not meaningful for this purpose.",
+            "The pre-upgrade is planned on HFC02, with HFC03 imported about two weeks later during the test phase.",
+            "The standard SAP BTP ABAP Environment 2608 upgrade is planned for 15/16 August and is planned on HFC04.",
+            "Use this as a side-by-side extension readiness check for custom apps built on SAP BTP ABAP Environment."
+          ]
+        },
+        {
+          label: "Explore Migration Objects 2602.4/2608 update",
+          source: "SAP Community product update, published 8 June 2026 and modified 23 June 2026.",
+          summary: "SAP's Explore Migration Objects app update adds 2602.4 and 2608 features for migration planning: a migration-object Availability column, a scope-item Status column, and an enhanced dependency graph.",
+          items: [
+            "Use the new Availability column and quick filter to see which migration objects are available for the activated scope.",
+            "Review scope-item status and dependencies where migration-object visibility depends on scope, feature toggles, or business functions.",
+            "Use this before the 2608 upgrade when validating migration cockpit readiness or project data-load planning."
+          ]
+        },
+        {
+          label: "Asset Management autonomous agents",
+          source: "SAP Community product update, published 26 June 2026 and modified 27 June 2026.",
+          summary: "SAP published an Asset Management update for SAP S/4HANA Cloud Public Edition describing a move from reactive maintenance toward AI-assisted and autonomous maintenance operations.",
+          items: [
+            "Maintenance supervisors: AI is described for grouping, deduplicating, and prioritizing large volumes of notifications.",
+            "Maintenance planners: AI is described for synthesizing fragmented asset data and recommending planning decisions.",
+            "Maintenance technicians: SAP describes photo-assisted defect reporting and AI-created maintenance notifications to reduce administration."
+          ]
+        },
+        {
+          label: "EWM/QM two-tier warehouse integration",
+          source: "SAP Community product update, published 26 June 2026.",
+          summary: "SAP published a two-tier ERP update for decentralized SAP EWM integration with SAP Cloud ERP where quality inspection is executed directly in EWM using the Quality Inspection Engine, with stock status synchronized back to SAP Cloud ERP.",
+          items: [
+            "Review inbound delivery distribution from SAP Cloud ERP to decentralized EWM for inspection-relevant goods receipts.",
+            "Validate Quality Inspection Engine inspection rules, inspection object types, follow-up actions, and stock-type mapping for accepted, rejected, and exception outcomes.",
+            "Use this as a supply-chain readiness topic for sites using decentralized EWM and quality inspection close to warehouse execution."
+          ]
+        },
+        {
+          label: "Clean-core wrapper interface design",
+          source: "SAP Community extensibility guidance, published 25 June 2026.",
+          summary: "SAP published wrapper-interface guidance for clean-core extensibility in SAP S/4HANA, focused on encapsulating classic APIs and internal objects behind stable ABAP Cloud-friendly contracts.",
+          items: [
+            "Use wrapper interfaces to reduce direct dependency on classic APIs such as BAPIs.",
+            "Expose only required parameters and results through released interfaces.",
+            "Review custom ABAP Cloud extensions for upgrade-stable interface boundaries before 2608 regression testing."
+          ]
+        },
+        {
+          label: "Outbound-delivery stock-warning custom logic",
+          source: "SAP Community extensibility guidance from RSS feed, published 24 June 2026; direct article retry returned 503 during this check.",
+          summary: "SAP published a custom-logic example for SAP S/4HANA Cloud that checks stock during outbound delivery creation and raises a warning when quantity is insufficient, including API-message considerations.",
+          items: [
+            "Example BAdI called out by SAP: LE_SHP_DELIVERY_FINAL_CHECK for final checks before delivery save.",
+            "The scenario compares sales-order item quantity with current stock and returns a warning for insufficient quantity.",
+            "Review API-created outbound delivery behavior separately because front-end warnings and API messages can differ."
+          ]
+        },
+        {
+          label: "API-created delivery stock-shortage handling",
+          source: "SAP Community extensibility guidance, published 25 June 2026.",
+          summary: "SAP published an API-specific outbound-delivery example for SAP S/4HANA Cloud where insufficient stock can cause the API to create a delivery with available stock and leave the external system inconsistent unless custom logic handles the message path.",
+          items: [
+            "Method 1 uses BAdI LE_SHP_SAVE_DOCUMENT_PREPARE to set delivery custom field YY1_Message when stock is below the sales-order item quantity.",
+            "Method 2 uses BAdI LE_SHP_DELIVERY_FINAL_CHECK for final save checks; SAP notes that API-created delivery scenarios can ignore warnings, so error handling may be needed.",
+            "Review integrations that create outbound deliveries by API and assume warning messages are visible or blocking."
+          ]
+        },
+        {
+          label: "EPPM financial-planning custom value types",
+          source: "SAP Community product update, published 24 June 2026.",
+          summary: "SAP published EPPM financial-planning guidance for separating business-specific cost splits such as CAPEX and OPEX by introducing custom value types and mapping them in integration customizing.",
+          items: [
+            "Review whether project financial planning needs dimensions beyond standard View, Category, Group, Cost Element, Cost Center, Activity Type, and CO Version.",
+            "SAP describes custom value types such as CAPEX/OPEX and implementation through BAdI RPM_FICO_INT.",
+            "For split-instance landscapes, SAP says custom value types need configuration on both EPPM and Project System sides."
+          ]
+        },
+        {
+          label: "Origin Profit Centers for project margin",
+          source: "SAP Community product update, published 18 June 2026.",
+          summary: "SAP describes Origin Profit Center as a Universal Journal attribute for tracking project margin by both responsible and contributing profit centers, supporting cross-project ownership reporting.",
+          items: [
+            "Review professional-services and project-margin reporting where contributors belong to profit centers different from the responsible project profit center.",
+            "SAP says the attribute is derived from the employee's assigned cost center and stored in ACDOCA.",
+            "Assess reporting and allocation logic that expects only responsible profit center visibility."
+          ]
+        },
+        {
+          label: "CBC 5-country rollout planning",
+          source: "SAP Community Central Business Configuration guidance, published 22 June 2026.",
+          summary: "SAP published guidance for SAP Central Business Configuration in SAP S/4HANA Cloud Public Edition explaining the 5-country delta rule for scope extensions, country additions, and main-line / parallel-line merge or rebase planning.",
+          items: [
+            "Any system change in CBC, including scope extension and country addition, cannot create a country delta greater than five countries.",
+            "Large rollouts should be phased, for example 5 plus 5 plus 2 countries instead of a single 12-country addition.",
+            "Review merge and rebase plans where the main line and parallel line have diverged by more than five countries."
+          ]
+        },
+        {
+          label: "Advanced down payment with milestone billing",
+          source: "SAP Community product update, published 24 June 2026.",
+          summary: "SAP published a Sales Billing update for SAP S/4HANA Cloud Public Edition combining Advanced Down Payment Processing with milestone billing.",
+          items: [
+            "The update introduces Milestone Billing with Down Payment Requests for order-related milestone billing.",
+            "SAP references scope item 7Z1 for Sales Order Processing with Milestone Billing and contrasts it with delivery-related down-payment processing.",
+            "Relevant review area: sales billing, customer down payments, settlement invoices, and order-related billing scenarios."
+          ]
+        },
+        {
+          label: "Project Billing revenue and sales-deduction check",
+          source: "SAP Community product update, published 14 May 2026.",
+          summary: "SAP says that with SAP S/4HANA Cloud Public Edition 2608, Project Billing applies a standardized billing-relevance check for project-related journal entries. Postings to G/L accounts with Cost Element Category 11 (Revenues) or 12 (Sales Deduction) are excluded from Project Billing processes.",
+          items: [
+            "The check applies across Project Billing entry points, including the Manage Project Billing app and Project Billing APIs.",
+            "In 2602.3, SAP delivered the behavior through feature toggle PROJ_BILLG_ACCOUNT_TYPE_CHECK for impact analysis and configuration adaptation.",
+            "For 2608, the feature toggle is delivered enabled by default, and customers can temporarily disable it during the transition window if needed.",
+            "Review project billing configuration, billable-cost expectations, and any journal-entry patterns using revenue or sales-deduction accounts before the Test upgrade."
+          ]
+        },
+        {
+          label: "Treasury Business Partner workflow controls",
+          source: "SAP Community Financial Management product update for SAP Cloud ERP release 2608.",
+          summary: "SAP describes planned workflow-based controls for Treasury Business Partner data in SAP Cloud ERP 2608, focused on approval traceability, segregation of duties, and four-eyes governance for sensitive counterparty and payment-relevant data.",
+          items: [
+            "Review treasury counterparty, bank detail, standing instruction, and payment-relevant Business Partner change processes.",
+            "Validate who can create or change sensitive treasury Business Partner data and who approves those changes.",
+            "Check downstream impact for confirmations, settlements, payment initiation, and correspondence processes.",
+            "Use this as a finance/treasury readiness topic alongside the broader 2608 workflow approval changes."
+          ]
+        },
+        {
+          label: "EBRR dynamic fiscal-period close jobs",
+          source: "SAP Community product update, published 22 June 2026 and modified 26 June 2026.",
+          summary: "SAP says SAP S/4HANA Cloud Public Edition 2608 adds dynamic determination of the To Fiscal Period/Year for Event-Based Revenue Recognition period-end close jobs, reducing static-period scheduling errors and supporting multi-ledger fiscal-year variants.",
+          items: [
+            "Review recurring EBRR period-end close jobs that currently use a fixed To Fiscal Period/Year.",
+            "Validate whether Current Fiscal Period or Previous Fiscal Period matches month-end and start-of-period close schedules.",
+            "Test multi-company-code and multi-ledger jobs where fiscal-year variants differ.",
+            "SAP lists the supported jobs as Run Revenue Recognition - Sales Orders (F4276), Projects (F4277), Service Documents (F4278), Provider Contracts (F5405), and Revenue Contracts (F7347)."
+          ]
+        },
+        {
+          label: "Additional ERP feed product signals",
+          source: "SAP Community ERP Blog Posts by SAP RSS feed, checked 1 July 2026 03:59 AEST.",
+          summary: "The public ERP feed exposed additional SAP S/4HANA Cloud Public Edition product/extensibility updates relevant to 2608 readiness review, even though they are not separate maintenance windows. Several items have now been split into dedicated cards; the sales-order BAdI article was modified on 29 June 2026 with more implementation detail. SAP's SAP Cloud ERP Business AI concept article was updated again on 1 July 2026 AEST, still describing the shift from embedded assistants toward role- and process-aware agents and skills.",
+          items: [
+            "Sales extensibility: BAdI SD_SLS_END_OF_FINALIZE runs at the end of the sales-order Finalize phase and can maintain a human-readable issue-summary custom field on sales orders before save.",
+            "Implementation details now tracked: custom field YY1_ISSUE_SUMMARY_SDH, enhancement spot ES_SD_SLS_DEV_EXTEND, method IF_SD_SLS_END_OF_FINALIZE~MODIFY_FIELDS, simulation-mode skip logic, and the generated control flag needed for writes.",
+            "EBRR scheduling: company-code and ledger ranges can reduce one-job-per-company-code or one-job-per-ledger scheduling patterns.",
+            "EBRR project-based sales: External Revenue Recognition Key Derivation is described for CFD 2602.3 across EPPM, SD, and EBRR integration.",
+            "Two-tier planning/Joule: SAP published cross-tier flexible constraint visibility and cross-ATP check concepts for availability commitments across headquarters and subsidiary ERP tiers.",
+            "Business AI / agents: SAP updated the Chinese-language SAP Cloud ERP product article on 1 July 2026 AEST; it continues to describe the Assistant, Agent, and Skill model for process-aware AI coordination after SAP Sapphire 2026, with no maintenance-window or customer-action date change detected."
+          ]
+        }
+      ]
     },
     {
       id: "2026-W31",
@@ -956,8 +1608,16 @@ window.sapWatchData = {
       start: "2026-08-01T22:00:00+10:00",
       end: "2026-08-02T22:00:00+10:00",
       systems: "Starter and other systems",
-      description: "2608 major upgrade for Starter and other systems.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      description: "2608 major upgrade for Starter and other systems. SAP's 2608 upgrade guidance indicates other tenants upgrade with HFC03 on 1-2 August 2026, and T-Tenant receives HFC03 for new feature preview. Preliminary 2608 What's New content is now a preparation source. Continue tracking the IAM successor app customer action and RASD impact cards before this upgrade weekend.",
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "pending",
+        label: "2608 HFC03 upgrade detail",
+        summary: "Starter, sandbox, evaluation, and other tenants are expected to upgrade with HFC03. T-Tenant is also expected to receive HFC03 at this point to preview features before D/P tenants move to HFC03+. Preliminary What's New and RASD should be used to identify scope-specific review items before the weekend, including change-history deltas and impact-card navigation. The IAM successor app activation check remains an active customer action.",
+        expectedSource: "SAP Help 2608 preview, preliminary 2608 What's New / Product Assistance, RASD 2026 guidance, IAM successor app guidance, future SAP S/4HANA Cloud Public Edition 2608 Patch Collection Information Note, SAP for Me announcements, and Cloud ALM status events.",
+        expectedFrom: "2026-07-15",
+        nextAction: "Hourly check for HFC03 details, RASD impacts, new feature preview wording, and any date or downtime wording changes."
+      }
     },
     {
       id: "2026-W33-DEV",
@@ -968,8 +1628,16 @@ window.sapWatchData = {
       start: "2026-08-15T14:00:00+10:00",
       end: "2026-08-15T18:00:00+10:00",
       systems: "Development systems",
-      description: "2608 major upgrade for Development systems.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      description: "2608 major upgrade for Development systems. SAP's 2608 upgrade guidance indicates D/P tenants upgrade with HFC03+ on 15-16 August 2026, with T-Tenant receiving HFC03+ in the same weekend. Preliminary 2608 What's New and RASD content should be reviewed before the D/P weekend. IAM successor app activation and RASD impact-card follow-ups should be validated before Development and Production move to 2608.",
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "pending",
+        label: "2608 HFC03+ D/P detail",
+        summary: "Development systems are expected to upgrade with HFC03+. SAP's 2608 pattern introduces HFCxx+ releases containing critical fixes one week after the base HFC. Preliminary What's New, RASD 2026 guidance, and the IAM successor app activation guidance are active preparation sources for scope-specific changes.",
+        expectedSource: "SAP Help 2608 preview, preliminary 2608 What's New / Product Assistance, RASD 2026 guidance, IAM successor app guidance, future 2608 patch collection note, HFC short-description attachments, and SAP for Me / Cloud ALM announcements.",
+        expectedFrom: "2026-07-15",
+        nextAction: "Hourly check for HFC03+ wording, application correction lists, critical-fix markers, and recommended customer activities."
+      }
     },
     {
       id: "2026-W33-PROD",
@@ -980,8 +1648,16 @@ window.sapWatchData = {
       start: "2026-08-15T22:00:00+10:00",
       end: "2026-08-16T02:00:00+10:00",
       systems: "Production systems",
-      description: "2608 major upgrade for Production systems.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      description: "2608 major upgrade for Production systems. SAP's 2608 upgrade guidance indicates D/P tenants upgrade with HFC03+ on 15-16 August 2026, with T-Tenant receiving HFC03+ in the same weekend. Preliminary 2608 What's New and RASD content should be reviewed before the D/P weekend. Production readiness now explicitly includes IAM successor app activation checks and RASD impact-card follow-up.",
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "pending",
+        label: "2608 HFC03+ production detail",
+        summary: "Production systems are expected to upgrade with HFC03+. This is the highest-priority watch item for HFC03+ critical fixes, customer activities, completion updates, scope-specific RASD preparation items, and IAM successor app activation readiness.",
+        expectedSource: "SAP Help 2608 preview, preliminary 2608 What's New / Product Assistance, RASD 2026 guidance, IAM successor app guidance, future 2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM announcements, and upgrade emails.",
+        expectedFrom: "2026-07-15",
+        nextAction: "Hourly check for HFC03+ details, production-impact wording, recommended activities, and any completion or delay updates."
+      }
     },
     {
       id: "2026-W34",
@@ -993,7 +1669,14 @@ window.sapWatchData = {
       end: "2026-08-24T00:00:00+10:00",
       systems: "Systems not upgraded earlier",
       description: "Backup upgrade weekend if SAP needs it for systems not upgraded earlier.",
-      outlook: "Created as an all-day free calendar item with a 1-day reminder."
+      outlook: "Created as an all-day free calendar item with a 1-day reminder.",
+      detailWatch: {
+        status: "watching",
+        label: "Exception-only watch",
+        summary: "The backup weekend is only used for systems not upgraded during the original upgrade weekends. There may be no correction PDF unless SAP announces a specific affected system.",
+        expectedSource: "SAP for Me / Cloud ALM system-specific announcements and upgrade completion or exception emails.",
+        nextAction: "Hourly check for any Fortescue-specific backup-weekend announcement, cancellation, or changed system scope."
+      }
     },
     {
       id: "2026-W35",
@@ -1005,7 +1688,15 @@ window.sapWatchData = {
       end: "2026-08-30T05:00:00+10:00",
       systems: "Post-upgrade estate",
       description: "Post-upgrade hotfix / patching watch window.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "pending",
+        label: "Post-upgrade HFC detail pending",
+        summary: "This post-upgrade patching window should be matched to the published 2608 HFC level once SAP publishes the 2608 patch collection note and attachments.",
+        expectedSource: "Future 2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM HFC announcements.",
+        expectedFrom: "2026-07-15",
+        nextAction: "Hourly check for the exact HFC code, correction list, and whether the window remains required after upgrade completion."
+      }
     },
     {
       id: "2026-W37",
@@ -1017,7 +1708,14 @@ window.sapWatchData = {
       end: "2026-09-13T05:00:00+10:00",
       systems: "After 2608 pattern change",
       description: "Standard maintenance / hotfix watch window after the 2608 pattern change.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "pending",
+        label: "Standard maintenance detail pending",
+        summary: "This is the first standard maintenance / hotfix watch window after the 2608 pattern change. SAP's 2608 pattern indicates D/P tenants receive HFCxx+ critical-fix releases while T/other tenants may receive the base HFC earlier.",
+        expectedSource: "2608 patch collection note, SAP for Me / Cloud ALM maintenance announcements, and HFC attachments when published.",
+        nextAction: "Hourly check for exact HFC/HFC+ code, correction/update wording, customer activities, and window changes."
+      }
     },
     {
       id: "2026-W39",
@@ -1029,7 +1727,14 @@ window.sapWatchData = {
       end: "2026-09-27T05:00:00+10:00",
       systems: "Continuous delivery",
       description: "Online software change / continuous delivery watch window.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "watching",
+        label: "Continuous delivery watch",
+        summary: "Online software change details are expected through What's New, Preliminary What's New, RASD, and SAP for Me / Cloud ALM announcement text. SAP's 2608 pattern adds online software change weekends alongside standard maintenance and optional urgent maintenance.",
+        expectedSource: "What's New Viewer, Preliminary What's New, Release Assessment / Scope Dependency, SAP for Me / Cloud ALM announcements.",
+        nextAction: "Hourly check for released or upcoming feature/update detail and any customer action flags."
+      }
     },
     {
       id: "2026-W41",
@@ -1041,7 +1746,14 @@ window.sapWatchData = {
       end: "2026-10-11T06:00:00+11:00",
       systems: "Monthly maintenance",
       description: "Standard maintenance / hotfix watch window.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "pending",
+        label: "Standard maintenance detail pending",
+        summary: "Monthly standard maintenance details will be tied to the current 2608 HFC level once SAP publishes the relevant note update and announcement.",
+        expectedSource: "2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM announcements.",
+        nextAction: "Hourly check for exact HFC code, correction list, and any changed downtime wording."
+      }
     },
     {
       id: "2026-W42",
@@ -1053,7 +1765,14 @@ window.sapWatchData = {
       end: "2026-10-18T06:00:00+11:00",
       systems: "Continuous delivery",
       description: "Online software change / continuous delivery watch window.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "watching",
+        label: "Continuous delivery watch",
+        summary: "Online software change details will be checked against What's New / RASD plus SAP for Me / Cloud ALM announcement text.",
+        expectedSource: "What's New Viewer, Preliminary What's New, Release Assessment / Scope Dependency, SAP for Me / Cloud ALM announcements.",
+        nextAction: "Hourly check for feature/update detail, affected scope, and customer action flags."
+      }
     },
     {
       id: "2026-W45",
@@ -1065,7 +1784,14 @@ window.sapWatchData = {
       end: "2026-11-08T06:00:00+11:00",
       systems: "Monthly maintenance",
       description: "Standard maintenance / hotfix watch window.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "pending",
+        label: "Standard maintenance detail pending",
+        summary: "Monthly standard maintenance details will be tied to the current 2608 HFC level once SAP publishes the relevant note update and announcement.",
+        expectedSource: "2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM announcements.",
+        nextAction: "Hourly check for exact HFC code, correction list, and any changed downtime wording."
+      }
     },
     {
       id: "2026-W46",
@@ -1077,7 +1803,14 @@ window.sapWatchData = {
       end: "2026-11-15T06:00:00+11:00",
       systems: "Continuous delivery",
       description: "Online software change / continuous delivery watch window.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "watching",
+        label: "Continuous delivery watch",
+        summary: "Online software change details will be checked against What's New / RASD plus SAP for Me / Cloud ALM announcement text.",
+        expectedSource: "What's New Viewer, Preliminary What's New, Release Assessment / Scope Dependency, SAP for Me / Cloud ALM announcements.",
+        nextAction: "Hourly check for feature/update detail, affected scope, and customer action flags."
+      }
     },
     {
       id: "2026-W49",
@@ -1089,7 +1822,14 @@ window.sapWatchData = {
       end: "2026-12-06T06:00:00+11:00",
       systems: "Monthly maintenance",
       description: "Standard maintenance / hotfix watch window.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "pending",
+        label: "Standard maintenance detail pending",
+        summary: "Monthly standard maintenance details will be tied to the current 2608 HFC level once SAP publishes the relevant note update and announcement.",
+        expectedSource: "2608 patch collection note, HFC short-description attachments, SAP for Me / Cloud ALM announcements.",
+        nextAction: "Hourly check for exact HFC code, correction list, and any changed downtime wording."
+      }
     },
     {
       id: "2026-W50",
@@ -1101,13 +1841,19 @@ window.sapWatchData = {
       end: "2026-12-13T06:00:00+11:00",
       systems: "Continuous delivery",
       description: "Online software change / continuous delivery watch window.",
-      outlook: "Created as a free calendar item with a 12-hour reminder."
+      outlook: "Created as a free calendar item with a 12-hour reminder.",
+      detailWatch: {
+        status: "watching",
+        label: "Continuous delivery watch",
+        summary: "Online software change details will be checked against What's New / RASD plus SAP for Me / Cloud ALM announcement text.",
+        expectedSource: "What's New Viewer, Preliminary What's New, Release Assessment / Scope Dependency, SAP for Me / Cloud ALM announcements.",
+        nextAction: "Hourly check for feature/update detail, affected scope, and customer action flags."
+      }
     }
   ]
 };
-
-</script>
-<script>
+    </script>
+    <script>
 (function () {
   const data = window.sapWatchData;
   const events = data.events.map((event) => ({
@@ -1145,6 +1891,49 @@ window.sapWatchData = {
     return events.find((event) => event.endDate >= now) || events[events.length - 1];
   }
 
+  function escapeHTML(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function getHotfixSearchText(event) {
+    if (!event.hotfixCollection) return "";
+    const fixes = event.hotfixCollection.corrections
+      .map((fix) => `${fix.component} ${fix.summary}`)
+      .join(" ");
+    return `${event.hotfixCollection.code} ${event.hotfixCollection.sapNote} ${event.hotfixCollection.attachment} ${fixes}`;
+  }
+
+  function getDetailWatchSearchText(event) {
+    if (!event.detailWatch) return "";
+    return [
+      event.detailWatch.status,
+      event.detailWatch.label,
+      event.detailWatch.summary,
+      event.detailWatch.expectedSource,
+      event.detailWatch.expectedFrom,
+      event.detailWatch.nextAction
+    ].filter(Boolean).join(" ");
+  }
+
+  function getSignalSearchText(event) {
+    return [event.customerActions, event.productUpdates]
+      .flatMap((group) => group || [])
+      .flatMap((signal) => [
+        signal.label,
+        signal.status,
+        signal.source,
+        signal.summary,
+        ...(signal.items || [])
+      ])
+      .filter(Boolean)
+      .join(" ");
+  }
+
   function setCounts() {
     document.querySelector("#upgradeCount").textContent = events.filter((event) => event.category === "upgrade").length;
     document.querySelector("#maintenanceCount").textContent = events.filter((event) => event.category === "maintenance").length;
@@ -1153,7 +1942,7 @@ window.sapWatchData = {
     sourceChecked.textContent = data.sourceChecked;
 
     const next = getNextEvent();
-    nextWindow.textContent = `${next.week} \u00b7 ${next.title}`;
+    nextWindow.textContent = `${next.week} ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· ${next.title}`;
     selectedId = selectedId || next.id;
   }
 
@@ -1161,9 +1950,29 @@ window.sapWatchData = {
     const search = searchInput.value.trim().toLowerCase();
     return events.filter((event) => {
       const matchesFilter = activeFilter === "all" || event.category === activeFilter;
-      const haystack = `${event.week} ${event.title} ${event.displayTime} ${event.description} ${event.systems}`.toLowerCase();
+      const haystack = `${event.week} ${event.title} ${event.displayTime} ${event.description} ${event.systems} ${getHotfixSearchText(event)} ${getDetailWatchSearchText(event)} ${getSignalSearchText(event)}`.toLowerCase();
       return matchesFilter && (!search || haystack.includes(search));
     });
+  }
+
+  function renderSignalCards(signals, typeLabel, className) {
+    if (!signals || !signals.length) return "";
+    return signals.map((signal) => `
+      <section class="signal-card ${className}" aria-label="${escapeHTML(typeLabel)}">
+        <div class="signal-heading">
+          <span>${escapeHTML(typeLabel)}</span>
+          ${signal.status ? `<strong>${escapeHTML(signal.status)}</strong>` : ""}
+        </div>
+        <h4>${escapeHTML(signal.label)}</h4>
+        <p>${escapeHTML(signal.summary)}</p>
+        ${signal.items && signal.items.length ? `
+          <ul class="signal-list">
+            ${signal.items.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}
+          </ul>
+        ` : ""}
+        ${signal.source ? `<div class="signal-source">${escapeHTML(signal.source)}</div>` : ""}
+      </section>
+    `).join("");
   }
 
   function renderSchedule() {
@@ -1194,6 +2003,7 @@ window.sapWatchData = {
         </span>
         <span class="event-meta">
           ${event.id === next.id ? '<span class="next-badge">Next</span>' : ""}
+          ${event.hotfixCollection ? `<span class="hotfix-badge">${event.hotfixCollection.code}</span>` : ""}
           <span class="category-badge">${categoryLabels[event.category]}</span>
         </span>
       `;
@@ -1210,31 +2020,88 @@ window.sapWatchData = {
 
   function renderDetails() {
     const event = events.find((item) => item.id === selectedId) || getNextEvent();
+    const hotfix = event.hotfixCollection;
+    const detailWatch = event.detailWatch;
+    const customerActionMarkup = renderSignalCards(event.customerActions, "Customer action", "customer-action-card");
+    const productUpdateMarkup = renderSignalCards(event.productUpdates, "Product update", "product-update-card");
+    const hotfixMarkup = hotfix ? `
+      <section class="hotfix-card" aria-label="${escapeHTML(hotfix.code)} application corrections">
+        <div class="hotfix-heading">
+          <span class="hotfix-code">${escapeHTML(hotfix.code)}</span>
+          <div>
+            <strong>${escapeHTML(hotfix.correctionCount)} application corrections</strong>
+            <span>Released ${escapeHTML(hotfix.releasedOn)} for SAP S/4HANA Cloud Public Edition ${escapeHTML(hotfix.release)}</span>
+          </div>
+        </div>
+        <div class="hotfix-source">
+          <span>SAP Note ${escapeHTML(hotfix.sapNote)}</span>
+          <span>${escapeHTML(hotfix.attachment)}</span>
+        </div>
+        <div class="hotfix-list" role="list">
+          ${hotfix.corrections.map((fix) => `
+            <article class="hotfix-row" role="listitem">
+              <span>${escapeHTML(fix.component)}</span>
+              <p>${escapeHTML(fix.summary)}</p>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    ` : "";
+    const detailWatchMarkup = detailWatch ? `
+      <section class="watch-card ${escapeHTML(detailWatch.status)}" aria-label="Detail watch status">
+        <div class="watch-heading">
+          <span>${escapeHTML(detailWatch.label)}</span>
+          <strong>${escapeHTML(detailWatch.status)}</strong>
+        </div>
+        <p>${escapeHTML(detailWatch.summary)}</p>
+        <dl class="watch-list">
+          ${detailWatch.expectedFrom ? `
+            <div>
+              <dt>Expected from</dt>
+              <dd>${escapeHTML(detailWatch.expectedFrom)}</dd>
+            </div>
+          ` : ""}
+          <div>
+            <dt>Source being checked</dt>
+            <dd>${escapeHTML(detailWatch.expectedSource)}</dd>
+          </div>
+          <div>
+            <dt>Hourly action</dt>
+            <dd>${escapeHTML(detailWatch.nextAction)}</dd>
+          </div>
+        </dl>
+      </section>
+    ` : "";
+
     detailContent.innerHTML = `
       <div class="detail-kicker ${event.category}">${categoryLabels[event.category]}</div>
-      <h3>${event.title}</h3>
+      <h3>${escapeHTML(event.title)}</h3>
       <dl>
         <div>
           <dt>Week</dt>
-          <dd>${event.week}</dd>
+          <dd>${escapeHTML(event.week)}</dd>
         </div>
         <div>
           <dt>Window</dt>
-          <dd>${event.displayTime}</dd>
+          <dd>${escapeHTML(event.displayTime)}</dd>
         </div>
         <div>
           <dt>Systems</dt>
-          <dd>${event.systems}</dd>
+          <dd>${escapeHTML(event.systems)}</dd>
         </div>
         <div>
           <dt>Outlook</dt>
-          <dd>${event.outlook}</dd>
+          <dd>${escapeHTML(event.outlook)}</dd>
         </div>
       </dl>
-      <p>${event.description}</p>
+      <p>${escapeHTML(event.description)}</p>
+      ${hotfixMarkup}
+      ${detailWatchMarkup}
+      ${customerActionMarkup}
+      ${productUpdateMarkup}
       <div class="detail-footer">
-        <span>Source: ${data.sourceLabel}</span>
-        <span>${data.timezone}</span>
+        <span>Source: ${escapeHTML(data.sourceLabel)}</span>
+        <span>${escapeHTML(data.timezone)}</span>
       </div>
     `;
   }
@@ -1254,7 +2121,8 @@ window.sapWatchData = {
   renderDetails();
 })();
 
-</script>
+    </script>
   </body>
 </html>
+
 

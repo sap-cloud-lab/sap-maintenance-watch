@@ -306,6 +306,11 @@ h3 {
 .detail-panel {
   position: sticky;
   top: 94px;
+  align-self: start;
+  max-height: calc(100vh - 118px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
 }
 
 .panel-heading {
@@ -516,6 +521,230 @@ dd {
   color: var(--muted);
 }
 
+.hotfix-badge,
+.hotfix-code {
+  border-radius: 999px;
+  background: #e8f3ff;
+  color: var(--sap-deep);
+  font-size: 0.75rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.hotfix-badge {
+  padding: 7px 10px;
+}
+
+.hotfix-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(10, 110, 209, 0.24);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+}
+
+.hotfix-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.hotfix-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  padding: 8px 11px;
+}
+
+.hotfix-heading div {
+  display: grid;
+  gap: 3px;
+}
+
+.hotfix-heading strong {
+  font-size: 0.95rem;
+}
+
+.hotfix-heading span:last-child,
+.hotfix-source {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.hotfix-source {
+  display: grid;
+  gap: 4px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.hotfix-list {
+  display: grid;
+  max-height: 360px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.hotfix-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.34fr) minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hotfix-row:last-child {
+  border-bottom: 0;
+}
+
+.hotfix-row span {
+  color: var(--sap-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  word-break: break-word;
+}
+
+.hotfix-row p {
+  color: var(--ink);
+  font-size: 0.84rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.watch-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--sap-cyan);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.watch-card.pending {
+  border-left-color: var(--change);
+}
+
+.watch-card.watching {
+  border-left-color: var(--sap-blue);
+}
+
+.watch-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.watch-heading span,
+.watch-heading strong {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.watch-heading span {
+  color: var(--sap-deep);
+}
+
+.watch-heading strong {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--muted);
+}
+
+.watch-card p {
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.signal-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--sap-blue);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.signal-card.customer-action-card {
+  border-left-color: #e76500;
+  background: #fffaf4;
+}
+
+.signal-card.product-update-card {
+  border-left-color: #188918;
+  background: #f6fbf6;
+}
+
+.signal-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--sap-deep);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.signal-heading strong {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #fff;
+  color: #9a3f00;
+  font-size: 0.72rem;
+}
+
+.signal-card h4 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.signal-card p,
+.signal-card li {
+  color: var(--ink);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.signal-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.signal-source {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.watch-list {
+  gap: 0;
+}
+
+.watch-list div {
+  padding: 10px 0;
+}
+
+.watch-list dd {
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .detail-footer {
   display: grid;
   gap: 8px;
@@ -636,6 +865,9 @@ dd {
 
   .detail-panel {
     position: static;
+    max-height: none;
+    overflow: visible;
+    overscroll-behavior: auto;
   }
 
   .panel-heading,
@@ -698,6 +930,11 @@ dd {
 
   .event-meta {
     justify-content: flex-start;
+  }
+
+  .hotfix-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }
 

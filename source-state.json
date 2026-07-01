@@ -1,0 +1,575 @@
+﻿{
+    "monitorId":  "sap-s-4hana-cloud-maintenance-watch",
+    "lastCheckedAt":  "2026-07-01T21:17:57+10:00",
+    "timezone":  "Australia/Sydney",
+    "sources":  [
+                    {
+                        "kind":  "sap-public-schedule-pdf",
+                        "title":  "SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade \u0026 Maintenance Schedule",
+                        "url":  "https://www.sap.com/docs/download/2021/09/58ffa59e-f97d-0010-bca6-c68f7e60039b.pdf",
+                        "resolvedFileName":  "S4HANA_3SL_Maintenance_Schedule_for_Customer_Communication_2026Q1234_2026_02_19.pdf",
+                        "contentLength":  744073,
+                        "etag":  "\"8256dc3e419980804ad330M4ccd0670e53c8dec3b40\"",
+                        "observedAt":  "2026-07-01T21:17:57+10:00",
+                        "lastCheckStatus":  "Direct HEAD check returned 403 at 2026-07-01T21:17:57+10:00; prior metadata retained."
+                    },
+                    {
+                        "kind":  "sap-note-attachment",
+                        "sapNote":  "3646210",
+                        "title":  "SAP S/4HANA Cloud Public Edition 2602 and SAP Marketing Cloud 2602 - Patch Collection Information Note",
+                        "version":  "13",
+                        "releasedOn":  "2026-06-25",
+                        "attachmentName":  "S4HANACloud2602HFC13_ListOfHotfixShortDescription.pdf",
+                        "attachmentSizeKb":  39,
+                        "sha256":  "2DDFC23E5983BDF0DEED08927EE8818227C2C28F662139408D94161D89B8052B",
+                        "rowsExtracted":  91,
+                        "observedAt":  "2026-06-27T12:33:42+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-guidance",
+                        "title":  "Get Ready for the 2608 Upgrade of the SAP Cloud ERP Public Edition",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/get-ready-for-the-2608-upgrade-of-the-sap-cloud-erp-public-edition/ba-p/14421165",
+                        "publishedAt":  "2026-06-17T15:13:02.083Z",
+                        "modifiedAt":  "2026-06-17T17:10:08+02:00",
+                        "trackedSignals":  [
+                                               "T-Tenant upgrade with HFC02 on 2026-07-18/19",
+                                               "Other tenants upgrade with HFC03 on 2026-08-01/02",
+                                               "D/P tenants upgrade with HFC03+ on 2026-08-15/16",
+                                               "Standard maintenance, online software change, optional maintenance pattern after 2608"
+                                           ],
+                        "observedAt":  "2026-07-01T21:17:57+10:00",
+                        "lastCheckStatus":  "Direct article reachable; HFC02/HFC03 upgrade-window wording still present at 2026-07-01T21:17:57+10:00."
+                    },
+                    {
+                        "kind":  "sap-help-portal",
+                        "title":  "SAP S/4HANA Cloud Public Edition",
+                        "url":  "https://help.sap.com/docs/SAP_S4HANA_CLOUD",
+                        "trackedSignals":  [
+                                               "SAP Help Portal source for SAP S/4HANA Cloud Public Edition documentation",
+                                               "2608 preview is referenced from SAP\u0027s preliminary What\u0027s New announcement",
+                                               "Detailed help content is loaded by the SAP Help Portal application"
+                                           ],
+                        "observedAt":  "2026-06-27T14:03:32+10:00"
+                    },
+                    {
+                        "kind":  "sap-help-extensibility-explorer",
+                        "title":  "SAP Extensibility Explorer for SAP S/4HANA Cloud",
+                        "url":  "https://help.sap.com/crawler/PRODUCTION/SAP_EXTENSIBILITY_EXPLORER/SHIP/en-US",
+                        "contentLength":  4060,
+                        "articleTextSha256":  "0DA1914A63F7A47D7A82573AAC163820F3B6455D7F74DB8B08E2C4F6F6C0A73E",
+                        "checksumMethod":  "Crawler visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "Public SAP Help crawler endpoint for SAP Extensibility Explorer",
+                                               "Used to discover public SAP S/4HANA Cloud extensibility examples without interactive login",
+                                               "Visible examples include General Ledger Account Line Item with Project Reference, Workforce Utilization Reporting, customer address validation microservice, Timesheet Data Export, Situation Handling Automation, and extension authentication setup"
+                                           ],
+                        "observedAt":  "2026-07-01T21:17:57+10:00",
+                        "lastCheckStatus":  "Extensibility Explorer crawler reachable; visible text checksum unchanged at 2026-07-01T21:17:57+10:00."
+                    },
+                    {
+                        "kind":  "sap-help-whats-new",
+                        "title":  "What\u0027s New in SAP S/4HANA Cloud Public Edition 2602.4 (HFC12)",
+                        "url":  "https://help.sap.com/http.svc/elasticsearch?q=SAP%20S%2F4HANA%20Cloud%20Public%20Edition%202602.4%20HFC12\u0026area=content\u0026advancedSearch=0\u0026excludeNotSearchable=1\u0026language=en-US\u0026state=PRODUCTION\u0026transtype=standard,html,pdf,others\u0026to=100",
+                        "helpDocExampleUrl":  "https://help.sap.com/docs/SAP_S4HANA_CLOUD/ee9ee0ca4c3942068ea584d2f929b5b1/3ee2f812232c421dba6e02c3dc00d02f.html?locale=en-US\u0026state=PRODUCTION\u0026version=2602.12",
+                        "release":  "2602.4",
+                        "hotfixCollection":  "HFC12",
+                        "resultDate":  "2026-06-26",
+                        "rowsExtracted":  54,
+                        "resultRowsSha256":  "0A2CB7672334EA9D14D263E7E41AF338BD99AF602818FF7067C961A1682F363D",
+                        "checksumMethod":  "Canonical rows sorted by SAP Help URL: loio|date|versionId|title|url",
+                        "trackedSignals":  [
+                                               "SAP Help exposes 54 official What\u0027s New entries for SAP S/4HANA Cloud Public Edition 2602.4 (HFC12), all dated 2026-06-26 in search results",
+                                               "Relevant visible topics include Schedule Goods Issue for Deliveries Using Developer Extensibility, Explore Migration Objects App - Enhancements, Features for Joule, Print Preview on Explode BOM, Electronic Invoicing via Approved Platform, and finance/compliance/logistics updates",
+                                               "This is tracked as the product-assistance layer for the current 2602 maintenance cycle; SAP Note 3646210 remains the HFC13 correction source"
+                                           ],
+                        "observedAt":  "2026-07-01T21:17:57+10:00",
+                        "lastCheckStatus":  "SAP Help HFC12 search reachable; 54-row product-assistance checksum unchanged at 2026-07-01T21:17:57+10:00."
+                    },
+                    {
+                        "kind":  "sap-community-guidance",
+                        "title":  "SAP S/4HANA Cloud Public Edition 2602.4: Final What\u0027s New \u0026 Product Assistance available",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/sap-s-4hana-cloud-public-edition-2602-4-final-what-s-new-amp-product/ba-p/14413240",
+                        "publishedAt":  "2026-06-11T14:07:05.975Z",
+                        "modifiedAt":  "2026-06-11T16:07:05+02:00",
+                        "articleTextSha256":  "8CD7B08C9F0DF47B4F3C46EDD65893B97E2A353C6A49BF7D8B38A3BF2A75FC92",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP announced final What\u0027s New information for SAP S/4HANA Cloud Public Edition 2602.4",
+                                               "SAP announced final Product Assistance for SAP S/4HANA Cloud Public Edition 2602.4",
+                                               "SAP recommends the Release Assessment and Scope Dependency tool for a personalized view based on activated and used scope",
+                                               "The announcement says 2602.4 information would be available in RASD within the next few days"
+                                           ],
+                        "observedAt":  "2026-06-29T10:58:39+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-guidance",
+                        "title":  "Preliminary What\u0027s New Information for SAP S/4HANA Cloud Public Edition 2608",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/preliminary-what-s-new-information-for-sap-s-4hana-cloud-public-edition/ba-p/14419769",
+                        "publishedAt":  "2026-06-17T07:33:36.818Z",
+                        "modifiedAt":  "2026-06-22T09:38:49+02:00",
+                        "trackedSignals":  [
+                                               "Preliminary 2608 What\u0027s New information is available",
+                                               "Preliminary 2608 Product Assistance is available",
+                                               "Use What\u0027s New Viewer or RASD for upgrade preparation",
+                                               "RASD provides a personalized view based on activated and used scope",
+                                               "Valid S-user access is required for RASD and all preliminary content"
+                                           ],
+                        "observedAt":  "2026-06-27T14:03:32+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Release Assessment and Scope Dependency for SAP S/4HANA Cloud Public Edition: What is new in 2026",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/release-assessment-and-scope-dependency-for-sap-s-4hana-cloud-public/ba-p/14410548",
+                        "publishedAt":  "2026-06-03T13:13:34.955Z",
+                        "modifiedAt":  "2026-06-23T14:25:15+02:00",
+                        "articleTextSha256":  "7B294FB1B1E7D19CBAC89A18B65F1EF3168E75487F4D8AE558234FC29A343E90",
+                        "trackedSignals":  [
+                                               "RASD 2026 guidance focuses on disruption-free upgrades and zero Day 1 impact based on customer usage",
+                                               "What\u0027s New Viewer change history tracks content updates from preliminary release content through RTC",
+                                               "Last Modified On filtering helps review only recently changed What\u0027s New entries",
+                                               "RASD impact cards now support navigation to Custom CDS Views, Manage Business Role Changes After Upgrade, and tenant-specific S/4HANA Cloud apps",
+                                               "Impacted areas include extensibility objects, where-used lists, impacted business catalogs, IAM apps, and renamed app tiles"
+                                           ],
+                        "observedAt":  "2026-06-27T18:04:23+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update-localized",
+                        "title":  "SAP S/4HANA Cloud Public Edition RASD å·¥å…· 2026 å¹´æ–°åŠŸèƒ½ï¼šChange History",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/sap-s-4hana-cloud-public-edition-rasd-%E5%B7%A5%E5%85%B7-2026-%E5%B9%B4%E6%96%B0%E5%8A%9F%E8%83%BD-change-history/ba-p/14420877",
+                        "articleTextSha256":  "A094F5696AD4402DF37EDC21650537189EEC57C9968F51C0E8CE7E95220FD759",
+                        "trackedSignals":  [
+                                               "Localized RASD Change History guidance repeats the already tracked RASD 2026 signal",
+                                               "Change History helps identify What\u0027s New entries that changed after preliminary publication",
+                                               "Last Modified filtering remains the relevant watch signal for daily RASD delta review"
+                                           ],
+                        "observedAt":  "2026-06-29T02:51:56+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-guidance",
+                        "title":  "Register now for the 2608 Early Release Series!",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/register-now-for-the-2608-early-release-series/ba-p/14399772",
+                        "publishedAt":  "2026-06-08T14:43:49.348Z",
+                        "modifiedAt":  "2026-06-15T14:37:49+02:00",
+                        "trackedSignals":  [
+                                               "2608 Early Release Series runs 2026-07-13 to 2026-07-17",
+                                               "Sessions include Artificial Intelligence, Extensibility, Finance, SAP Activate, SAP Cloud ALM, Test Automation Tool, Sales, Asset Management, GRC, Sourcing and Procurement, and related topics",
+                                               "Active SAP Learning Hub account is required for sign-up",
+                                               "Static source text does not expose a reliable session timezone"
+                                           ],
+                        "observedAt":  "2026-06-27T14:03:32+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-guidance",
+                        "title":  "Why It\u0027s Important to Activate New Apps and How to Do It (Short Version)",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/why-it-s-important-to-activate-new-apps-and-how-to-do-it-short-version/ba-p/14399282",
+                        "publishedAt":  "2026-06-02T07:25:17.662Z",
+                        "modifiedAt":  "2026-06-02T12:30:28+02:00",
+                        "htmlSha256":  "354591CA2F32C84F0C27AD38750472FD03FA46FA1EBF07566BAD7D9F16A525EF",
+                        "trackedSignals":  [
+                                               "From SAP S/4HANA Cloud Public Edition 2602, new IAM apps are delivered inactive by default",
+                                               "Customers should identify successor apps, affected business roles, and required IAM app activation",
+                                               "SAP references SAP Note 2975653 as the central IAM change overview",
+                                               "Customer follow-up includes testing, role restrictions, catalog/page impacts, transport, documentation, filter migration, and end-user communication"
+                                           ],
+                        "observedAt":  "2026-06-27T14:03:32+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-guidance",
+                        "title":  "2608 IAM successor app checklist",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%BF%80%E6%B4%BB%E6%96%B0%E5%BA%94%E7%94%A8-iam-app-%E4%BB%A5%E5%8F%8A%E5%A6%82%E4%BD%95%E6%93%8D%E4%BD%9C-2608%E5%8D%87%E7%BA%A7%E5%89%8D%E5%BF%85%E7%9C%8B/ba-p/14415816",
+                        "publishedAt":  "2026-06-12T03:02:36.093Z",
+                        "modifiedAt":  "2026-06-12T08:17:29+02:00",
+                        "htmlSha256":  "C9AD7166CAE9B8794EB7CB58DEFB451501093BA0D834819819CEBCA7B42DD065",
+                        "trackedSignals":  [
+                                               "2608 pre-upgrade customer action: check and activate successor IAM apps if predecessor apps are used",
+                                               "Successor IAM app IDs called out include F3516A_TRAN, F3425A_TRAN, F1443B_TRAN, F3883A_TRAN, F3915A_TRAN, F7280A_TRAN, F0956B_TRAN, and F9104_TRAN",
+                                               "Use IAM Information System, Display IAM Apps, Manage Business Role Changes After Upgrade, Maintain Business Roles, and Mass Change workflows",
+                                               "Transport validated business-role changes to Test and Production before the relevant 2608 upgrade windows"
+                                           ],
+                        "observedAt":  "2026-06-27T14:03:32+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "4-Eyes by Configuration: Multi-Processor Workflow Approvals in SAP S/4HANA Cloud Public Edition 2608",
+                        "url":  "https://community.sap.com/t5/technology-blog-posts-by-sap/4-eyes-by-configuration-multi-processor-workflow-approvals-in-sap-s-4hana/ba-p/14426804",
+                        "publishedAt":  "2026-06-25T14:21:59.132Z",
+                        "modifiedAt":  "2026-06-26T10:16:05+02:00",
+                        "htmlSha256":  "250E2688C7ED42E53700CCBAC029A8F65BD29686B58C515AE4059DAD551856EC",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud Public Edition 2608 introduces multi-processor task completion for two- or three-person approvals",
+                                               "Supports four-eyes and six-eyes workflow approval controls in Manage Workflow",
+                                               "Includes uniqueness rules for independent processing and validation callbacks to block invalid workflow activation",
+                                               "Review affected flexible workflows after 2608 upgrade and test approval, substitution, forwarding, and excluded-agent scenarios"
+                                           ],
+                        "observedAt":  "2026-06-27T14:03:32+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "SAP BTP ABAP Environment - Pre-Upgrade Option for Release 2608",
+                        "url":  "https://community.sap.com/t5/technology-blog-posts-by-sap/sap-btp-abap-environment-pre-upgrade-option-for-release-2608/ba-p/14417919",
+                        "publishedAt":  "2026-06-12T20:39:08.716Z",
+                        "modifiedAt":  "2026-06-19T01:19:44+02:00",
+                        "trackedSignals":  [
+                                               "Optional SAP BTP ABAP Environment 2608 pre-upgrade testing can be nominated for existing systems",
+                                               "Nominated systems are planned for pre-upgrade on 2026-07-17 from 08:00 to 16:00 CET, or 2026-07-17 17:00 to 2026-07-18 01:00 AEST if SAP\u0027s CET label is interpreted literally",
+                                               "SAP recommends non-development systems such as test systems; production nomination is not meaningful",
+                                               "Pre-upgrade is planned with HFC02, followed by HFC03 during the test phase; standard upgrade is planned for 2026-08-15/16 with HFC04"
+                                           ],
+                        "observedAt":  "2026-06-27T20:06:24+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "What\u0027s New in the Explore Migration Objects App: Releases 2602.4 and 2608",
+                        "url":  "https://community.sap.com/t5/technology-blog-posts-by-sap/what-s-new-in-the-explore-migration-objects-app-releases-2602-4-and-2608/ba-p/14410708",
+                        "publishedAt":  "2026-06-08T15:47:19.788Z",
+                        "modifiedAt":  "2026-06-23T19:19:14+02:00",
+                        "trackedSignals":  [
+                                               "Explore Migration Objects app adds release 2602.4 and 2608 features for SAP S/4HANA Cloud Public Edition",
+                                               "New migration-object Availability column and quick filter indicate which migration objects are available for activated scope",
+                                               "New scope-item Status column and enhanced dependency graph improve migration planning visibility",
+                                               "Availability can depend on activated scope, feature toggles, and business function activation"
+                                           ],
+                        "observedAt":  "2026-06-27T20:06:24+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-release-planning",
+                        "title":  "SAP Preferred Success: Join Our SAP Cloud ERP 2608 Release Planning Session!",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/sap-preferred-success-join-our-sap-cloud-erp-2608-release-planning-session/ba-p/14396634",
+                        "publishedAt":  "2026-06-01T08:13:26.773Z",
+                        "modifiedAt":  "2026-06-01T15:37:59+02:00",
+                        "trackedSignals":  [
+                                               "APJ English live session is listed for 2026-07-08 from 13:00 to 14:00 AEST",
+                                               "Session covers 2608 release dates, upgrade process, and new system maintenance schedule starting from September",
+                                               "Session includes RASD impact analysis and 2602/2608 call-to-action items",
+                                               "SAP says registration is via SAP Learning Hub and the audience is SAP Cloud ERP with SAP Preferred Success subscription customers"
+                                           ],
+                        "observedAt":  "2026-06-28T18:47:50+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Asset Management in SAP S/4HANA Cloud Public Edition: From reactive maintenance to autonomous agents",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/asset-management-in-sap-s-4hana-cloud-public-edition-from-reactive/ba-p/14428230",
+                        "publishedAt":  "2026-06-26T14:20:15.314Z",
+                        "modifiedAt":  "2026-06-27T09:35:19+02:00",
+                        "trackedSignals":  [
+                                               "SAP describes AI-assisted Asset Management in SAP S/4HANA Cloud Public Edition",
+                                               "Maintenance supervisor scenario: group, deduplicate, and prioritize notifications",
+                                               "Maintenance planner scenario: synthesize fragmented asset data and recommend planning decisions",
+                                               "Maintenance technician scenario: photo-assisted defect reporting and AI-created maintenance notifications"
+                                           ],
+                        "observedAt":  "2026-06-28T19:47:50+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Decentralized Extended Warehouse Management and Quality Management in Two-Tier ERP",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/decentralized-extended-warehouse-management-and-quality-management-in-two/ba-p/14427745",
+                        "rssPubDate":  "Fri, 26 Jun 2026 05:43:32 GMT",
+                        "modifiedAt":  "2026-06-26T07:43:32+02:00",
+                        "articleTextSha256":  "5EEDD92EAAD2A93C0ED2FEB199F0F350095481A9BEAE1CF97C34FD3FFF6F76B3",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP describes decentralized SAP EWM integration with SAP Cloud ERP in a two-tier ERP scenario",
+                                               "Quality inspection is executed directly in EWM using the Quality Inspection Engine",
+                                               "Inbound delivery starts in SAP Cloud ERP, is distributed to decentralized EWM, and warehouse-side inspection outcomes update stock status back to SAP Cloud ERP",
+                                               "Relevant review areas include QIE inspection rules, inspection object types, follow-up actions, stock-type mapping, and inbound delivery distribution"
+                                           ],
+                        "observedAt":  "2026-06-29T15:00:13+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-extensibility-guidance",
+                        "title":  "Recommendations for Wrapper Interface Design",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/recommendations-for-wrapper-interface-design/ba-p/14425678",
+                        "publishedAt":  "2026-06-25T13:19:44.883Z",
+                        "modifiedAt":  "2026-06-25T16:05:01+02:00",
+                        "articleTextSha256":  "54BD2519F948AB827F747ADF7D9D1E4128BDE5A94807BC736BEC9BC16188B230",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP clean-core extensibility guidance for SAP S/4HANA and SAP S/4HANA Cloud",
+                                               "Wrapper interfaces are recommended to encapsulate classic APIs and internal objects",
+                                               "Wrappers define stable contracts, reduce dependencies on underlying implementations, and improve testability",
+                                               "Relevant for custom ABAP Cloud extension readiness before 2608 regression testing"
+                                           ],
+                        "observedAt":  "2026-06-29T16:02:33+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-extensibility-guidance",
+                        "title":  "Outbound delivery stock-shortage warning by custom logic",
+                        "originalTitle":  "åœ¨ SAP S/4HANA Cloud ä¸­é€šè¿‡è‡ªå®šä¹‰é€»è¾‘åœ¨åˆ›å»ºå¤–å‘äº¤è´§å•æ—¶å®žçŽ°åº“å­˜æ•°é‡ä¸è¶³æé†’",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/%E5%9C%A8-sap-s-4hana-cloud-%E4%B8%AD%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E9%80%BB%E8%BE%91%E5%9C%A8%E5%88%9B%E5%BB%BA%E5%A4%96%E5%90%91%E4%BA%A4%E8%B4%A7%E5%8D%95%E6%97%B6%E5%AE%9E%E7%8E%B0%E5%BA%93%E5%AD%98%E6%95%B0%E9%87%8F%E4%B8%8D%E8%B6%B3%E6%8F%90%E9%86%92/ba-p/14426037",
+                        "rssPubDate":  "Wed, 24 Jun 2026 03:42:42 GMT",
+                        "rssDescriptionSha256":  "E3528E2B8D7F4F88714B19CCAB5AA013B741656019315FCAD0B91006A9879E9C",
+                        "checksumMethod":  "RSS description text because direct SAP Community article returned 503 during this check",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud custom logic example for outbound delivery creation",
+                                               "BAdI LE_SHP_DELIVERY_FINAL_CHECK is used for final checks before delivery save",
+                                               "Scenario compares sales-order item quantity with current stock and raises a warning when stock is insufficient",
+                                               "API-created outbound delivery behavior is called out as a separate message-handling consideration"
+                                           ],
+                        "observedAt":  "2026-06-29T16:02:33+10:00",
+                        "lastCheckStatus":  "Direct article retry returned 503 at 2026-06-29T16:02:33+10:00; RSS description retained."
+                    },
+                    {
+                        "kind":  "sap-community-extensibility-guidance",
+                        "title":  "API-created delivery stock-shortage handling",
+                        "originalTitle":  "ä½¿ç”¨APIåˆ›å»ºäº¤è´§å•åº“å­˜ä¸è¶³æé†’",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/%E4%BD%BF%E7%94%A8api%E5%88%9B%E5%BB%BA%E4%BA%A4%E8%B4%A7%E5%8D%95%E5%BA%93%E5%AD%98%E4%B8%8D%E8%B6%B3%E6%8F%90%E9%86%92/ba-p/14426955",
+                        "publishedAt":  "2026-06-25T06:06:21.140Z",
+                        "modifiedAt":  "2026-06-25T08:06:21+02:00",
+                        "articleTextSha256":  "BDBD45ABADC7B9129F93E89B94CF890CEA1871240EE5DA41C3FA3AB3094BB48F",
+                        "rssDescriptionSha256":  "F526039B477B3FA031AA47F00F83A222708EE5950EE4723F1E539B37EB7F4C1D",
+                        "checksumMethod":  "Cleaned visible article text and RSS description text",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud API-created outbound delivery stock-shortage scenario",
+                                               "API creation can create the outbound delivery with available stock and leave external systems inconsistent if insufficient stock is only warned",
+                                               "Method 1 uses BAdI LE_SHP_SAVE_DOCUMENT_PREPARE to set delivery custom field YY1_Message",
+                                               "Method 2 uses BAdI LE_SHP_DELIVERY_FINAL_CHECK; SAP notes API-created delivery scenarios can ignore warnings, so error handling may be required"
+                                           ],
+                        "observedAt":  "2026-06-29T17:08:48+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-implementation-guidance",
+                        "title":  "Navigating the 5-Country Strategy with SAP Central Business Configuration to Speed Up Implementation",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/navigating-the-5-country-strategy-with-sap-central-business-configuration/ba-p/14424679",
+                        "publishedAt":  "2026-06-22T14:17:43.598Z",
+                        "modifiedAt":  "2026-06-22T16:21:36+02:00",
+                        "articleTextSha256":  "F501D3DD9B0F9D4ED758DEBA2A61A263449ED7422ECBFA5A444600457B178719",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP Central Business Configuration guidance for SAP S/4HANA Cloud Public Edition",
+                                               "CBC scope extension, including country additions, cannot create a country delta greater than five countries",
+                                               "Large rollouts should be phased into requests of five or fewer country additions",
+                                               "The five-country delta also affects main-line and parallel-line merge or rebase scenarios when country scope diverges"
+                                           ],
+                        "observedAt":  "2026-06-29T18:09:59+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "SAP EPPM Financial Planning: Introducing Custom Value Types for Flexible Cost Splits",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/sap-eppm-financial-planning-introducing-custom-value-types-for-flexible/ba-p/14425067",
+                        "publishedAt":  "2026-06-24T09:38:43.656Z",
+                        "modifiedAt":  "2026-06-24T17:38:00+02:00",
+                        "articleTextSha256":  "FE336D525A1B570037569770A230758D50592C3B527756B87BD32D79ED6DA9F5",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP EPPM financial-planning guidance for custom value types and flexible cost splits",
+                                               "Scenario separates CAPEX and OPEX cost categories beyond standard aggregation dimensions",
+                                               "Implementation includes integration customizing and BAdI RPM_FICO_INT",
+                                               "SAP says split-instance landscapes require custom value type configuration on both EPPM and Project System sides"
+                                           ],
+                        "observedAt":  "2026-06-29T16:02:33+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Origin Profit Centers - Track Margins not only for Responsible but also for Contributing Profit Ctrs",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/origin-profit-centers-track-margins-not-only-for-responsible-but-also-for/ba-p/14422485",
+                        "publishedAt":  "2026-06-18T11:10:21.182Z",
+                        "modifiedAt":  "2026-06-18T13:10:21+02:00",
+                        "articleTextSha256":  "EB8843ACCB7D16C7302B30C5A3C08F09E34E126984FBD09F00F3A37BD20D2ECC",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud introduces Origin Profit Center as a Universal Journal attribute",
+                                               "Attribute identifies the employee home profit center derived from assigned cost center",
+                                               "Supports project-margin reporting by both responsible and contributing profit centers",
+                                               "Relevant for professional-services CPM projects and cross-project-ownership reporting"
+                                           ],
+                        "observedAt":  "2026-06-29T16:02:33+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Advanced Down Payment Processing Meets Milestone Billing in SAP S/4HANA Cloud Public Edition",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/advanced-down-payment-processing-meets-milestone-billing-in-sap-s-4hana/ba-p/14422367",
+                        "publishedAt":  "2026-06-24T07:48:31.341Z",
+                        "modifiedAt":  "2026-06-24T09:54:27+02:00",
+                        "trackedSignals":  [
+                                               "SAP describes Advanced Down Payment Processing combined with milestone billing",
+                                               "New process: Milestone Billing with Down Payment Requests",
+                                               "SAP references scope item 7Z1 for Sales Order Processing with Milestone Billing",
+                                               "Relevant review area: sales billing, customer down payments, settlement invoices, and order-related billing"
+                                           ],
+                        "observedAt":  "2026-06-28T19:47:50+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Project Billing: Clarified Billing Relevance for Revenue and Sales Deduction G/L Accounts",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/project-billing-clarified-billing-relevance-for-revenue-and-sales-deduction/ba-p/14395847",
+                        "publishedDisplay":  "2026 May 14 8:36 AM",
+                        "articleTextSha256":  "2B3FCBB9076551651F8D1A99CAF2B563B79BBD3C15F2094E626F1A65DC5359DF",
+                        "trackedSignals":  [
+                                               "With SAP S/4HANA Cloud Public Edition 2608, Project Billing applies a standardized billing-relevance check for project-related journal entries",
+                                               "Journal entries posted to G/L accounts with Cost Element Category 11 (Revenues) or 12 (Sales Deduction) are excluded from Project Billing processes",
+                                               "The check applies across Manage Project Billing and Project Billing APIs",
+                                               "In 2602.3 the behavior is available through feature toggle PROJ_BILLG_ACCOUNT_TYPE_CHECK; in 2608 SAP says the toggle is delivered enabled by default for transition"
+                                           ],
+                        "observedAt":  "2026-06-28T23:49:24+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Workflow-Based Treasury Business Partner Controls Across the Treasury Lifecycle",
+                        "url":  "https://community.sap.com/t5/financial-management-blog-posts-by-sap/workflow-based-treasury-business-partner-controls-across-the-treasury/ba-p/14415628",
+                        "publishedDisplay":  "2 weeks ago",
+                        "articleTextSha256":  "8A0A5BD6ADEF6BF3FC0B569E294D588DEE930851E27902FF2AFDC0D0BE3B97AB",
+                        "trackedSignals":  [
+                                               "SAP describes innovation planned with SAP Cloud ERP release 2608 for workflow-based Treasury Business Partner controls",
+                                               "Focus areas include regulatory/audit requirements, payment controls, segregation of duties, approval traceability, and protection of sensitive Business Partner data",
+                                               "Sensitive Treasury Business Partner changes include counterparty data, bank details, standing instructions, and other payment-relevant information",
+                                               "Relevant downstream processes include external confirmations, settlements, payment initiation, and correspondence"
+                                           ],
+                        "observedAt":  "2026-06-29T00:50:55+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Dynamic Fiscal Period Determination in EBRR period-end close run application jobs",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/dynamic-fiscal-period-determination-in-ebrr-period-end-close-run/ba-p/14424187",
+                        "publishedAt":  "2026-06-22T12:18:35.489Z",
+                        "modifiedAt":  "2026-06-26T17:33:15+02:00",
+                        "articleTextSha256":  "293E4ECD3C79C1BA5E048F5438012AC7E2B3515F5E1B23559B77B419FDE5002D",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud Public Edition 2608 introduces dynamic determination of To Fiscal Period/Year for EBRR period-end close jobs",
+                                               "The feature supports Current Fiscal Period and Previous Fiscal Period options instead of only static fiscal-period values",
+                                               "Runtime determination evaluates company code, ledger, fiscal-year variant, and job run date",
+                                               "SAP says the supported jobs include Run Revenue Recognition for Sales Orders, Projects, Service Documents, Provider Contracts, and Revenue Contracts"
+                                           ],
+                        "observedAt":  "2026-06-29T07:52:35+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-rss-feed",
+                        "title":  "Enterprise Resource Planning Blog Posts by SAP articles",
+                        "url":  "https://community.sap.com/khhcw49343/rss/board?board.id=erp-blog-sap",
+                        "feedPubDate":  "Wed, 01 Jul 2026 11:19:20 GMT",
+                        "matchingRelevantItems":  13,
+                        "trackedSignals":  [
+                                               "RSS feed is now used as a discovery source for SAP ERP product and extensibility posts that keyword search can miss",
+                                               "Feed scan found additional SAP S/4HANA Cloud Public Edition / SAP Cloud ERP product signals for sales extensibility, clean-core wrapper guidance, outbound delivery custom logic, API-created delivery stock-shortage handling, EPPM planning, Origin Profit Centers, CBC 5-country rollout planning, EBRR scheduling, EWM/QM two-tier integration, and Joule/two-tier planning",
+                                               "Already tracked feed items include Asset Management autonomous agents, EWM/QM two-tier warehouse integration, clean-core wrapper design, outbound-delivery stock warning custom logic, API-created delivery stock-shortage handling, EPPM custom value types, Origin Profit Centers, CBC 5-country rollout planning, Advanced Down Payment Processing with milestone billing, and EBRR dynamic fiscal-period determination",
+                                               "The feed now shows Extend Sales Order with Issue Summary by Using BAdI SD_SLS_END_OF_FINALIZE with pubDate Mon, 29 Jun 2026 01:31:39 GMT",
+                                               "New 30 June 2026 RSS item: Chinese-language SAP Cloud ERP Business AI article on Assistant, Agent, and Skill concepts for process-aware AI coordination."
+                                           ],
+                        "observedAt":  "2026-07-01T21:17:57+10:00",
+                        "titleSha256":  "C762F3B3F34DCB5E63B10B783550ECA4B51EAF59C05D850CA06BE190FA458167",
+                        "itemFingerprintSha256":  "1F1EEC4ACB78DF5D0824923ABA331C25907FCE759C99CF08DD74C49E04A1D06F",
+                        "lastCheckStatus":  "RSS feed reachable; feed-level pubDate advanced but relevant item fingerprint is unchanged. SAP web search surfaced only already tracked 2608 upgrade, APJ planning, Preliminary What\u0027s New/RASD, FAQ, and generic Help pages. No new material SAP Cloud ERP / S/4HANA Cloud maintenance, hotfix, RASD, extensibility, product-update, or customer-action signal was found at 2026-07-01T21:17:57+10:00."
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Extend Sales Order with Issue Summary by Using BAdI SD_SLS_END_OF_FINALIZE",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/extend-sales-order-with-issue-summary-by-using-badi-sd-sls-end-of-finalize/ba-p/14427661",
+                        "publishedAt":  "2026-06-26T07:24:24.557Z",
+                        "modifiedAt":  "2026-06-29T03:31:39+02:00",
+                        "rssPubDate":  "Mon, 29 Jun 2026 01:31:39 GMT",
+                        "articleTextSha256":  "BE793EBE0EE4423EC4A1C282DF199634D35025422A53DC7278250E6FB77A6412",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud Public Edition developer extensibility example for Sales Documents",
+                                               "BAdI SD_SLS_END_OF_FINALIZE runs at the end of the sales-order Finalize phase after standard processing",
+                                               "Example use case maintains custom field YY1_ISSUE_SUMMARY_SDH as a human-readable summary of current sales-order issues",
+                                               "Implementation references enhancement spot ES_SD_SLS_DEV_EXTEND and method IF_SD_SLS_END_OF_FINALIZE~MODIFY_FIELDS",
+                                               "Article now calls out simulation-mode skip logic and the generated control flag needed for custom-field writes"
+                                           ],
+                        "observedAt":  "2026-06-29T21:32:06+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "AI-Assisted Cross-Tier Flexible Constraint Visibility in Two-Tier ERP",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/ai-assisted-cross-tier-flexible-constraint-visibility-in-two-tier-erp/ba-p/14427139",
+                        "publishedAt":  "2026-06-25T09:32:43.861Z",
+                        "modifiedAt":  "2026-06-26T07:09:48+02:00",
+                        "articleTextSha256":  "7FCBB8E7ABD02471D91D26140888C1309EFEF0645D8E894A27ECA25911EEFE67",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud Public Edition manufacturing / two-tier ERP product signal",
+                                               "Joule-based concept for cross-tier flexible constraint visibility",
+                                               "Relevant for planners needing visibility into upstream supply capacity across headquarters, regional hubs, and subsidiaries"
+                                           ],
+                        "observedAt":  "2026-06-29T07:52:35+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Cross ATP Check in Two-Tier ERP: Smarter Availability Commitments with Joule",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/cross-atp-check-in-two-tier-erp-smarter-availability-commitments-with-joule/ba-p/14426326",
+                        "publishedAt":  "2026-06-24T09:58:27.126Z",
+                        "modifiedAt":  "2026-06-24T12:11:11+02:00",
+                        "articleTextSha256":  "9A0515CC99283C82035AA3604DDCD712DC26DC03A127224AC90B59AFD72A25C9",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud Public Edition / Joule Studio product signal for two-tier ERP",
+                                               "Cross-ATP check concept for availability commitments across headquarters and subsidiary tiers",
+                                               "Relevant for sales-office-as-subsidiary scenarios with intercompany replenishment or HQ drop shipment"
+                                           ],
+                        "observedAt":  "2026-06-29T07:52:35+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "Simplifying EBRR Job Scheduling with Company Code and Ledger Ranges",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/simplifying-ebrr-job-scheduling-with-company-code-and-ledger-ranges/ba-p/14424716",
+                        "publishedAt":  "2026-06-22T15:05:51.856Z",
+                        "modifiedAt":  "2026-06-22T17:05:37+02:00",
+                        "articleTextSha256":  "853C06B693E56D8580945EB5FCB6589F5D6D407498B047E21E93E17069BF23B3",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud Public Edition Finance product signal for Event-Based Revenue Recognition",
+                                               "EBRR application jobs can process ranges of company codes and ledgers in one run",
+                                               "SAP describes validation of company-code/ledger combinations and processing only valid combinations"
+                                           ],
+                        "observedAt":  "2026-06-29T07:52:35+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "External Revenue Recognition Key Derivation for Project-Based Sales",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/external-revenue-recognition-key-derivation-for-project-based-sales/ba-p/14424654",
+                        "publishedAt":  "2026-06-22T14:30:09.719Z",
+                        "modifiedAt":  "2026-06-22T16:29:53+02:00",
+                        "articleTextSha256":  "952C069B441B83C3414C294A09E52CD007AEABD87586816B1052CA455683993D",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP S/4HANA Cloud Public Edition Finance product signal for project-based sales",
+                                               "SAP says CFD 2602.3 introduces External Revenue Recognition Key Derivation",
+                                               "Relevant integration areas include Project-Based Sales, SD, and Event-Based Revenue Recognition"
+                                           ],
+                        "observedAt":  "2026-06-29T07:52:35+10:00"
+                    },
+                    {
+                        "kind":  "sap-community-product-update",
+                        "title":  "从 Assistant 到 Agent：理解 SAP 新一代代理式 AI 创新",
+                        "titleEnglish":  "From Assistant to Agent: Understanding SAP next-generation agentic AI innovation",
+                        "url":  "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/%E4%BB%8E-assistant-%E5%88%B0-agent-%E7%90%86%E8%A7%A3-sap-%E6%96%B0%E4%B8%80%E4%BB%A3%E4%BB%A3%E7%90%86%E5%BC%8F-ai-%E5%88%9B%E6%96%B0/ba-p/14430206",
+                        "publishedAt":  "2026-06-30T07:08:49.812Z",
+                        "modifiedAt":  "2026-06-30T19:18:10+02:00",
+                        "articleTextSha256":  "A3B8F40C6D10C01DFE39AA3411DDC2BF665C6A11B549B189007E4E29F26C28AE",
+                        "checksumMethod":  "Cleaned visible text after removing scripts, styles, tags, and normalized whitespace",
+                        "trackedSignals":  [
+                                               "SAP Cloud ERP product update signal from the SAP ERP Blog Posts by SAP RSS feed",
+                                               "Article modified again on 2026-06-30 19:18:10 CEST / 2026-07-01 03:18:10 AEST",
+                                               "Describes SAP Business AI evolution from embedded assistants toward process-aware Assistant and Agent coordination",
+                                               "Introduces Assistant, Agent, and Skill concepts after SAP Sapphire 2026",
+                                               "No maintenance-window, hotfix, database-upgrade, RASD, or customer-action date change was detected from this article update"
+                                           ],
+                        "observedAt":  "2026-07-01T03:59:41+10:00",
+                        "rssPubDate":  "Tue, 30 Jun 2026 17:18:10 GMT",
+                        "lastCheckStatus":  "Article text checksum changed on SAP Community. Reviewed at 2026-07-01T03:59:41+10:00; this remains a SAP Cloud ERP Business AI concept signal with no maintenance-window, hotfix, database-upgrade, RASD, or customer-action date change detected."
+                    }
+                ],
+    "outlookEmailSearch":  {
+                               "receivedSince":  "2026-06-30",
+                               "queries":  [
+                                               "SAP S/4HANA Cloud SAP Cloud ERP Public Edition maintenance upgrade hotfix RASD What\u0027s New Early Release Series IAM Extensibility Explorer EBRR received\u003e=2026-06-30",
+                                               "SAP for Me SAP Cloud ALM S/4HANA Cloud maintenance upgrade hotfix RASD EBRR received\u003e=2026-06-30 hasattachment:true",
+                                               "SAP S/4HANA Cloud Product Updates Extensibility API outbound delivery stock shortage Central Business Configuration CBC received\u003e=2026-06-30"
+                                           ],
+                               "matches":  0,
+                               "observedAt":  "2026-07-01T21:17:57+10:00",
+                               "lastCheckStatus":  "Outlook Email connector returned zero matching messages for the monitored SAP queries at 2026-07-01T21:17:57+10:00."
+                           },
+    "outlookCalendarSearch":  {
+                                  "observedAt":  "2026-07-01T21:17:57+10:00",
+                                  "calendar":  "Fortescue Outlook Calendar via Microsoft Graph connector",
+                                  "query":  "Codex SAP maintenance watch id, 2026-06-28 to 2026-12-31",
+                                  "expectedEvents":  17,
+                                  "graphMatches":  16,
+                                  "missingIds":  [
+                                                     "2026-W28-RELEASE-PLANNING"
+                                                 ],
+                                  "missingTitle":  "SAP S/4HANA Cloud watch: 2608 APJ release planning",
+                                  "writeStatus":  "Graph calendar write tools are not exposed in this session. Calendar read state unchanged; W28 APJ planning item remains absent from Fortescue cloud calendar."
+                              }
+}

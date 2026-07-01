@@ -1,17 +1,12 @@
-name: Refresh SAP schedule and publish Pages
+name: Publish SAP Maintenance Watch Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    # GitHub cron is UTC. Running at both possible UTC offsets lets the
-    # workflow honor 7:00 AM Australia/Sydney across daylight saving changes.
-    - cron: "0 20 * * *"
-    - cron: "0 21 * * *"
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -20,86 +15,25 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  refresh:
-    runs-on: ubuntu-latest
-    outputs:
-      changed: ${{ steps.commit.outputs.changed }}
-      should_deploy: ${{ steps.deploy_gate.outputs.should_deploy }}
-    steps:
-      - name: Check Sydney run time
-        id: time_gate
-        if: github.event_name == 'schedule'
-        run: |
-          hour=$(TZ=Australia/Sydney date +%H)
-          if [ "$hour" = "07" ]; then
-            echo "run_refresh=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run_refresh=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Check out repository
-        if: github.event_name != 'schedule' || steps.time_gate.outputs.run_refresh == 'true'
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        if: github.event_name != 'schedule' || steps.time_gate.outputs.run_refresh == 'true'
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-
-      - name: Install updater dependencies
-        if: github.event_name != 'schedule' || steps.time_gate.outputs.run_refresh == 'true'
-        run: python -m pip install -r requirements.txt
-
-      - name: Refresh SAP schedule data
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-        run: python scripts/update_schedule.py
-
-      - name: Commit schedule changes
-        id: commit
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-        run: |
-          if git diff --quiet -- data.js SAP-S4HANA-Cloud-Maintenance-Watch.ics data/source-metadata.json; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.js SAP-S4HANA-Cloud-Maintenance-Watch.ics data/source-metadata.json
-          git commit -m "Update SAP maintenance schedule"
-          git push
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-
-      - name: Decide whether to deploy
-        id: deploy_gate
-        run: |
-          if [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
-            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "should_deploy=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Set up Pages
-        if: steps.deploy_gate.outputs.should_deploy == 'true'
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: Upload static site
-        if: steps.deploy_gate.outputs.should_deploy == 'true'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
   deploy:
-    needs: refresh
-    if: needs.refresh.outputs.should_deploy == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
