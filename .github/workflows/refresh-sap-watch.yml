@@ -1,6 +1,8 @@
 name: Refresh SAP Watch Sources
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       record_no_change_check:
