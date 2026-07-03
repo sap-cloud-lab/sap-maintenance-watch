@@ -1,6 +1,6 @@
 {
   "monitorId": "sap-s-4hana-cloud-maintenance-watch",
-  "lastCheckedAt": "2026-07-03T07:02:17+10:00",
+  "lastCheckedAt": "2026-07-04T07:01:43+10:00",
   "timezone": "Australia/Sydney",
   "sources": [
     {
@@ -575,9 +575,9 @@
   "automation": {
     "id": "sap-s-4hana-cloud-maintenance-watch",
     "runner": "github-actions",
-    "lastRunAt": "2026-07-03T07:02:17+10:00",
+    "lastRunAt": "2026-07-04T07:01:43+10:00",
     "lastRunRecordedBecause": "tracked-source-change",
-    "lastMaterialChangeAt": "2026-07-03T07:02:17+10:00",
+    "lastMaterialChangeAt": "2026-07-04T07:01:43+10:00",
     "trackedSources": [
       {
         "id": "sap-help-extensibility-explorer",
@@ -590,22 +590,22 @@
         "fingerprintMethod": "Cleaned visible text",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-07-03T07:02:17+10:00",
+        "observedAt": "2026-07-04T07:01:43+10:00",
         "lastChangedAt": "2026-07-01T22:50:41+10:00"
       },
       {
         "id": "sap-community-erp-rss-relevant-items",
         "title": "SAP ERP Blog Posts by SAP RSS relevant items",
         "url": "https://community.sap.com/khhcw49343/rss/board?board.id=erp-blog-sap",
-        "status": "reachable",
-        "httpStatus": 200,
+        "status": "http-error-with-body",
+        "httpStatus": 403,
         "finalUrl": "https://community.sap.com/khhcw49343/rss/board?board.id=erp-blog-sap",
-        "fingerprintSha256": "49C327ABDCBCEAD2ED7F133E11A56EA0375A45E7EC82EC8AC8884DF947A2E2BF",
+        "fingerprintSha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
         "fingerprintMethod": "Relevant RSS items: title, link, pubDate, and description hash",
         "initialized": false,
         "changed": true,
-        "observedAt": "2026-07-03T07:02:17+10:00",
-        "lastChangedAt": "2026-07-03T07:02:17+10:00"
+        "observedAt": "2026-07-04T07:01:43+10:00",
+        "lastChangedAt": "2026-07-04T07:01:43+10:00"
       },
       {
         "id": "sap-help-2602-hfc12-search",
@@ -618,22 +618,22 @@
         "fingerprintMethod": "Canonical SAP Help search rows",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-07-03T07:02:17+10:00",
+        "observedAt": "2026-07-04T07:01:43+10:00",
         "lastChangedAt": "2026-07-01T22:50:41+10:00"
       },
       {
         "id": "sap-community-2608-upgrade-guidance",
         "title": "2608 upgrade guidance article",
         "url": "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/get-ready-for-the-2608-upgrade-of-the-sap-cloud-erp-public-edition/ba-p/14421165",
-        "status": "reachable",
-        "httpStatus": 200,
+        "status": "http-error-with-body",
+        "httpStatus": 403,
         "finalUrl": "https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/get-ready-for-the-2608-upgrade-of-the-sap-cloud-erp-public-edition/ba-p/14421165",
-        "fingerprintSha256": "C3C2C95E89A6AB288AEC8F3DB51D8E05332E487611EB3EB5CC4856A1F7804B7E",
+        "fingerprintSha256": "A263E002A0563FD57898F230052ADCA74C3FF8F6BF5E3EC84F1CA1AD29079126",
         "fingerprintMethod": "Presence of stable 2608 upgrade-window signals",
         "initialized": false,
-        "changed": false,
-        "observedAt": "2026-07-03T07:02:17+10:00",
-        "lastChangedAt": "2026-07-01T22:51:35+10:00"
+        "changed": true,
+        "observedAt": "2026-07-04T07:01:43+10:00",
+        "lastChangedAt": "2026-07-04T07:01:43+10:00"
       },
       {
         "id": "sap-for-me-note-3646210-login-gate",
@@ -646,7 +646,7 @@
         "fingerprintMethod": "SAP for Me login-gate status, final URL, and body hash",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-07-03T07:02:17+10:00",
+        "observedAt": "2026-07-04T07:01:43+10:00",
         "lastChangedAt": "2026-07-01T22:50:41+10:00"
       }
     ],
@@ -659,15 +659,22 @@
       ],
       "loginAttempted": false,
       "lastCheckStatus": "SAP S-user secrets are configured. Scheduled checks avoid browser password login because SAP for Me can require MFA or trusted-browser approval.",
-      "observedAt": "2026-07-03T07:02:17+10:00"
+      "observedAt": "2026-07-04T07:01:43+10:00"
     },
     "changes": [
       {
         "id": "sap-community-erp-rss-relevant-items",
         "title": "SAP ERP Blog Posts by SAP RSS relevant items",
-        "previousFingerprintSha256": "5416139A97ABEB2178F0C2280BBFDD22F94C403EE9201252DF493B988DD1184B",
-        "currentFingerprintSha256": "49C327ABDCBCEAD2ED7F133E11A56EA0375A45E7EC82EC8AC8884DF947A2E2BF",
-        "observedAt": "2026-07-03T07:02:17+10:00"
+        "previousFingerprintSha256": "49C327ABDCBCEAD2ED7F133E11A56EA0375A45E7EC82EC8AC8884DF947A2E2BF",
+        "currentFingerprintSha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "observedAt": "2026-07-04T07:01:43+10:00"
+      },
+      {
+        "id": "sap-community-2608-upgrade-guidance",
+        "title": "2608 upgrade guidance article",
+        "previousFingerprintSha256": "C3C2C95E89A6AB288AEC8F3DB51D8E05332E487611EB3EB5CC4856A1F7804B7E",
+        "currentFingerprintSha256": "A263E002A0563FD57898F230052ADCA74C3FF8F6BF5E3EC84F1CA1AD29079126",
+        "observedAt": "2026-07-04T07:01:43+10:00"
       }
     ]
   }
