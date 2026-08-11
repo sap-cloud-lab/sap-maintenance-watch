@@ -1,6 +1,6 @@
 {
   "monitorId": "sap-s-4hana-cloud-maintenance-watch",
-  "lastCheckedAt": "2026-08-11T07:42:19+10:00",
+  "lastCheckedAt": "2026-08-12T07:49:35+10:00",
   "timezone": "Australia/Sydney",
   "sources": [
     {
@@ -575,9 +575,9 @@
   "automation": {
     "id": "sap-s-4hana-cloud-maintenance-watch",
     "runner": "github-actions",
-    "lastRunAt": "2026-08-11T07:42:19+10:00",
+    "lastRunAt": "2026-08-12T07:49:35+10:00",
     "lastRunRecordedBecause": "tracked-source-change",
-    "lastMaterialChangeAt": "2026-08-11T07:42:19+10:00",
+    "lastMaterialChangeAt": "2026-08-12T07:49:35+10:00",
     "trackedSources": [
       {
         "id": "sap-help-extensibility-explorer",
@@ -590,7 +590,7 @@
         "fingerprintMethod": "Cleaned visible text",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-08-11T07:42:19+10:00",
+        "observedAt": "2026-08-12T07:49:35+10:00",
         "lastChangedAt": "2026-08-10T07:33:24+10:00"
       },
       {
@@ -600,12 +600,12 @@
         "status": "reachable",
         "httpStatus": 200,
         "finalUrl": "https://community.sap.com/khhcw49343/rss/board?board.id=erp-blog-sap",
-        "fingerprintSha256": "14F5B614BECD0C99E0EF483859D2E09D9AE0A5F8BA9B8C804E2A7A99B60E5EE8",
+        "fingerprintSha256": "9F476968138B1B22296FB66513A7583631EAA9440F20E7A0C7E8BE1A6F274ED4",
         "fingerprintMethod": "Relevant RSS items: title, link, pubDate, and description hash",
         "initialized": false,
         "changed": true,
-        "observedAt": "2026-08-11T07:42:19+10:00",
-        "lastChangedAt": "2026-08-11T07:42:19+10:00"
+        "observedAt": "2026-08-12T07:49:35+10:00",
+        "lastChangedAt": "2026-08-12T07:49:35+10:00"
       },
       {
         "id": "sap-help-2602-hfc12-search",
@@ -614,12 +614,12 @@
         "status": "reachable",
         "httpStatus": 200,
         "finalUrl": "https://help.sap.com/http.svc/elasticsearch?q=SAP%20S%2F4HANA%20Cloud%20Public%20Edition%202602.4%20HFC12&area=content&advancedSearch=0&excludeNotSearchable=1&language=en-US&state=PRODUCTION&transtype=standard,html,pdf,others&to=100",
-        "fingerprintSha256": "00792A3146D4345205C6E32E469CBB4984795DBEA714F48E9C2A7C19E5C57557",
+        "fingerprintSha256": "2529CDC5068C89F9649EB8116390F6FEB797BA67D2D0913DA7D91B36B2FC2F6A",
         "fingerprintMethod": "Canonical SAP Help search rows",
         "initialized": false,
         "changed": true,
-        "observedAt": "2026-08-11T07:42:19+10:00",
-        "lastChangedAt": "2026-08-11T07:42:19+10:00"
+        "observedAt": "2026-08-12T07:49:35+10:00",
+        "lastChangedAt": "2026-08-12T07:49:35+10:00"
       },
       {
         "id": "sap-community-2608-upgrade-guidance",
@@ -632,7 +632,7 @@
         "fingerprintMethod": "Presence of stable 2608 upgrade-window signals",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-08-11T07:42:19+10:00",
+        "observedAt": "2026-08-12T07:49:35+10:00",
         "lastChangedAt": "2026-07-04T07:01:43+10:00"
       },
       {
@@ -646,7 +646,7 @@
         "fingerprintMethod": "SAP for Me login-gate status, final URL, and body hash",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-08-11T07:42:19+10:00",
+        "observedAt": "2026-08-12T07:49:35+10:00",
         "lastChangedAt": "2026-07-01T22:50:41+10:00"
       }
     ],
@@ -659,22 +659,22 @@
       ],
       "loginAttempted": false,
       "lastCheckStatus": "SAP S-user secrets are configured. Scheduled checks avoid browser password login because SAP for Me can require MFA or trusted-browser approval.",
-      "observedAt": "2026-08-11T07:42:19+10:00"
+      "observedAt": "2026-08-12T07:49:35+10:00"
     },
     "changes": [
       {
         "id": "sap-community-erp-rss-relevant-items",
         "title": "SAP ERP Blog Posts by SAP RSS relevant items",
-        "previousFingerprintSha256": "716BD6CF4F320A8376147E1025E0648EE834F1246B21879F548A1FD031F96846",
-        "currentFingerprintSha256": "14F5B614BECD0C99E0EF483859D2E09D9AE0A5F8BA9B8C804E2A7A99B60E5EE8",
-        "observedAt": "2026-08-11T07:42:19+10:00"
+        "previousFingerprintSha256": "14F5B614BECD0C99E0EF483859D2E09D9AE0A5F8BA9B8C804E2A7A99B60E5EE8",
+        "currentFingerprintSha256": "9F476968138B1B22296FB66513A7583631EAA9440F20E7A0C7E8BE1A6F274ED4",
+        "observedAt": "2026-08-12T07:49:35+10:00"
       },
       {
         "id": "sap-help-2602-hfc12-search",
         "title": "SAP Help 2602.4 / HFC12 search",
-        "previousFingerprintSha256": "EF27AC5A0968981E964FD571B9D8155FF9CE76F4DF6D32C7170998BD8947B6C4",
-        "currentFingerprintSha256": "00792A3146D4345205C6E32E469CBB4984795DBEA714F48E9C2A7C19E5C57557",
-        "observedAt": "2026-08-11T07:42:19+10:00"
+        "previousFingerprintSha256": "00792A3146D4345205C6E32E469CBB4984795DBEA714F48E9C2A7C19E5C57557",
+        "currentFingerprintSha256": "2529CDC5068C89F9649EB8116390F6FEB797BA67D2D0913DA7D91B36B2FC2F6A",
+        "observedAt": "2026-08-12T07:49:35+10:00"
       }
     ]
   }
