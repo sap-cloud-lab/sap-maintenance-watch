@@ -1,6 +1,6 @@
 {
   "monitorId": "sap-s-4hana-cloud-maintenance-watch",
-  "lastCheckedAt": "2026-08-20T07:26:10+10:00",
+  "lastCheckedAt": "2026-08-21T07:29:01+10:00",
   "timezone": "Australia/Sydney",
   "sources": [
     {
@@ -575,9 +575,9 @@
   "automation": {
     "id": "sap-s-4hana-cloud-maintenance-watch",
     "runner": "github-actions",
-    "lastRunAt": "2026-08-20T07:26:10+10:00",
+    "lastRunAt": "2026-08-21T07:29:01+10:00",
     "lastRunRecordedBecause": "tracked-source-change",
-    "lastMaterialChangeAt": "2026-08-20T07:26:10+10:00",
+    "lastMaterialChangeAt": "2026-08-21T07:29:01+10:00",
     "trackedSources": [
       {
         "id": "sap-help-extensibility-explorer",
@@ -590,7 +590,7 @@
         "fingerprintMethod": "Cleaned visible text",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-08-20T07:26:10+10:00",
+        "observedAt": "2026-08-21T07:29:01+10:00",
         "lastChangedAt": "2026-08-10T07:33:24+10:00"
       },
       {
@@ -600,12 +600,12 @@
         "status": "reachable",
         "httpStatus": 200,
         "finalUrl": "https://community.sap.com/khhcw49343/rss/board?board.id=erp-blog-sap",
-        "fingerprintSha256": "A91582569F41654C5EE517FBB89CEDDC28487A26A2E18AA54613046404A1C85C",
+        "fingerprintSha256": "6835728F036AB49E08665EF77E42E3E38B45EF007FC3A6B80728B263185C730F",
         "fingerprintMethod": "Relevant RSS items: title, link, pubDate, and description hash",
         "initialized": false,
         "changed": true,
-        "observedAt": "2026-08-20T07:26:10+10:00",
-        "lastChangedAt": "2026-08-20T07:26:10+10:00"
+        "observedAt": "2026-08-21T07:29:01+10:00",
+        "lastChangedAt": "2026-08-21T07:29:01+10:00"
       },
       {
         "id": "sap-help-2602-hfc12-search",
@@ -618,7 +618,7 @@
         "fingerprintMethod": "Canonical SAP Help search rows",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-08-20T07:26:10+10:00",
+        "observedAt": "2026-08-21T07:29:01+10:00",
         "lastChangedAt": "2026-08-16T07:22:13+10:00"
       },
       {
@@ -632,7 +632,7 @@
         "fingerprintMethod": "Presence of stable 2608 upgrade-window signals",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-08-20T07:26:10+10:00",
+        "observedAt": "2026-08-21T07:29:01+10:00",
         "lastChangedAt": "2026-07-04T07:01:43+10:00"
       },
       {
@@ -646,7 +646,7 @@
         "fingerprintMethod": "SAP for Me login-gate status, final URL, and body hash",
         "initialized": false,
         "changed": false,
-        "observedAt": "2026-08-20T07:26:10+10:00",
+        "observedAt": "2026-08-21T07:29:01+10:00",
         "lastChangedAt": "2026-07-01T22:50:41+10:00"
       }
     ],
@@ -659,15 +659,15 @@
       ],
       "loginAttempted": false,
       "lastCheckStatus": "SAP S-user secrets are configured. Scheduled checks avoid browser password login because SAP for Me can require MFA or trusted-browser approval.",
-      "observedAt": "2026-08-20T07:26:10+10:00"
+      "observedAt": "2026-08-21T07:29:01+10:00"
     },
     "changes": [
       {
         "id": "sap-community-erp-rss-relevant-items",
         "title": "SAP ERP Blog Posts by SAP RSS relevant items",
-        "previousFingerprintSha256": "99EC2A5C220BAB4BF8563FE3DCA677F81630F45944A4ED784AD395239F9E33E4",
-        "currentFingerprintSha256": "A91582569F41654C5EE517FBB89CEDDC28487A26A2E18AA54613046404A1C85C",
-        "observedAt": "2026-08-20T07:26:10+10:00"
+        "previousFingerprintSha256": "A91582569F41654C5EE517FBB89CEDDC28487A26A2E18AA54613046404A1C85C",
+        "currentFingerprintSha256": "6835728F036AB49E08665EF77E42E3E38B45EF007FC3A6B80728B263185C730F",
+        "observedAt": "2026-08-21T07:29:01+10:00"
       }
     ]
   }
