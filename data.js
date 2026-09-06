@@ -1,5 +1,5 @@
 window.sapWatchData = {
-  sourceChecked: "2026-09-06",
+  sourceChecked: "2026-09-07",
   timezone: "Australia/Sydney",
   sourceLabel: "SAP S/4HANA Cloud Public Edition, 3-System Landscape - Upgrade & Maintenance Schedule",
   calendarImportFile: "SAP-S4HANA-Cloud-Maintenance-Watch.ics",
